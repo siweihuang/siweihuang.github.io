@@ -75,9 +75,9 @@
             html = html + subtitle + " - " + displayID
 
             if (paragraphTemp.length > 6) {
-                html += `</h1><p style="text-align: center;font-size: 100px;">`
+                html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 100px;">`
             } else {
-                html += `</h1><p style="text-align: center;font-size: 150px;">`
+                html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 150px;">`
             }
 
             if (showPinYin) {
@@ -103,7 +103,7 @@
 
         html += `<div class="slide"><h1>`
         html += subtitle
-        html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 250px;"><a>The End</a></p></div></div>`
+        html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 200px;"><a>The End</a></p></div></div>`
 
         document.getElementById(type).innerHTML = html;
     }
