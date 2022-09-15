@@ -9,7 +9,7 @@ var mainData = [
         "title": "Unit 10 - Mid-Autum Festival",
         "subtitle":"Unit 10",
         "testdate":"11/08/2022",
-        "words": ["festival","lanterns","stall","stool","street","price","dumplings","meat","mooncakes","vegetables"]
+        "words": ["festival","lanterns","stall","stool","street","price","dumplings","meat","mooncake","vegetables"]
     },
     {
         "title": "Unit 9 - When My Baby Sister Came Home",
