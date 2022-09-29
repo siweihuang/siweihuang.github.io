@@ -5,7 +5,7 @@
     <title id="maintitle"></title>
 
     <!-- Input Data -->
-    <script src="../DataSource/chinesespelling.js"></script>
+    <script src="../DataSource/readingnotes.js"></script>
 
     <!-- configuration parameters -->
     <meta name="defaultView" content="slideshow" />
@@ -41,9 +41,6 @@
         <div id="paragraph"></div>
     </div>
 </body>
-<script type="text/javascript" src="../lib/dict/pinyin_dict_withtone.js"></script>
-<script type="text/javascript" src="../lib/dict/pinyin_dict_polyphone.js"></script>
-<script type="text/javascript" src="../lib/dict/pinyinUtil.js"></script>
 <script>
     const params = new URLSearchParams(window.location.search)
     var pageNo = ''
@@ -65,45 +62,28 @@
 
         var title = inputJSON.title
         var subtitle = inputJSON.subtitle
-        html += `<div class="slide"><h1>华文听写</h1><p style="text-align: center;font-size: 6vmax;">`
+        html += `<div class="slide"><h1>Reading Notes</h1><p style="text-align: center;font-size: 100px;">`
         html += title
         html += `</p></div>`
+
         for (var j = 0; j < inputJSON.words.length; j++) {
             let paragraphTemp = inputJSON.words[j]
             html += `<div class="slide"><h1>`
             var displayID = j + 1
             html = html + subtitle + " - " + displayID
-
-            if (paragraphTemp.length > 6) {
-                html += `</h1><div class="vertical-center"><p style="text-align: center;font-size:  5vmax;">`
+            if (paragraphTemp.length > 120) {
+                html += `</h1><div class="vertical-center"><p style="text-align: center;font-size:  4vh;">`
             } else {
-                html += `</h1><div class="vertical-center"><p style="text-align: center;font-size:  6vmax;">`
+                html += `</h1><div class="vertical-center"><p style="text-align: center;font-size:  6vh;">`
             }
-
-            if (showPinYin) {
-                html += `<ruby>`
-                let paragraphPinyinTemp = pinyinUtil.getPinyin(paragraphTemp, ' ', true, true);
-                let myArr = paragraphPinyinTemp.split(" ")
-                for (var k = 0; k < myArr.length; k++) {
-                    html = html + myArr[k] + "&nbsp;"
-                }
-                html += "<br>"
-                for (var k = 0; k < myArr.length; k++) {
-                    html = html + paragraphTemp[k] + "&nbsp;"
-                }
-                html += `</ruby>`
-
-            } else {
-                html += paragraphTemp
-            }
-
+            html += paragraphTemp
 
             html += `</p></div></div>`
         }
 
         html += `<div class="slide"><h1>`
         html += subtitle
-        html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 5vmax;"><a>结 束</a></p></div></div>`
+        html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 200px;"><a>The End</a></p></div></div>`
 
         document.getElementById(type).innerHTML = html;
     }

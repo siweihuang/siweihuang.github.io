@@ -1,122 +1,42 @@
 var MasterEnglishWords = {
-    "greet": {
-        "word": "greet",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukg/ukgre/ukgreen018.mp3"
-    },
-    "prepare": {
-        "word": "prepare",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukp/ukpre/ukpremi021.mp3"
-    },
-    "celebrate": {
-        "word": "celebrate",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcel/ukceleb001.mp3"
-    },
-    "wait": {
-        "word": "wait",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukw/ukwai/ukwaist004.mp3"
-    },
-    "playful": {
-        "word": "playful",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukp/ukpla/ukplate027.mp3"
-    },
-    "sorry": {
-        "word": "sorry",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksor/uksorel010.mp3"
-    },
-    "first": {
-        "word": "first",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukf/ukfir/ukfirew008.mp3"
-    },
-    "gifts": {
-        "word": "gifts",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukg/ukgha/ukghast027.mp3"
-    },
-    "packets": {
-        "word": "packets",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/uko/ukozo/ukozone025.mp3"
-    },
-    "kitchen": {
-        "word": "kitchen",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukk/ukkit/ukkit__002.mp3"
-    },
-    "festival": {
-        "word": "festival",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukf/ukfer/ukferre016.mp3"
-    },
-    "lanterns": {
-        "word": "lanterns",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukl/uklan/uklangu012.mp3"
-    },
-    "stall": {
-        "word": "stall",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksta/ukstair014.mp3"
-    },
-    "stool": {
-        "word": "stool",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksto/ukstoma019.mp3"
-    },
-    "street": {
-        "word": "street",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/uks/ukstr/ukstrat018.mp3"
-    },
-    "price": {
-        "word": "price",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukp/ukpri/ukprice001.mp3"
-    },
-    "dumplings": {
-        "word": "dumplings",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukd/ukdul/ukdull_018.mp3"
-    },
-    "meat": {
-        "word": "meat",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukm/ukmea/ukmeant012.mp3"
-    },
-    "mooncake": {
-        "word": "mooncake",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/c/cdo/cdo03/cdo0317moonuk2512.mp3"
-    },
-    "vegetables": {
-        "word": "vegetables",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukv/ukvec/ukvecto010.mp3"
-    },
-    "sister": {
-        "word": "sister",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksin/uksinle020.mp3"
-    },
-    "siblings": {
-        "word": "siblings",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/uks/ukshu/ukshun_021.mp3"
-    },
-    "cousin": {
-        "word": "cousin",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcou/ukcouri017.mp3"
-    },
-    "grandparents": {
-        "word": "grandparents",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukg/ukgra/ukgrand020.mp3"
-    },
-    "diary": {
-        "word": "diary",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukd/ukdia/ukdiaph005.mp3"
-    },
-    "often": {
-        "word": "often",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/uko/ukoff/ukoffst003.mp3"
-    },
-    "soften": {
-        "word": "soften",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksod/uksodiu009.mp3"
-    },
-    "listen": {
-        "word": "listen",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukl/uklis/uklisp_004.mp3"
-    },
-    "castle": {
-        "word": "castle",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcas/ukcaste003.mp3"
-    },
-    "carried": {
-        "word": "carried",
-        "audio": "https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcar/ukcarpe010.mp3"
-    }
+"greet":{"word":"greet","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukg/ukgre/ukgreen018.mp3"},
+"prepare":{"word":"prepare","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukp/ukpre/ukpremi021.mp3"},
+"celebrate":{"word":"celebrate","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcel/ukceleb001.mp3"},
+"wait":{"word":"wait","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukw/ukwai/ukwaist004.mp3"},
+"playful":{"word":"playful","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukp/ukpla/ukplate027.mp3"},
+"sorry":{"word":"sorry","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksor/uksorel010.mp3"},
+"first":{"word":"first","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukf/ukfir/ukfirew008.mp3"},
+"gifts":{"word":"gifts","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukg/ukgha/ukghast027.mp3"},
+"packets":{"word":"packets","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/uko/ukozo/ukozone025.mp3"},
+"kitchen":{"word":"kitchen","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukk/ukkit/ukkit__002.mp3"},
+"festival":{"word":"festival","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukf/ukfer/ukferre016.mp3"},
+"lanterns":{"word":"lanterns","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukl/uklan/uklangu012.mp3"},
+"stall":{"word":"stall","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksta/ukstair014.mp3"},
+"stool":{"word":"stool","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksto/ukstoma019.mp3"},
+"street":{"word":"street","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/uks/ukstr/ukstrat018.mp3"},
+"price":{"word":"price","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukp/ukpri/ukprice001.mp3"},
+"dumplings":{"word":"dumplings","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukd/ukdul/ukdull_018.mp3"},
+"meat":{"word":"meat","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukm/ukmea/ukmeant012.mp3"},
+"mooncake":{"word":"mooncake","audio":"https://dictionary.cambridge.org/media/english/uk_pron/c/cdo/cdo03/cdo0317moonuk2512.mp3"},
+"vegetables":{"word":"vegetables","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukv/ukvec/ukvecto010.mp3"},
+"sister":{"word":"sister","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksin/uksinle020.mp3"},
+"siblings":{"word":"siblings","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/uks/ukshu/ukshun_021.mp3"},
+"cousin":{"word":"cousin","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcou/ukcouri017.mp3"},
+"grandparents":{"word":"grandparents","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukg/ukgra/ukgrand020.mp3"},
+"diary":{"word":"diary","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukd/ukdia/ukdiaph005.mp3"},
+"often":{"word":"often","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/uko/ukoff/ukoffst003.mp3"},
+"soften":{"word":"soften","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksod/uksodiu009.mp3"},
+"listen":{"word":"listen","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukl/uklis/uklisp_004.mp3"},
+"castle":{"word":"castle","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcas/ukcaste003.mp3"},
+"carried":{"word":"carried","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukc/ukcar/ukcarpe010.mp3"},
+"busy":{"word":"busy","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukb/ukbus/ukbushr018.mp3"},
+"goats":{"word":"goats","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukg/ukgoa/ukgoall009.mp3"},
+"farmyard":{"word":"farmyard","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukf/ukfan/ukfanny025.mp3"},
+"Wednesday":{"word":"Wednesday","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukw/ukwea/ukweari029.mp3"},
+"Saturday":{"word":"Saturday","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/uks/uksat/uksatan024.mp3"},
+"hoes":{"word":"hoes","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukh/ukhob/ukhobno011.mp3"},
+"prowled":{"word":"prowled","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/ukp/ukpro/ukprowe002.mp3"},
+"scraped":{"word":"scraped","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/uks/ukscr/ukscrap003.mp3"},
+"scratched":{"word":"scratched","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/uks/ukscr/ukscrap011.mp3"},
+"stretched":{"word":"stretched","audio":"https://dictionary.cambridge.org/media/english/uk_pron/u/uks/ukstr/ukstrep006.mp3"}
 }
