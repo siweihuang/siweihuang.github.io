@@ -9,7 +9,7 @@ var mainData = [
             "You will not know how far you can go",
             "Our bodies are our gardens.<br>Our wills are gardeners. <br> -- William Sharespeare",
             "Fear comes from the selfish idea of cutting one's self off from the universe",
-            "Live your own life. That is to say, where you are, as you are, with what you are, and with who you are. Accept the sitation in which you find yourself and try, at the same time, to adapt ot it. You cannot escape from it."
+            "Live your own life. That is to say, where you are, as you are, with what you are, and with who you are. Accept the sitation in which you find yourself and try, at the same time, to adapt to it. You cannot escape from it."
             ,"It is only when we give complete attention to a problem, and solve it immediately - never carrying it over to the next day, the next minute, that there is solitude.",
             "A mind that is burdened with the past is a sorrowful mind.",
             "The known are our house, our furniture, our family, our character, our work, our knowledge, our fame, our loneliness, our gods...",

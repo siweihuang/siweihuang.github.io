@@ -76,6 +76,7 @@
             html += paragraphTemp
 
             if (MasterEnglishWords[inputJSON.words[j]]) {
+                html += `<div style="text-align: center;font-size: 2vmax;">${MasterEnglishWords[inputJSON.words[j]].description}"</div>`
                 var audioID = 0;
                 audioID = j + 1
                 html += `<audio id="audio${audioID}" src="${MasterEnglishWords[inputJSON.words[j]].audio}"></audio>`
