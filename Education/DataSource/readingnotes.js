@@ -9,7 +9,7 @@ var mainData = [
             "You will not know how far you can go",
             "Our bodies are our gardens.<br>Our wills are gardeners. <br> -- William Sharespeare",
             "Fear comes from the selfish idea of cutting one's self off from the universe",
-            "Live your own life. That is to say, where you are, as you are, with what you are, and with who you are. Accept the sitation in which you find yourself and try, at the same time, to adapt to it. You cannot escape from it.",
+            "Live your own life. That is to say, where you are, as you are, with what you are, and with who you are. Accept the situation in which you find yourself and try, at the same time, to adapt to it. You cannot escape from it.",
             "It is only when we give complete attention to a problem, and solve it immediately - never carrying it over to the next day, the next minute, that there is solitude.",
             "A mind that is burdened with the past is a sorrowful mind.",
             "The known are our house, our furniture, our family, our character, our work, our knowledge, our fame, our loneliness, our gods...",
@@ -26,7 +26,7 @@ var mainData = [
         "testdate":"23/10/2022",
         "words": [
             "The person who can wear the mantel of a Master is one who is capable of solving his own emotional and mental problems and who can show others the way to overcome their emotional and mental problems.",
-            "To go from opinion to perception, fomr imagination to fact, from illusion to reality, form something that is not there, to something that is; that is the way forward.",
+            "To go from opinion to perception, from imagination to fact, from illusion to reality, from something that is not there, to something that is; that is the way forward.",
             "To grow is to go beyond what you are today. Stand up at yourself. Do not imitate. Do not pretend to have achieved your goal and do not try to cut corner. Just try to grow.",
             "The human soul travels from law to love, from discipline to freedom, from the moral plane to the spiritual plane.",
             "Wise people, who know and understand the soul, are indifferent to both pleasure and pain; they have risen above sensations. They are indifferent to the past and the future; they have risen above time. They are indifferent to danger; they have risen above fear. Wise people know that what is here, is also there; that what was, will also be. They see unity, not division.",
