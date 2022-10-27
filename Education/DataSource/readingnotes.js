@@ -33,7 +33,7 @@ var mainData = [
             "The outward freedom that we shall attain will only be in exact proportion to the inward freedom to which we may have grown at any given moment.",
             "Very few people in this world can reason normally. There is a terrible tendency to accept all that is said, all that is read, and to accept it without question. Only he who is ready to question, to think for himself, will find the truth! <br>To understand the current of a river, he who wishes to know the truth must enter the river.",
             "By the term religion, I am using it in its broadest sense, meaning thereby self realization or knowledge of the self.",
-            "Allow your son to say foolish things. They are foolish things from your point of view, but when he speaks, agree with him. Say, 'all right, yes. I understand what you mean. Yes, I agree.' Once he has expressed his opition, then try to show him that there are inconsistencies in some of what he is saying."
+            "Allow your son to say foolish things. They are foolish things from your point of view, but when he speaks, agree with him. Say, 'all right, yes. I understand what you mean. Yes, I agree.' Once he has expressed his opinion, then try to show him that there are inconsistencies in some of what he is saying."
         ]
     },
     {
