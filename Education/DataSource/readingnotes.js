@@ -33,7 +33,23 @@ var mainData = [
             "The outward freedom that we shall attain will only be in exact proportion to the inward freedom to which we may have grown at any given moment.",
             "Very few people in this world can reason normally. There is a terrible tendency to accept all that is said, all that is read, and to accept it without question. Only he who is ready to question, to think for himself, will find the truth! <br>To understand the current of a river, he who wishes to know the truth must enter the river.",
             "By the term religion, I am using it in its broadest sense, meaning thereby self realization or knowledge of the self.",
-            "Allow your son to say foolish things. They are foolish things from your point of view, but when he speaks, agree with him. Say, 'all right, yes. I understand what you mean. Yes, I agree.' Once he has expressed his opinion, then try to show him that there are inconsistencies in some of what he is saying."
+            "Allow your son to say foolish things. They are foolish things from your point of view, but when he speaks, agree with him. Say, 'all right, yes. I understand what you mean. Yes, I agree.' Once he has expressed his opinion, then try to show him that there are inconsistencies in some of what he is saying.",
+            "Guard your tongue, for it is highly dangerous; unguarded words can caseu terrible distress. A single bad word can destroy a vast quantity of good. A wound caused by fire will eventually heal; but a wound caused by the tongue leaves a scar that never heals.",
+            "Watching and listening are a great art. By watching and listening we learn infinitely more than we do from any books. Books are necessary, but watching and listening sharpen your senses.",
+            "The healing of the mind takes place gradually on contact with nature, with the orange on the branch, the blade of grass eating its way into the cement, and the hills hidden by the clouds."
+        ]
+    },
+    {
+        "title": "365 Part 3",
+        "subtitle":"365",
+        "testdate":"29/10/2022",
+        "words": [
+            "How can we be free to look and learn when our minds from the moment we are born to the moment we die are shaped by a particular culture in the narrow pattern of 'me?'",
+            "For centuries, we have been conditioned by nationality, castle, class, tradition, religion, language, education, literature, art, custom, convention, propaganda of all kinds, economic pressure, the food we eat, the climate we live in, our family, our friends, our experience - every influence you can think of - and therefore our responses to every problem are conditioned.",
+            "Are you aware that you are conditioned?",
+            "Sensibility is the capacity to feel, recognize, and distinguish the most tiny and subtle changes.",
+            "No matter how insignificant the thing you have to do, do it as well as you can, give it as much of your care and attention as you would give to the thing you regard as most important.",
+            "The intellectual aspect is, that love sees and understands. The emotional aspect is to feel as one with the other person. Love is unity. There is no 'me' in love, only 'you'. The behavioral aspect is, that love inspires us to give. There is no expectation; we do not expect to receive. Such love is wisdom nad liberation in itself."
         ]
     },
     {
