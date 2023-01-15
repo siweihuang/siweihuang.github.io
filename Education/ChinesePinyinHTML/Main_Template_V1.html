@@ -9,33 +9,6 @@
     <link media="print" rel="stylesheet" href="./css/print.css">
     <script src="./Main_Data.js"></script>
 
-    <style>
-        dd {
-            display: block;
-            border: 1px solid #4CAF50;
-            height: 50px;
-            line-height: 50px;
-            color: #000;
-            text-decoration: none;
-            text-align: center;
-            padding: 0px 8px;
-            margin-top: 20px;
-        }
-
-        .button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 32px;
-            margin: 4px 2px;
-            cursor: pointer;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -97,20 +70,11 @@
 
             for (var i = 0; i < myArr.length; i++) {
 
-                if (value[i] == "：" || value[i] == "< " || value[i] == "> " || value[i] == " ") {
-                    // html = html + value[i] + "&nbsp;&nbsp;" + "<rt class='symbol'></rt>"
-                    html = html + "<rt class='symbol'></rt>"
+                if (value[i] == "，" || value[i] == "；" || value[i] == "。" || value[i] == "？"
+                    || value[i] == "!" || value[i] == "：" || value[i] == "< " || value[i] == "> ") {
+                    html = html + value[i] + "&nbsp;" + "<rt class='symbol'> </rt>"
                 } else {
-                    if (value[i] == "？" || value[i] == "!" || value[i] == "；" ||
-                        value[i] == "," || value[i] == "." ||
-                        value[i] == "，" || value[i] == "。" ||
-                        value[i] == '“' || value[i] == '”' ||
-                        value[i] == "？" || value[i] == "！") {
-                        html = html + "<dd>&nbsp;" + value[i] + "&nbsp;<rt></rt></dd>"
-                    } else {
-                        html = html + "<dd>&nbsp;" + value[i] + "&nbsp;<rt>" + myArr[i] + "</rt></dd>"
-                    }
-
+                    html = html + "&nbsp;" + value[i] + "&nbsp;<rt>" + myArr[i] + "</rt>"
                 }
 
             }
