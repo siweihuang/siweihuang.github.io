@@ -72,5 +72,43 @@ var mainData = [
             "He felt very <b><u>comfortable</u></b> sitting on that big sofa.",
             "Peter has a <b><u>fear</u></b> of sleeping alone.",
             "As the bed was <b><u>full</u></b>, there was little room for me to sleep."],
+    },
+    {
+        "title": "Unit 3 - My Gumpy's Outing",
+        "subtitle":"Unit 3",
+        "testdate":"25/02/2023",
+        "words": [
+            "sheep",
+            "stream",
+            "creep",
+            "pleaded",
+            "bleated",
+            "leaked",
+            "teased",
+            "trampled",
+            "squabbled",
+            "clasped",
+            "falpped",
+            "mucked",
+            "owned",
+            "field",
+            "entrance"],
+        "sentences": [
+            "The farmer kept the <b><u>sheep</u></b> for its wool.",
+            "As the <b><u>steam</u></b> was quite shallow, we were able to walk across it.",
+            "I tried to <b><u>creep</u></b> around the corner, hoping my brother would not see me.",
+            "Karen <b><u>pleaded</u></b> with her mother for a shopping trip.",
+            "The goat <b><u>bleated</u></b> weakly in hunger.",
+            "The water pipe had <b><u>leaked</u></b> so we called a plumber to fix it.",
+            "Harry <b><u>teased</u></b> his cousin when he made a mistake.",
+            "The horses <b><u>trampled</u></b> on the flowers as they galloped across the field.",
+            "The boys <b><u>squabbled</u></b> noisily over a ball during recess.",
+            "We <b><u>clasped</u></b> each other's hands so that none of us would be lost in the crowd.",
+            "A yellow bird <b><u>flapped</u></b> its wings furiously and flew off.",
+            "The children <b><u>mucked</u></b> about all afternoon and wasted a lot of time.",
+            "My Gumpy <b><u>owned</u></b> a boat and his house was by a river.",
+            "I saw a fox run across the <b><u>field</u></b>.",
+            "When we arrived at the zoo, we saw that the <b><u>entrance</u></b> was packed with tourists."
+        ]
     }
 ]
