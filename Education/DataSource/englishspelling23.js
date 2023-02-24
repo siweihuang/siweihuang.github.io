@@ -76,7 +76,7 @@ var mainData = [
     {
         "title": "Unit 3 - My Gumpy's Outing",
         "subtitle":"Unit 3",
-        "testdate":"25/02/2023",
+        "testdate":"23/02/2023",
         "words": [
             "sheep",
             "stream",
@@ -95,7 +95,7 @@ var mainData = [
             "entrance"],
         "sentences": [
             "The farmer kept the <b><u>sheep</u></b> for its wool.",
-            "As the <b><u>steam</u></b> was quite shallow, we were able to walk across it.",
+            "As the <b><u>stream</u></b> was quite shallow, we were able to walk across it.",
             "I tried to <b><u>creep</u></b> around the corner, hoping my brother would not see me.",
             "Karen <b><u>pleaded</u></b> with her mother for a shopping trip.",
             "The goat <b><u>bleated</u></b> weakly in hunger.",
@@ -109,6 +109,44 @@ var mainData = [
             "My Gumpy <b><u>owned</u></b> a boat and his house was by a river.",
             "I saw a fox run across the <b><u>field</u></b>.",
             "When we arrived at the zoo, we saw that the <b><u>entrance</u></b> was packed with tourists."
+        ]
+    },
+    {
+        "title": "Unit 4 - A Day In the Kitchen with Grandma",
+        "subtitle":"Unit 4",
+        "testdate":"09/03/2023",
+        "words": [
+            "towel",
+            "tooth",
+            "noodles",
+            "bamboo",
+            "dough",
+            "dumplings",
+            "equipment",
+            "refrigerator",
+            "crushed",
+            "stained",
+            "shaped",
+            "decorated",
+            "stirred",
+            "boiled",
+            "fried"],
+        "sentences": [
+            "She used the kitchen <b><u>towel</u></b> to wipe the oily table.",
+            "Grandma broke a <b><u>tooth</u></b> while she was eating some chilli crabs.",
+            "I ordered chicken <b><u>noodles</u></b> for dinner.",
+            "She wrapped the rice with <b><u>bamboo</u></b> leaves.",
+            "Karen and her mother kneaded the <b><u>dough</u></b> to make bread.",
+            "We eat rice <b><u>dumplings</u></b> during the Dragon Boat Festival.",
+            "My parents went shopping for new kitchen <b><u>equipment</u></b> for our new house.",
+            "Please keep the milk in the <b><u>refrigerator</u></b>.",
+            "Grandma <b><u>crushed</u></b> the blue flowers to colour the rice.",
+            "His shirt was <b><u>stained</u></b> with ink.",
+            "The chef <b><u>shaped</u></b> with mixture into a ball.",
+            "My siblings and I <b><u>decorated</u></b> the gingerbread cookied with icing.",
+            "He <b><u>stirred</u></b> some milk into his coffee.",
+            "Grandma <b><u>boiled</u></b> some eggs to add to the salad.",
+            "My mother <b><u>fried</u></b> fish for yesterday's dinner."
         ]
     }
 ]
