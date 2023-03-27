@@ -148,5 +148,43 @@ var mainData = [
             "Grandma <b><u>boiled</u></b> some eggs to add to the salad.",
             "My mother <b><u>fried</u></b> fish for yesterday's dinner."
         ]
+    },
+    {
+        "title": "Unit 5 - A butterfly is born",
+        "subtitle":"Unit 5",
+        "testdate":"13/04/2023",
+        "words": [
+            "nectar",
+            "pupa",
+            "shell",
+            "leaves",
+            "caterpillar",
+            "butterflies",
+            "branch",
+            "watch",
+            "crunch",
+            "munch",
+            "hatches",
+            "crumpled",
+            "amazed",
+            "hungry",
+            "happening"],
+        "sentences": [
+            "Bees collect <b><u>nector</u></b> from flowers.",
+            "A <b><u>pupa</u></b> is an insect in one stage of the life cycle of a butterfly.",
+            "The <b><u>shell</u></b> of an egg is the hard covering which surrounds it.",
+            "Many trees lose their <b><u>leaves</u></b> in the winter.",
+            "The <b><u>caterpillar</u></b> turns into a butterfly.",
+            "We tried to catch the <b><u>butterflies</u></b> with a net.",
+            "The bat hangs from a <b><u>branch</u></b> to rest.",
+            "We are going to <b><u>watch</u></b> a movie this Sunday.",
+            "She is trying to <b><u>crunch</u></b> the ice cube in her mouth.",
+            "We were shocked that she could <b><u>munch</u></b> her way through a big tub of popcorn.",
+            "The egg <b><u>hatches</u></b> into a baby bird.",
+            "Susan threw the <b><u>crumpled</u></b> piece of paper away.",
+            "He was <b><u>amazed</u></b> when the magician pulled out a rabbit from his hat.",
+            "The children are always <b><u>hungry</u></b> when they come home from school.",
+            "Can you see what is <b><u>happening</u></b> in the neighbour's house?"
+        ]
     }
 ]
