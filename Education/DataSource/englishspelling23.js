@@ -186,5 +186,43 @@ var mainData = [
             "The children are always <b><u>hungry</u></b> when they come home from school.",
             "Can you see what is <b><u>happening</u></b> in the neighbour's house?"
         ]
+    },
+    {
+        "title": "Unit 8 - Roti Prata",
+        "subtitle":"Unit 8",
+        "testdate":"13/07/2023",
+        "words": [
+            "tried",
+            "carried",
+            "patted",
+            "flipped",
+            "tossed",
+            "arrived",
+            "sprinkled",
+            "stretched",
+            "celebrate",
+            "excited",
+            "afternoon",
+            "harmony",
+            "friends",
+            "students",
+            "principal"],
+        "sentences": [
+            "I <b><u>tried</u></b> a few times to wrap the rice dumpling, but failed.",
+            "He <b><u>carried</u></b> the books to the staffroom.",
+            "My mother <b><u>patted</u></b> the vegetables dry with a paper towel.",
+            "She dropped the pancake onto the floor when she <b><u>flipped</u></b> it.",
+            "We <b><u>tossed</u></b> the coin to see which one of us would start the game.",
+            "My dog wagged its tail when the guests <b><u>arrived</u></b> at the gate.",
+            "Mary <b><u>sprinkled</u></b> some chocolate chips on the muffins.",
+            "He <b><u>stretched</u></b> the roti prata dough by pulling the sides.",
+            "This year, I will <b><u>celebrate</u></b> my birthday at home instead of dining out at a restaurant.",
+            "James was so <b><u>excited</u></b> about the learning journey that he could not sleep all night.",
+            "My brother enjoys taking a nap every <b><u>afternoon</u></b>.",
+            "Although there are several races in the country, the people live together in <b><u>harmony</u></b>.",
+            "Alice has made many <b><u>friends</u></b> in the new school within one month.",
+            "The <b><u>students</u></b> have been reminded to wear their face masks properly.",
+            "The <b><u>principal</u></b> praised Martin for returing the wallet."
+        ]
     }
 ]
