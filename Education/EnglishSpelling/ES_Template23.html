@@ -75,12 +75,19 @@
             html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 5vmax;">`
             html += paragraphTemp
 
-            if (MasterEnglishWords[inputJSON.words[j]]) {
+            /**if (MasterEnglishWords[inputJSON.words[j]]) {
                 html += `<div style="text-align: center;font-size: 2vmax;">${MasterEnglishWords[inputJSON.words[j]].description}"</div>`
                 var audioID = 0;
                 audioID = j + 1
-                html += `<audio id="audio${audioID}" src="${MasterEnglishWords[inputJSON.words[j]].audio}"></audio>`
-            }
+                html += `<audio id="audio${audioID}" src="${MasterEnglishWords[inputJSON.words[j]].audio}"></audio>` 
+            }*/
+
+            var audioID = 0;
+            audioID = j + 1
+            var audioSrc1 = inputJSON.words[j].replaceAll('<b><u>', '').replaceAll('</u></b>', '').replaceAll('"', '')
+            var audioSrc2 = inputJSON.sentences[j].replaceAll('<b><u>', '').replaceAll('</u></b>', '').replaceAll('"', '')
+            html += `<audio id="audio${audioID}" src="https://dict.youdao.com/dictvoice?type=1&audio=${audioSrc1}"></audio>`
+            html += `<audio id="audio${audioID * 30}" src="https://dict.youdao.com/dictvoice?type=1&audio=${audioSrc2}"></audio>`
 
             html += `</p></div></div>`
         }

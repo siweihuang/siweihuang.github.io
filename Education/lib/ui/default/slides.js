@@ -253,7 +253,7 @@ function keys(key) {
 			case 33: // page up
 			case 37: // leftkey
 			case 38: // upkey
-				if(number != undef) {
+			if(number != undef) {
 					go(-1 * number);
 				} else if (!incrementals[snum] || incpos <= 0) {
 					go(-1);
@@ -272,7 +272,7 @@ function keys(key) {
 				break;
 			case 80: // KeyP
 				console.log('KeyP is clicked:' + snum + ":");
-				var audio = document.getElementById("audio" + snum);
+				var audio = document.getElementById("audio" + snum*30);
 				if(audio) {
 					audio.play();
 				}
@@ -302,6 +302,12 @@ function clicker(e) {
 			go(1);
 		} else {
 			subgo(1);
+		}
+		// Added on 2023-07-28 For clicking on the mobile device, for auto playing the sentences
+		console.log('clicker is clicked:' + snum + ":");
+		var audio = document.getElementById("audio" + snum);
+		if(audio) {
+			audio.play();
 		}
 	}
 }
