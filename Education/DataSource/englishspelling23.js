@@ -224,5 +224,82 @@ var mainData = [
             "The <b><u>students</u></b> have been reminded to wear their face masks properly.",
             "The <b><u>principal</u></b> praised Martin for returing the wallet."
         ]
+    },
+    {
+        "title": "Unit 9 - Magnetic Max",
+        "subtitle":"Unit 9",
+        "testdate":"27/07/2023",
+        "words": [
+            "salt",
+            "dark",
+            "shrugged",
+            "answer",
+            "odd",
+            "amazing",
+            "enormous",
+            "carefully",
+            "ribbon",
+            "ladder",
+            "magnet",
+            "skateboard",
+            "anything",
+            "everyone",
+            "neighbourhood"],
+        "sentences": [
+            "I add a pinch of <b><u>salt</u></b> to the soup so that it is more flavourful.",
+            "The children refuse to go into the <b><u>dark</u></b> room unless you turn on the light.",
+            "He <b><u>shrugged</u></b> his shoulders as if to say that he was not interested in the game.",
+            "Nobody could <b><u>answer</u></b> that difficult question.",
+            "James felt a little <b><u>odd</u></b> having to wear a pink wig for the play.",
+            "We had an <b><u>amazing</u></b> holiday in Japan two years ago.",
+            "That elephant looks <b><u>enormous</u></b> when it is compared with the tiny mouse.",
+            '"The floor is wet. Please walk <b><u>carefully</u></b>." warned the teacher.',
+            "Mother tied a pretty <b><u>ribbon</u></b> around the Chrismas present.",
+            "The firefighters used a <b><u>ladder</u></b> to rescue the kitten in the tree.",
+            "Max used the <b><u>magnet</u></b> to move the toy car made of steel.",
+            "It is not easy to balance on a <b><u>skateboard</u></b>.",
+            "My brother did not want to do <b><u>anything</u></b> as he was tired.",
+            "Lisa told <b><u>everyone</u></b> to listen attentively to her story.",
+            "Every evening, my sister and I take a walk around the <b><u>neighbourhood</u></b>."
+        ]
+    },
+    {
+        "title": "Unit 10 - A Snake In the Garden",
+        "subtitle":"Unit 10",
+        "testdate":"17/08/2023",
+        "words": [
+            "phone",
+            "chef",
+            "ache",
+            "marched",
+            "returned",
+            "dangerous",
+            "tomatoes",
+            "vegetable",
+            "pale",
+            "gigantic",
+            "difficult",
+            "glared",
+            "sighed",
+            "shocked",
+            "apologised"],
+        "sentences": [
+            "Father took out his <b><u>phone</u></b> to call the snake-catcher.",
+            "The <b><u>chef</u></b> is busy preparing food in the kitchen for the wedding feast.",
+            "He complained of an <b><u>ache</u></b> in his shoulder which kept him awake all night.",
+            "The band <b><u>marched</u></b> through the streets.",
+            "He <b><u>returned</u></b> the book to its place on the shelf after reading it.",
+            '"It is <b><u>dangerous</u></b> to play in the kitchen," Mother warned me.',
+            "There are many fresh <b><u>tomatoes</u></b> in the garden.",
+            "My parents love to eat <b><u>vegetable</u></b> pies.",
+            "She looked <b><u>pale</u></b> and tired after working through the night.",
+            "Mei Ling found a <b><u>gigantic</u></b> snake in the garden.",
+            "Little Henry found it very <b><u>difficult</u></b> to tie his shoelaces.",
+            "Mr Lee <b><u>glared</u></b> at his son when he refused to do his homework.",
+            "Muthu <b><u>sighed</u></b> with regret when his teacher told him to redo his work neatly.",
+            "The children were <b><u>shocked</u></b> when their mother came home from the salon with pink hair.",
+            "The boy <b><u>apologised</u></b> to Mrs Tan for breaking her window."
+            
+        ]
     }
 ]
