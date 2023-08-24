@@ -301,5 +301,44 @@ var mainData = [
             "The boy <b><u>apologised</u></b> to Mrs Tan for breaking her window."
             
         ]
+    },
+    {
+        "title": "Unit 11 - The Feast",
+        "subtitle":"Unit 11",
+        "testdate":"30/08/2023",
+        "words": [
+            "feast",
+            "bodded",
+            "pranced",
+            "stamped",
+            "thumped",
+            "swoosh",
+            "cross",
+            "furious",
+            "fabulous",
+            "dragon",
+            "dinosaur",
+            "homemade",
+            "midnight",
+            "invitation",
+            "nonsense"],
+        "sentences": [
+            "We had a <b><u>feast</u></b> of fresh seafood to celebrate Chinese New Year.",
+            "After feeding the puppy, Mrs Tan <b><u>bobbed</u></b> down again behind the computer to continue with her work.",
+            "The little boy <b><u>pranced</u></b> cross the room in his cowboy costume.",
+            "She <b><u>stamped</u></b> her feet and stormed out of the room in anger.",
+            "My grandfather <b><u>thumped</u></b> down the stairs and flopped into his armchair.",
+            "I heard cars <b><u>swoosh</u></b> through the streets.",
+            "Mother was <b><u>cross</u></b> with me because I did not finish my homework.",
+            "He was <b><u>furious</u></b> that I was late for our appointment.",
+            "My mother looked <b><u>fabulous</u></b> in her new dress.",
+            "A <b><u>dragon</u></b> is a large, immaginary animal that can blow fire out of its mouth.",
+            "The triceratops is a plant-eating <b><u>dinosaur</u></b> with three horns and a large frill on its head.",
+            "Aunt Kelly sold her <b><u>homemade</u></b> bread at the market.",
+            "They did not arrive at their hotel until after <b><u>midnight</u></b>.",
+            "We received an <b><u>invitation</u></b> to Asher's birthday party.",
+            "No one listened to what he said as it was utter <b><u>nonsense</u></b> as usual."
+            
+        ]
     }
 ]
