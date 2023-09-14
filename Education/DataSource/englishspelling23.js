@@ -340,5 +340,44 @@ var mainData = [
             "No one listened to what he said as it was utter <b><u>nonsense</u></b> as usual."
             
         ]
+    },
+    {
+        "title": "Unit 12 - Willy And Hugh",
+        "subtitle":"Unit 12",
+        "testdate":"21/09/2023",
+        "words": [
+            "sneered",
+            "appeared",
+            "lonely",
+            "nasty",
+            "useless",
+            "surrounded",
+            "interesting",
+            "panicked",
+            "terrifying",
+            "intelligent",
+            "patiently",
+            "nervously",
+            "except",
+            "themselves",
+            "library"],
+        "sentences": [
+            "She <b><u>sneered</u></b> at my new watch because it was not expensive.",
+            "He suddenly <b><u>appeared</u></b> in the doorway and gave us a shock.",
+            "Jane feels very <b><u>lonely</u></b> because nobody talks to her.",
+            "Nobody likes Jimmy because he is always <b><u>nasty</u></b> to people.",
+            "The boys did not let Willy join in any games as they felt he was <b><u>useless</u></b>.",
+            "The policemen caught up with the thief and <b><u>surrounded</u></b> him.",
+            "She has a lot of <b><u>interesting</u></b> ideas for the Science project.",
+            "When Danny was about to jump over the hurdle, he <b><u>panicked</u></b> and fell.",
+            "Lisa heared a <b><u>terrifying</u></b> noise from the room next door.",
+            "The <b><u>intelligent</u></b> and hardworking student scored full marks for all his test.",
+            "He waited <b><u>patiently</u></b> for his turn to play on the slide.",
+            "She entered the examination room <b><u>nervously</u></b>.",
+            "Everyone seemed to have friends <b><u>except</u></b> Willy.",
+            "They enjoyed <b><u>themselves</u></b> very much at the party.",
+            "We go to <b><u>library</u></b> every Sunday to borrow books."
+            
+        ]
     }
 ]
