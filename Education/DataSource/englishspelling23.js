@@ -379,5 +379,44 @@ var mainData = [
             "We go to <b><u>library</u></b> every Sunday to borrow books."
             
         ]
+    },
+    {
+        "title": "Unit 13 - Postcards To David",
+        "subtitle":"Unit 13",
+        "testdate":"12/10/2023",
+        "words": [
+            "January",
+            "February",
+            "July",
+            "hazy",
+            "windy",
+            "merry",
+            "crying",
+            "syrup",
+            "climb",
+            "write",
+            "thinking",
+            "through",
+            "ground",
+            "postcard",
+            "special"],
+        "sentences": [
+            "David is starting school in <b><u>January</u></b>.",
+            "He was born in <b><u>February</u></b>.",
+            "We moved house in <b><u>July</u></b>.",
+            "The sky was <b><u>hazy</u></b> because of the forest fire.",
+            "On <b><u>windy</u></b> days, the children fly their kites in the park.",
+            "We could hear the <b><u>merry</u></b> sound of laughter coming from the class party.",
+            "The baby is <b><u>crying</u></b> for milk as he is hungry.",
+            "Mother poured some <b><u>syrup</u></b> into the drink to sweeten it.",
+            "As Ron is strong, he is able to <b><u>climb</u></b> up the rock wall easily.",
+            "Our teachers always remind us to <b><u>write</u></b> our words clearly.",
+            "David is <b><u>thinking</u></b> of a solution to the problem.",
+            "We had to watch out for snakes as we walked <b><u>through</u></b> the jungle.",
+            "We had to sit on the <b><u>ground</u></b> as there were no chairs around.",
+            "A <b><u>postcard</u></b> can be mailed without an envelope.",
+            "Oliver and his brother made a <b><u>special</u></b> effort to bake a cake for their mother."
+            
+        ]
     }
 ]
