@@ -418,5 +418,43 @@ var mainData = [
             "Oliver and his brother made a <b><u>special</u></b> effort to bake a cake for their mother."
             
         ]
+    },
+    {
+        "title": "Unit 14 - The Bicycle Race",
+        "subtitle":"Unit 14",
+        "testdate":"08/11/2023",
+        "words": [
+            "blacksmith",
+            "trishaw",
+            "overjoyed",
+            "grateful",
+            "different",
+            "because",
+            "retired",
+            "cheered",
+            "bicycle",
+            "wheelchair",
+            "recycling",
+            "pedalled",
+            "project",
+            "colourful",
+            "disappointed"],
+        "sentences": [
+            "A <b><u>blacksmith</u></b> is a person who makes and repairs iron objects and horseshoes.",
+            "The <b><u>trishaw</u></b> was a popular type of transportation in Singapore many years ago.",
+            "They were <b><u>overjoyed</u></b> to learn that their son had not been injured in the accident.",
+            "The survivors were <b><u>grateful</u></b> to be alive after the earthquake.",
+            "The Asian elephants are <b><u>different</u></b> from the African elephants.",
+            "The road was flooded <b><u>because</u></b> it rained heavily.",
+            "Aunt Sarah has <b><u>retired</u></b> from her job two years ago.",
+            "The spectators <b><u>cheered</u></b> him on as he struggled to reach the finishing line after his fall.",
+            "Uncle Lim fixed a set of training wheels on the <b><u>bicycle</u></b> for his grandson to cycle.",
+            "Kate injured her leg and had to use the <b><u>wheelchair</u></b> when she was in school.",
+            "David found some useful things from the <b><u>recycling</u></b> bin that could be reused.",
+            "He <b><u>pedalled</u></b> hard to go up the steep slope.",
+            "The teacher gave me some materials to help me complete the <b><u>project</u></b>.",
+            "I designed a <b><u>colourful</u></b> card for my mother.",
+            "Paul was <b><u>disappointed</u></b> as the trip to the zoo was cancelled due to the rain."            
+        ]
     }
 ]
