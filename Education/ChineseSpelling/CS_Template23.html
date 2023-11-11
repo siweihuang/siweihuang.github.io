@@ -98,6 +98,12 @@
                 html += paragraphTemp
             }
 
+            // Add audio 
+            let weekNo = pageNo * 1 + 1;
+            var audioID = 0;
+            audioID = j + 1;
+            var audioSrc1 = `${weekNo}-${j}.mp3`;
+            html += `<audio id="audio${audioID}" src="..\\..\\public\\download\\mp3\\Chinese\\AY2023\\ww${weekNo}\\${audioSrc1}"></audio>`
 
             html += `</p></div></div>`
         }
