@@ -5,8 +5,7 @@
     <title id="maintitle"></title>
 
     <!-- Input Data -->
-    <script src="../DataSource/englishspelling24.js"></script>
-    <script src="../DataSource/MasterEnglishWords.js"></script>
+    <script src="../DataSource/englishcomprehension.js"></script>
 
     <!-- configuration parameters -->
     <meta name="defaultView" content="slideshow" />
@@ -63,33 +62,17 @@
 
         var title = inputJSON.title
         var subtitle = inputJSON.subtitle
-        html += `<div class="slide"><h1>English Spelling 2024</h1><p style="text-align: center;font-size: 6vmax;">`
+        html += `<div class="slide"><h1>English Comprehension</h1><p style="text-align: center;font-size: 6vmax;">`
         html += title
         html += `</p></div>`
 
-        for (var j = 0; j < inputJSON.sentences.length; j++) {
-            let paragraphTemp = inputJSON.sentences[j]
+        for (var j = 0; j < inputJSON.words.length; j++) {
+            let paragraphTemp = inputJSON.words[j]
             html += `<div class="slide"><h1>`
             var displayID = j + 1
             html = html + subtitle + " - " + displayID
-            html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 5vmax;">`
+            html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 3vmax;">`
             html += paragraphTemp
-
-            /**if (MasterEnglishWords[inputJSON.words[j]]) {
-                html += `<div style="text-align: center;font-size: 2vmax;">${MasterEnglishWords[inputJSON.words[j]].description}"</div>`
-                var audioID = 0;
-                audioID = j + 1
-                html += `<audio id="audio${audioID}" src="${MasterEnglishWords[inputJSON.words[j]].audio}"></audio>` 
-            }*/
-
-            html += `<div style="text-align: center;font-size: 2vmax;">"${inputJSON.meanings[j]}"</div>`
-
-            var audioID = 0;
-            audioID = j + 1
-            var audioSrc1 = inputJSON.words[j].replaceAll('<b><u>', '').replaceAll('</u></b>', '').replaceAll('"', '')
-            var audioSrc2 = inputJSON.sentences[j].replaceAll('<b><u>', '').replaceAll('</u></b>', '').replaceAll('"', '')
-            html += `<audio id="audio${audioID}" src="https://dict.youdao.com/dictvoice?type=1&audio=${audioSrc1}"></audio>`
-            html += `<audio id="audio${audioID * 30}" src="https://dict.youdao.com/dictvoice?type=1&audio=${audioSrc2}"></audio>`
 
             html += `</p></div></div>`
         }
