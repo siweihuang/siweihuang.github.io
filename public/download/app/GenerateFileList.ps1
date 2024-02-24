@@ -1,5 +1,5 @@
-# Define the root folder
-$rootFolder = "C:\Projects_Cloud\2.GitHub\siweihuang.github.io\public\download\app"
+# Get the current directory as the root folder
+$rootFolder = Get-Location
 
 # Function to recursively list files
 function Get-FilesRecursive {
@@ -25,4 +25,4 @@ $filteredFiles = $files | Where-Object { $_.FolderName -ne "" }
 $jsonObject = $filteredFiles | ConvertTo-Json
 
 # Save JSON object to a file
-$jsonObject | Out-File -FilePath "files.json"
+$jsonObject | Out-File -FilePath "files.json" -Encoding UTF8						     
