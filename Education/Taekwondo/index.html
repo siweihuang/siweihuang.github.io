@@ -18,7 +18,7 @@
 
         .wrap {
             margin: 0 auto;
-            width: 1000px;
+            width: 1500px;
         }
 
         .logo {
@@ -83,7 +83,7 @@
     <!---728x90--->
     <div class="wrap">
         <div class="logo">
-            <h1>Taekwondo Grading Patterns</h1>
+            <h1>Taekwondo Grading Patterns 跆拳道十级九段 - 太极八卦</h1>
             <div id="mainContent"></div>
         </div>
     </div>
@@ -94,18 +94,22 @@
 
     let text = `<table class="center">
     <tr>
-        <th>Jang</th>
-        <th>Target Belt Colour</th>
-        <th>Training time to progress to next belt</th>
+        <th>Current Belt Colour</th>
+        <th>Poomsae</th>
+        <th>Rank</th>
+        <th>Group</th>
+        <th>Level</th>
     </tr>`;
     for (var i = 0; i < inputJSON.length; i++) {
         let index = i + 1
         let type = "paragraph" + i
         text += `
         <tr>
-            <td>${index}</td>
-            <td><a href="./EC_Template.html?pageNo=${i}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;</a></td>
-            <td>&nbsp;${inputJSON[i].testdate}&nbsp;</td>
+            <td><a href="./TKD_Template.html?pageNo=${i}" target="_blank">&nbsp;${inputJSON[i].belt_color}&nbsp;</a></td>
+            <td><a href="${inputJSON[i].video}" target="_blank">&nbsp;${inputJSON[i].pattern}&nbsp;</a></td>
+            <td>${inputJSON[i].meaning}</td>
+            <td>${inputJSON[i].rank}</td>
+            <td>${inputJSON[i].level}</td>
         </tr>`
     }
 
