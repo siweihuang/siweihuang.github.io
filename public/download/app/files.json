@@ -649,7 +649,31 @@
     },
     {
         "FolderName":  "Enrichment",
+        "FileName":  "ChineseClassical-LunYu-Unit-01.json"
+    },
+    {
+        "FolderName":  "Enrichment",
+        "FileName":  "ChineseClassical-LunYu-Unit-02.json"
+    },
+    {
+        "FolderName":  "Enrichment",
+        "FileName":  "ChineseClassical-LunYu-Unit-03.json"
+    },
+    {
+        "FolderName":  "Enrichment",
+        "FileName":  "ChineseClassical-QuanXue.json"
+    },
+    {
+        "FolderName":  "Enrichment",
         "FileName":  "index.json"
+    },
+    {
+        "FolderName":  "Enrichment",
+        "FileName":  "indexChineseClassical_Essay.json"
+    },
+    {
+        "FolderName":  "Enrichment",
+        "FileName":  "indexChineseClassical_LunYu.json"
     },
     {
         "FolderName":  "Home",
@@ -662,6 +686,18 @@
     {
         "FolderName":  "School",
         "FileName":  "ChineseSpelling2024-Unit-06.json"
+    },
+    {
+        "FolderName":  "School",
+        "FileName":  "ChineseSpelling2024-Unit-07.json"
+    },
+    {
+        "FolderName":  "School",
+        "FileName":  "ChineseSpelling2024-Unit-08.json"
+    },
+    {
+        "FolderName":  "School",
+        "FileName":  "ChineseSpelling2024-Unit-09.json"
     },
     {
         "FolderName":  "School",
@@ -717,6 +753,10 @@
     },
     {
         "FolderName":  "School",
+        "FileName":  "indexMath2024.json"
+    },
+    {
+        "FolderName":  "School",
         "FileName":  "LearningLab2023-T4W12.json"
     },
     {
@@ -726,5 +766,9 @@
     {
         "FolderName":  "School",
         "FileName":  "LearningLab2024-T2W4.json"
+    },
+    {
+        "FolderName":  "School",
+        "FileName":  "Mathematics2024-Term3.json"
     }
 ]
