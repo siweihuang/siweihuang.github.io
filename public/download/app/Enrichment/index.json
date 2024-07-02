@@ -8,5 +8,10 @@
         "DisplayName":"古诗文",
         "FileName":"indexChineseClassical_Essay.json",
         "ReleaseDate":"2024-04-27"
+    },
+    {
+        "DisplayName":"三字经",
+        "FileName":"indexChineseClassical_SanZiJing.json",
+        "ReleaseDate":"2024-05-24"
     }
 ]

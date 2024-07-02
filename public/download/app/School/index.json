@@ -23,5 +23,10 @@
         "DisplayName":"华文听写 2024",
         "FileName":"indexChineseSpelling2024.json",
         "ReleaseDate":"2024-01-03"
+    },
+    {
+        "DisplayName":"Taboo Cards Game",
+        "FileName":"indexTabooCardsGame.json",
+        "ReleaseDate":"2024-05-18"
     }
 ]

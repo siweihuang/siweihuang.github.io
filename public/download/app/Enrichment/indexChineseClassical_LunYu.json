@@ -10,9 +10,24 @@
         "TestDate":"27/04/2024"
     },
     {
-        "DisplayName":"论语 3 - 为政篇 (24章)",
+        "DisplayName":"论语 3 - 八佾篇 (26章)",
         "FileName":"ChineseClassical-LunYu-Unit-03.json",
-        "TestDate":"28/04/2024"
+        "TestDate":"27/04/2024"
+    },
+    {
+        "DisplayName":"论语 4 - 里仁篇 (26章)",
+        "FileName":"ChineseClassical-LunYu-Unit-04.json",
+        "TestDate":"05/06/2024"
+    },
+    {
+        "DisplayName":"论语 5 - 公冶长篇 (28章)",
+        "FileName":"ChineseClassical-LunYu-Unit-05.json",
+        "TestDate":"05/06/2024"
+    },
+    {
+        "DisplayName":"论语 6 - 雍也篇 (30章)",
+        "FileName":"ChineseClassical-LunYu-Unit-06.json",
+        "TestDate":"05/06/2024"
     }
     
 ]
