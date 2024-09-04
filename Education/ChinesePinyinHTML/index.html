@@ -28,20 +28,44 @@
             <th>目录</th>
             <th>书名</th>
             <th>作者</th>
+            <th></th>
+            <th>目录</th>
+            <th>书名</th>
+            <th>作者</th>
         </tr>`;
-        for (var i = 0; i < inputJSON.length; i++) {
-            let index = i + 1
+        let rows = Math.ceil(inputJSON.length / 2)
+        console.log(`rows is ${rows}`)
+        for (var i = 0; i < rows; i++) {
+            let index1 = i + 1
+            let i2 = i + rows
+            let index2 = i + 1 + rows
             let type = "paragraph" + i
             text += `
             <tr>
-                <td>${index}</td>
+                <td>${index1}</td>
                 <td><a href="./Main_Template.html?pageNo=${i}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;</a></td>
                 <td>&nbsp;${inputJSON[i].subtitle}&nbsp;</td>
-            </tr>`
+                <td></td>
+                <td>${index2}</td>
+            `
+
+            if (inputJSON[i2]) {
+                text += `
+                    <td><a href="./Main_Template.html?pageNo=${i2}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;</a></td>
+                    <td>&nbsp;${inputJSON[i2].subtitle}&nbsp;</td>
+                `
+            } else {
+                text += `
+                    <td></td>
+                    <td></td>
+                `
+            }
+            text += `
+                </tr>`
         }
 
         text += `
-    </table>
+            </table>
         `
         document.getElementById("mainContent").innerHTML = text;
     </script>

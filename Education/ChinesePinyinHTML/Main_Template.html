@@ -98,7 +98,7 @@
 
             for (var i = 0; i < myArr.length; i++) {
 
-                if (value[i] == "：" || value[i] == "< " || value[i] == "> " || value[i] == " ") {
+                if (value[i] == "：" || value[i] == "< " || value[i] == "> " || value[i] == '《' || value[i] == '》' || value[i] == " ") {
                     // html = html + value[i] + "&nbsp;&nbsp;" + "<rt class='symbol'></rt>"
                     html = html + "<rt class='symbol'></rt>"
                 } else {
@@ -106,6 +106,7 @@
                         value[i] == "," || value[i] == "." ||
                         value[i] == "，" || value[i] == "。" ||
                         value[i] == '“' || value[i] == '”' ||
+                        value[i] == '《' || value[i] == '》' ||
                         value[i] == "？" || value[i] == "！") {
                         html = html + "<dd>&nbsp;" + value[i] + "&nbsp;<rt></rt></dd>"
                     } else {
@@ -116,6 +117,7 @@
 
             }
             html += "</ruby>"
+
             document.getElementById(type).innerHTML = html;
         }
 
