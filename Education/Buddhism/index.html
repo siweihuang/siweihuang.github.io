@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Input Data -->
-    <script src="../DataSource/guanglun.js"></script>
-    <title>Education - 广论</title>
+    <script src="../DataSource/buddhism.js"></script>
+    <title>Buddhism - 佛经</title>
     <style type="text/css">
         body {
             font-family: 'Love Ya Like A Sister', cursive;
@@ -83,7 +83,7 @@
     <!---728x90--->
     <div class="wrap">
         <div class="logo">
-            <h1>广论</h1>
+            <h1>Buddhism 佛经</h1>
             <div id="mainContent"></div>
         </div>
     </div>
@@ -92,25 +92,49 @@
 <script>
     let inputJSON = mainData;
 
-    let text = `    <table class="center">
+    let text = `    <table>
     <tr>
         <th>目录</th>
-        <th>科目</th>
-        <th>日期</th>
+        <th>书名</th>
+        <th>作者</th>
+        <th></th>
+        <th>目录</th>
+        <th>书名</th>
+        <th>作者</th>
     </tr>`;
-    for (var i = 0; i < inputJSON.length; i++) {
-        let index = i + 1
+    let rows = Math.ceil(inputJSON.length / 2)
+    console.log(`rows is ${rows}`)
+    for (var i = 0; i < rows; i++) {
+        let index1 = i + 1
+        let i2 = i + rows
+        let index2 = i + 1 + rows
         let type = "paragraph" + i
         text += `
         <tr>
-            <td>${index}</td>
-            <td><a href="./GL_Template.html?pageNo=${i}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;</a></td>
-            <td>&nbsp;${inputJSON[i].testdate}&nbsp;</td>
-        </tr>`
+            <td>${index1}</td>
+            <td><a href="./BU_Template.html?pageNo=${i}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;</a></td>
+            <td>&nbsp;${inputJSON[i].subtitle}&nbsp;</td>
+            <td></td>
+            <td>${index2}</td>
+        `
+
+        if (inputJSON[i2]) {
+            text += `
+                <td><a href="./BU_Template.html?pageNo=${i2}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;</a></td>
+                <td>&nbsp;${inputJSON[i2].subtitle}&nbsp;</td>
+            `
+        } else {
+            text += `
+                <td></td>
+                <td></td>
+            `
+        }
+        text += `
+            </tr>`
     }
 
     text += `
-</table>
+        </table>
     `
     document.getElementById("mainContent").innerHTML = text;
 </script>
