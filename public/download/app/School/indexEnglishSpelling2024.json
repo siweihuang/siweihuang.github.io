@@ -23,6 +23,16 @@
         "DisplayName":"3D Oral Reading Practice",
         "FileName":"EnglishSpelling2024-Oral-1.json",
         "TestDate":"18/04/2024"
+    },
+    {
+        "DisplayName":"Unit 7 - There's A Boy Under The Bed",
+        "FileName":"EnglishSpelling2024-Unit-07.json",
+        "TestDate":"12/07/2024"
+    },
+    {
+        "DisplayName":"Unit 8 - Prince Zak And The Wise Frog",
+        "FileName":"EnglishSpelling2024-Unit-08.json",
+        "TestDate":"12/09/2024"
     }
     
 ]

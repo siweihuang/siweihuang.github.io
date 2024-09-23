@@ -15,8 +15,13 @@
         "ReleaseDate":"2024-05-24"
     },
     {
-        "DisplayName":"英语学习",
-        "FileName":"indexEnglish_Study.json",
-        "ReleaseDate":"2024-08-23"
+        "DisplayName":"读书摘要",
+        "FileName":"indexEnglish_ReadingNotes.json",
+        "ReleaseDate":"2024-07-09"
+    },
+    {
+        "DisplayName":"菩提道次第广论",
+        "FileName":"indexChinese_GuangLun.json",
+        "ReleaseDate":"2024-07-12"
     }
 ]
