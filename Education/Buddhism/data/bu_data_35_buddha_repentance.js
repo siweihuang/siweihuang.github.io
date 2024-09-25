@@ -1,4 +1,4 @@
-var mainData = [
+var mainData = 
     {
         "title": "三十五佛忏",
         "subtitle":"藏文新译版",
@@ -53,4 +53,3 @@ var mainData = [
             { "bodytext": "人中尊胜现在住世者，诸凡过去如是诸未来，功德赞叹无边如大海，于彼悉皆合掌虔皈依" }
         ]
     }  
-]

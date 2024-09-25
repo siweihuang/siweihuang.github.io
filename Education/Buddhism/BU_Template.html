@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="maintitle"></title>
 
     <link media="screen" rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <link media="print" rel="stylesheet" href="./css/print.css">
-    <script src="../DataSource/buddhism.js"></script>
 
     <style>
         dd {
@@ -68,21 +68,55 @@
 
     <script type="text/javascript" src="./dict/pinyin_dict_withtone.js"></script>
     <script type="text/javascript" src="./dict/pinyin_dict_polyphone.js"></script>
-    <script type="text/javascript" src="./pinyinUtil.js"></script>
+    <script type="text/javascript" src="./js/pinyinUtil.js"></script>
 
     </div>
 
     <script>
-        const params = new URLSearchParams(window.location.search)
-        var pageNo = ''
-        let i = 0
-        for (const param of params) {
-            if (i == 0) {
-                pageNo = param[1]
-            }
-            i++
+        mainData = []
+        // console.log(JSON.stringify(mainData))
+        // Function to dynamically load JavaScript file
+        function loadScript(fileName) {
+            return new Promise(function (resolve, reject) {
+                const script = document.createElement('script');
+                script.src = "./data/" + fileName;
+                script.type = 'text/javascript';
+                script.onload = function () {
+                    // console.log(`${fileName} has been loaded successfully.`);
+                    resolve(); // Resolve the promise once the script is loaded
+                };
+                script.onerror = function () {
+                    reject(new Error(`Failed to load the script: ${fileName}`));
+                };
+                document.body.appendChild(script);
+            });
         }
-        console.log("pageNo:" + pageNo)
+        // Function to get the 'js' parameter from the URL
+        function getScriptParam() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('input'); // Get the value of 'js' parameter
+        }
+
+        // Load the JavaScript dynamically based on the URL parameter
+        window.onload = async function () {
+            const scriptFile = getScriptParam();
+            if (scriptFile) {
+                try {
+                    await loadScript(scriptFile); // Wait for the JS file to load
+                    // Log data from the dynamically loaded script after it's fully loaded
+                    if (typeof mainData !== 'undefined') {
+                        // console.log('Data from loaded script:', JSON.stringify(mainData));
+                        getPinyin(mainData);
+                    } else {
+                        console.log('No data found in the loaded script.');
+                    }
+                } catch (error) {
+                    console.error(error);
+                }
+            } else {
+                console.log('No JS file specified.');
+            }
+        }
 
         function populateHTML(type, value, myArr) {
             let html = '';
@@ -133,9 +167,9 @@
             document.getElementById(type).innerHTML = html;
         }
 
-        function getPinyin() {
+        function getPinyin(mainDataInput) {
 
-            let inputJSON = mainData[pageNo];
+            let inputJSON = mainDataInput; // Load data directly from the JS file
 
             document.getElementById("maintitle").innerHTML = inputJSON.title;
 
@@ -164,7 +198,7 @@
         }
 
 
-        getPinyin();
+
     </script>
 
 </body>

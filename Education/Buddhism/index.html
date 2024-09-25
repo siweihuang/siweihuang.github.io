@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Input Data -->
-    <script src="../DataSource/buddhism.js"></script>
+    <script src="./data/buddhism.js"></script>
     <title>Buddhism - 佛经</title>
     <style type="text/css">
         body {
@@ -112,7 +112,7 @@
         text += `
         <tr>
             <td>${index1}</td>
-            <td><a href="./BU_Template.html?pageNo=${i}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;</a></td>
+            <td><a href="./BU_Template.html?pageNo=${i}&input=${inputJSON[i].filename}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;</a></td>
             <td>&nbsp;${inputJSON[i].subtitle}&nbsp;</td>
             <td></td>
             <td>${index2}</td>
@@ -120,7 +120,7 @@
 
         if (inputJSON[i2]) {
             text += `
-                <td><a href="./BU_Template.html?pageNo=${i2}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;</a></td>
+                <td><a href="./BU_Template.html?pageNo=${i2}&input=${inputJSON[i2].filename}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;</a></td>
                 <td>&nbsp;${inputJSON[i2].subtitle}&nbsp;</td>
             `
         } else {
