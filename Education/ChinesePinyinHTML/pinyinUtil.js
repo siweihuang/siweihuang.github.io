@@ -118,6 +118,7 @@
 		 */
 		getPinyin: function(chinese, splitter, withtone, polyphone)
 		{
+			//console.log(`input chinese ${chinese} and ${chinese.length}`)
 			if(!chinese || /^ +$/g.test(chinese)) return '';
 			splitter = splitter == undefined ? ' ' : splitter;
 			withtone = withtone == undefined ? true : withtone;
@@ -128,7 +129,9 @@
 				var noChinese = '';
 				for (var i=0, len = chinese.length; i < len; i++)
 				{
+					// console.log(`${i} is --${chinese[i]}--`)
 					var pinyin = dict.withtone[chinese[i]];
+					//console.log(`${pinyin}`)
 					if(pinyin)
 					{
 						// 如果不需要多音字，默认返回第一个拼音，后面的直接忽略
@@ -144,13 +147,23 @@
 						noChinese && ( result.push( noChinese), noChinese = '' );
 					}
 					else{
+						//console.log(`last`)
 						noChinese += chinese[i];
+						// /noChinese = ''
 					}
+					if ( noChinese ){
+						noChinese += ' ' // Added on 2024-09-25
+						result.push( noChinese);
+						noChinese = '';
+					}
+					// console.log(`${noChinese}`)
+					// console.log(`${chinese[i]}`)
 				}
-				if ( noChinese ){
-					result.push( noChinese);
-					noChinese = '';
-				}
+				// if ( noChinese ){
+				// 	//noChinese += ' ' // Added on 2024-09-25
+				// 	result.push( noChinese);
+				// 	noChinese = '';
+				// }
 			}
 			else if(dict.notone) // 使用没有声调的字典文件
 			{
@@ -177,6 +190,7 @@
 				}
 
 				if ( noChinese ){
+					noChinese += ' ' // Added on 2024-09-25
 					result.push( noChinese );
 					noChinese = '';
 				}

@@ -173,7 +173,12 @@
 
             let inputJSON = mainDataInput; // Load data directly from the JS file
 
-            document.getElementById("maintitle").innerHTML = inputJSON.title;
+            let maintitle = inputJSON.title
+            if (inputJSON.title != "") {
+                maintitle = maintitle + " " + inputJSON.subtitle
+            }
+
+            document.getElementById("maintitle").innerHTML = maintitle;
 
             let titlePinyin = pinyinUtil.getPinyin(inputJSON.title, ' ', true, true);
             let subtitlePinyin = pinyinUtil.getPinyin(inputJSON.subtitle, ' ', true, true);

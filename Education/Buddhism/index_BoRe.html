@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Input Data -->
-    <script src="./data/buddhism.js"></script>
-    <title>Buddhism - 佛经</title>
+    <script src="./data/br_data_index.js"></script>
+    <title>大般若波罗蜜多经</title>
     <style type="text/css">
         body {
             font-family: 'Love Ya Like A Sister', cursive;
@@ -83,7 +83,7 @@
     <!---728x90--->
     <div class="wrap">
         <div class="logo">
-            <h1>Buddhism 佛经</h1>
+            <h1>大般若波罗蜜多经 Mahaprajnaparamita Sutra</h1>
             <div id="mainContent"></div>
         </div>
     </div>
@@ -95,12 +95,10 @@
     let text = `    <table>
     <tr>
         <th>目录</th>
-        <th>经名</th>
-        <th>作者/译师</th>
+        <th>书名</th>
         <th></th>
         <th>目录</th>
-        <th>经名</th>
-        <th>作者/译师</th>
+        <th>书名</th>
     </tr>`;
     let rows = Math.ceil(inputJSON.length / 2)
     console.log(`rows is ${rows}`)
@@ -110,41 +108,18 @@
         let i2 = i * 2 + 1
         let index2 = i * 2 + 2
         let type = "paragraph" + i
-        console.log(inputJSON[i].category)
-
-        if (inputJSON[i].category == "file") {
-            text += `
-            <tr>
-                <td>${index1}</td>
-                <td><a href="./BU_Template.html?pageNo=${i}&input=${inputJSON[i1].filename}" target="_blank">&nbsp;${inputJSON[i1].title}&nbsp;</a></td>
-                <td>&nbsp;${inputJSON[i].subtitle}&nbsp;</td>
-                <td></td>
-            `
-        } else {
-            text += `
-            <tr>
-                <td>${index1}</td>
-                <td><a href="./${inputJSON[i1].filename}" target="_blank">&nbsp;${inputJSON[i1].title}&nbsp;</a></td>
-                <td>&nbsp;${inputJSON[i].subtitle}&nbsp;</td>
-                <td></td>
-            `
-        }
+        text += `
+        <tr>
+            <td>${index1}</td>
+            <td><a href="./BR_Template.html?input=${inputJSON[i1].filename}" target="_blank">&nbsp;${inputJSON[i1].title}&nbsp;</a></td>
+            <td></td>    
+        `
 
         if (inputJSON[i2]) {
-            console.log(inputJSON[i2].category)
-            if (inputJSON[i2].category == "file") {
-                text += `
-                <td>${index2}</td>
-                <td><a href="./BU_Template.html?input=${inputJSON[i2].filename}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;</a></td>
-                <td>&nbsp;${inputJSON[i2].subtitle}&nbsp;</td>
-                `
-            } else {
-                text += `
-                <td>${index2}</td>
-                <td><a href="./${inputJSON[i2].filename}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;</a></td>
-                <td>&nbsp;${inputJSON[i2].subtitle}&nbsp;</td>
-                `
-            }
+            text += `
+            <td>${index2}</td>    
+            <td><a href="./BR_Template.html?&input=${inputJSON[i2].filename}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;</a></td>
+            `
         } else {
             text += `
                 <td></td>
