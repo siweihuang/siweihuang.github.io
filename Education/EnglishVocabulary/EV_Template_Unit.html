@@ -18,12 +18,16 @@
 
         .wrap {
             margin: 0 auto;
-            width: 1000px;
+            width: 990px;
         }
 
         .logo {
             text-align: center;
             margin-top: 10px;
+        }
+
+        .leftText {
+            text-align: left;
         }
 
         .logo img {
@@ -159,25 +163,10 @@
             text = `<table id="myTable">
                 <tr bgcolor= "#A6A6A6" style="color: white;">
                     <th>SN</th>
-                    <th>Prefix</th>
-                    <th>Root</th>
-                    <th>Postfix</th>
-                    <th>Word</th>
-                    <th>Prounciation</th>
-                    <th>Meaning</th>
+                    <th class="leftText">Word</th>
+                    <th class="leftText">Pronunciation</th>
+                    <th class="leftText">Meaning</th>
                 </tr>`;
-
-
-
-
-
-
-            // let titlePinyin = pinyinUtil.getPinyin(inputJSON.title, ' ', true, true);
-            // let subtitlePinyin = pinyinUtil.getPinyin(inputJSON.subtitle, ' ', true, true);
-            // populateHTML("title", inputJSON.title, titlePinyin.split(" "));
-            // if (inputJSON.subtitle != "") {
-            //     populateHTML("subtitle", inputJSON.subtitle, subtitlePinyin.split(" "));
-            // }
 
 
             for (var i = 0; i < inputJSON.paragraph.length; i++) {
@@ -185,21 +174,10 @@
                 let index = i + 1
                 let type = "paragraph" + i
                 text += `<td>${index}</td>`
-                let wordTemp = ""
 
-                text += `<td bgcolor= "#C00000" style="color: white;">${inputJSON.paragraph[i].prefixText}</td>`
-                wordTemp += inputJSON.paragraph[i].prefixText
-
-                text += `<td bgcolor= "#00B0F0" style="color: white;">${inputJSON.paragraph[i].bodyText}</td>`
-                wordTemp += inputJSON.paragraph[i].bodyText
-
-                text += `<td bgcolor= "#92D050" style="color: white;">${inputJSON.paragraph[i].postfixText}</td>`
-                wordTemp += inputJSON.paragraph[i].postfixText
-
-
-                text += `<td style="color: #ffba73;"><b>${wordTemp}</b></td>`
-                text += `<td>${inputJSON.paragraph[i].pronuciation}</td>`
-                text += `<td>${inputJSON.paragraph[i].meaning}</td>`
+                text += `<td class="leftText"><b>${inputJSON.paragraph[i].word}</b></td>`
+                text += `<td class="leftText">${inputJSON.paragraph[i].pronunciation}</td>`
+                text += `<td class="leftText">${inputJSON.paragraph[i].meaningCN}</td>`
 
                 text += `</tr>`
 
