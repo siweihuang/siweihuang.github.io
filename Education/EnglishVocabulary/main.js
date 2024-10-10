@@ -6,6 +6,12 @@ var mainData = [
     filename: "indexL6.html"
   },
   {
+    title: "初中英语词汇表",
+    subtitle: "Secondary",
+    category: "folder",
+    filename: "indexSec.html"
+  },
+  {
     title: "前缀字首",
     subtitle: "Prefix",
     category: "folder",

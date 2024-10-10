@@ -4,172 +4,172 @@ var mainData = {
   paragraph: [
     {
       word: "life",
-      pronunciation: "/laɪf/",
+      pronunciation: "[laɪf]",
       meaningCN: "n. 生活；生命"
     },
     {
       word: "break",
-      pronunciation: "/breɪk/",
+      pronunciation: "[breɪk]",
       meaningCN: "v. 打破；中断"
     },
     {
       word: "geography",
-      pronunciation: "/dʒiˈɒɡrəfi/",
+      pronunciation: "[dʒiˈɒɡrəfi]",
       meaningCN: "n. 地理"
     },
     {
       word: "history",
-      pronunciation: "/ˈhɪstəri/",
+      pronunciation: "[ˈhɪstəri]",
       meaningCN: "n. 历史"
     },
     {
       word: "French",
-      pronunciation: "/frentʃ/",
+      pronunciation: "[frentʃ]",
       meaningCN: "adj. 法国的；法语的"
     },
     {
       word: "more",
-      pronunciation: "/mɔː/",
+      pronunciation: "[mɔː]",
       meaningCN: "adj. 更多的；额外的"
     },
     {
       word: "instruction",
-      pronunciation: "/ɪnˈstrʌkʃən/",
+      pronunciation: "[ɪnˈstrʌkʃən]",
       meaningCN: "n. 指令；说明"
     },
     {
       word: "experiment",
-      pronunciation: "/ɪkˈsperɪmənt/",
+      pronunciation: "[ɪkˈsperɪmənt]",
       meaningCN: "n. 实验；试验"
     },
     {
       word: "activity",
-      pronunciation: "/ækˈtɪvɪti/",
+      pronunciation: "[ækˈtɪvɪti]",
       meaningCN: "n. 活动；行为"
     },
     {
       word: "club",
-      pronunciation: "/klʌb/",
+      pronunciation: "[klʌb]",
       meaningCN: "n. 俱乐部；社团"
     },
     {
       word: "calligraphy",
-      pronunciation: "/kəˈlɪɡrəfi/",
+      pronunciation: "[kəˈlɪɡrəfi]",
       meaningCN: "n. 书法"
     },
     {
       word: "join",
-      pronunciation: "/dʒɔɪn/",
+      pronunciation: "[dʒɔɪn]",
       meaningCN: "v. 加入；连接"
     },
     {
       word: "technology",
-      pronunciation: "/tekˈnɒlədʒi/",
+      pronunciation: "[tekˈnɒlədʒi]",
       meaningCN: "n. 技术；科技"
     },
     {
       word: "everyone",
-      pronunciation: "/ˈevrɪwʌn/",
+      pronunciation: "[ˈevrɪwʌn]",
       meaningCN: "pron. 每个人"
     },
     {
       word: "lab",
-      pronunciation: "/læb/",
+      pronunciation: "[læb]",
       meaningCN: "n. 实验室"
     },
     {
       word: "field",
-      pronunciation: "/fiːld/",
+      pronunciation: "[fiːld]",
       meaningCN: "n. 领域；田野"
     },
     {
       word: "grade",
-      pronunciation: "/ɡreɪd/",
+      pronunciation: "[ɡreɪd]",
       meaningCN: "n. 年级；等级"
     },
     {
       word: "excuse",
-      pronunciation: "/ɪkˈskjuːz/",
+      pronunciation: "[ɪkˈskjuːz]",
       meaningCN: "n. 借口；理由"
     },
     {
       word: "project",
-      pronunciation: "/ˈprɒdʒekt/",
+      pronunciation: "[ˈprɒdʒekt]",
       meaningCN: "n. 项目；计划"
     },
     {
       word: "start",
-      pronunciation: "/stɑːt/",
+      pronunciation: "[stɑːt]",
       meaningCN: "v. 开始"
     },
     {
       word: "topic",
-      pronunciation: "/ˈtɒpɪk/",
+      pronunciation: "[ˈtɒpɪk]",
       meaningCN: "n. 主题；话题"
     },
     {
       word: "online",
-      pronunciation: "/ˈɒnlaɪn/",
+      pronunciation: "[ˈɒnlaɪn]",
       meaningCN: "adj. 在线的；联网的"
     },
     {
       word: "receive",
-      pronunciation: "/rɪˈsiːv/",
+      pronunciation: "[rɪˈsiːv]",
       meaningCN: "v. 接收；收到"
     },
     {
       word: "reply",
-      pronunciation: "/rɪˈplaɪ/",
+      pronunciation: "[rɪˈplaɪ]",
       meaningCN: "v. 回复；答复"
     },
     {
       word: "group",
-      pronunciation: "/ɡruːp/",
+      pronunciation: "[ɡruːp]",
       meaningCN: "n. 群体；组"
     },
     {
       word: "most",
-      pronunciation: "/məʊst/",
+      pronunciation: "[məʊst]",
       meaningCN: "adj. 最多的；大多数的"
     },
     {
       word: "end",
-      pronunciation: "/end/",
+      pronunciation: "[end]",
       meaningCN: "v. 结束；终止"
     },
     {
       word: "difference",
-      pronunciation: "/ˈdɪfərəns/",
+      pronunciation: "[ˈdɪfərəns]",
       meaningCN: "n. 差异；区别"
     },
     {
       word: "same",
-      pronunciation: "/seɪm/",
+      pronunciation: "[seɪm]",
       meaningCN: "adj. 相同的；一样的"
     },
     {
       word: "during",
-      pronunciation: "/ˈdjʊərɪŋ/",
+      pronunciation: "[ˈdjʊərɪŋ]",
       meaningCN: "prep. 在…期间"
     },
     {
       word: "outside",
-      pronunciation: "/ˈaʊtsaɪd/",
+      pronunciation: "[ˈaʊtsaɪd]",
       meaningCN: "adv. 外面；在外"
     },
     {
       word: "noon",
-      pronunciation: "/nuːn/",
+      pronunciation: "[nuːn]",
       meaningCN: "n. 中午；正午"
     },
     {
       word: "connect",
-      pronunciation: "/kəˈnekt/",
+      pronunciation: "[kəˈnekt]",
       meaningCN: "v. 连接；联系"
     },
     {
       word: "comment",
-      pronunciation: "/ˈkɒment/",
+      pronunciation: "[ˈkɒment]",
       meaningCN: "n. 评论；意见"
     }
   ]
