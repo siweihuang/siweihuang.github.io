@@ -85,6 +85,15 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        td {
+            transition: background-color 0.5s ease;
+        }
+
+        td.animated {
+            background-color: yellow;
+            transition: background-color 1s ease-in-out;
+        }
     </style>
 
 </head>
@@ -134,11 +143,25 @@
             return urlParams.get('pageno'); // Get the value of 'pageno' parameter
         }
 
-        function playSound(id) {
+        function playSound(cell, id) {
             var audio = document.getElementById(id);
             if (audio) {
                 audio.play();
             }
+
+            // Remove animation class if it's already there to reset animation
+            if (cell.classList.contains('animated')) {
+                cell.classList.remove('animated');
+                void cell.offsetWidth; // trigger reflow to restart animation
+            }
+
+            // Add the animation class
+            cell.classList.add('animated');
+
+            // Remove the class after 1 second (1000 milliseconds)
+            setTimeout(() => {
+                cell.classList.remove('animated');
+            }, 1000);
         }
 
         // Load the JavaScript dynamically based on the URL parameter
@@ -188,7 +211,7 @@
                 text += `<td>${index}</td>`
 
                 text += `<td class="leftText"><b>${inputJSON.paragraph[i].word}</b></td>`
-                text += `<td class="leftText" style="color: red;" onclick="playSound('audio_${index}')">${inputJSON.paragraph[i].pronunciation}<audio id = "audio_${index}" src="./audio/${inputJSON.paragraph[i].word}.mp3"></audio></td>`
+                text += `<td class="leftText" style="color: red;" onclick="playSound(this, 'audio_${index}')">${inputJSON.paragraph[i].pronunciation}<audio id = "audio_${index}" src="./audio/${inputJSON.paragraph[i].word}.mp3"></audio></td>`
                 text += `<td class="leftText">${inputJSON.paragraph[i].meaningCN}</td>`
                 text += ``
                 text += `</tr>`

@@ -44,7 +44,7 @@ var mainData = {
     },
     {
       word: "activity",
-      pronunciation: "[ækˈtɪvɪti]",
+      pronunciation: "[ækˈtɪvəti]",
       meaningCN: "n. 活动；行为"
     },
     {
