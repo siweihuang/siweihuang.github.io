@@ -129,16 +129,29 @@
             return urlParams.get('input'); // Get the value of 'js' parameter
         }
 
+        function getScriptParamNo() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('pageno'); // Get the value of 'pageno' parameter
+        }
+
+        function playSound(id) {
+            var audio = document.getElementById(id);
+            if (audio) {
+                audio.play();
+            }
+        }
+
         // Load the JavaScript dynamically based on the URL parameter
         window.onload = async function () {
             const scriptFile = getScriptParam();
+            const pageNo = getScriptParamNo();
             if (scriptFile) {
                 try {
                     await loadScript(scriptFile); // Wait for the JS file to load
                     // Log data from the dynamically loaded script after it's fully loaded
                     if (typeof mainData !== 'undefined') {
                         console.log('Data from loaded script:', JSON.stringify(mainData));
-                        processData(mainData);
+                        processData(mainData, pageNo);
                     } else {
                         console.log('No data found in the loaded script.');
                     }
@@ -150,7 +163,7 @@
             }
         }
 
-        function processData(mainDataInput) {
+        function processData(mainDataInput, pageNo) {
 
             let inputJSON = mainDataInput; // Load data directly from the JS file
             console.log(inputJSON.title)
@@ -168,17 +181,16 @@
                     <th class="leftText">Meaning</th>
                 </tr>`;
 
-
             for (var i = 0; i < inputJSON.paragraph.length; i++) {
                 text += `<tr>`
-                let index = i + 1
+                let index = pageNo * 100 + i + 1
                 let type = "paragraph" + i
                 text += `<td>${index}</td>`
 
                 text += `<td class="leftText"><b>${inputJSON.paragraph[i].word}</b></td>`
-                text += `<td class="leftText" style="color: red;">${inputJSON.paragraph[i].pronunciation}</td>`
+                text += `<td class="leftText" style="color: red;" onclick="playSound('audio_${index}')">${inputJSON.paragraph[i].pronunciation}<audio id = "audio_${index}" src="./audio/${inputJSON.paragraph[i].word}.mp3"></audio></td>`
                 text += `<td class="leftText">${inputJSON.paragraph[i].meaningCN}</td>`
-
+                text += ``
                 text += `</tr>`
 
                 if (inputJSON.paragraph[i].sentence) {

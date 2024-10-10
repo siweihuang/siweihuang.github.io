@@ -16,7 +16,7 @@ var mainData = [
   {
     title: "Part 3 (0201-0300)",
     subtitle: "",
-    startword: "well",
+    startword: "middle school",
     category: "file",
     filename: "ev_Sec_U3"
   },
