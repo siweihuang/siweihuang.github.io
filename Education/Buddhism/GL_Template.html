@@ -53,52 +53,150 @@
         <div id="paragraph"></div>
     </div>
 </body>
+
+
 <script>
-    const params = new URLSearchParams(window.location.search)
-    var pageNo = ''
-    let i = 0
-    for (const param of params) {
-        if (i == 0) {
-            pageNo = param[1]
-        }
-        i++
+    mainData = []
+    // console.log(JSON.stringify(mainData))
+    // Function to dynamically load JavaScript file
+    function loadScript(fileName) {
+        return new Promise(function (resolve, reject) {
+            const script = document.createElement('script');
+            script.src = "./data/" + fileName + ".js";
+            script.type = 'text/javascript';
+            script.onload = function () {
+                // console.log(`${fileName} has been loaded successfully.`);
+                resolve(); // Resolve the promise once the script is loaded
+            };
+            script.onerror = function () {
+                reject(new Error(`Failed to load the script: ${fileName}`));
+            };
+            document.body.appendChild(script);
+        });
     }
-    console.log("pageNo:" + pageNo)
+    // Function to get the 'js' parameter from the URL
+    function getScriptParam() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('input'); // Get the value of 'js' parameter
+    }
 
-    let inputJSON = mainData[pageNo];
-    document.getElementById("maintitle").innerHTML = inputJSON.testdate;
+    function getScriptParamNo() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('pageno'); // Get the value of 'pageno' parameter
+    }
 
-    function populateHTMLparagraph(type) {
-        let showPinYin = true
-        let html = ""
-
-        var title = inputJSON.title
-        var subtitle = inputJSON.subtitle
-        html += `<div class="slide"><h1>菩提道次第广论</h1><p style="text-align: center;font-size: 5vmax;">`
-        html += title
-        html += `</p></div>`
-
-        for (var j = 0; j < inputJSON.words.length; j++) {
-            let paragraphTemp = inputJSON.words[j]
-            html += `<div class="slide"><h1>`
-            var displayID = j + 1
-            html = html + subtitle + " - " + displayID
-            html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 3vmax;">`
-            html += paragraphTemp
-
-            html += `</p></div></div>`
+    // Load the JavaScript dynamically based on the URL parameter
+    window.onload = async function () {
+        const scriptFile = getScriptParam();
+        if (scriptFile) {
+            try {
+                await loadScript(scriptFile); // Wait for the JS file to load
+                // Log data from the dynamically loaded script after it's fully loaded
+                if (typeof mainData !== 'undefined') {
+                    // console.log('Data from loaded script:', JSON.stringify(mainData));
+                    getPinyin(mainData);
+                } else {
+                    console.log('No data found in the loaded script.');
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        } else {
+            console.log('No JS file specified.');
         }
+    }
 
-        html += `<div class="slide"><h1>`
-        html += subtitle
-        html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 3vmax;"><a>结束</a></p></div></div>`
+    function populateHTML(type, value, myArr) {
+        let html = '';
+        for (var i = 0; i < myArr.length; i++) {
+            html = html + "<ruby>" + "&nbsp;" + value[i] + "&nbsp;<rt>" + myArr[i] + "</rt>" + "</ruby>"
+        }
+        document.getElementById(type).innerHTML = html;
+    }
+
+    function populateHTMLparagraph(type, value, myArr, index) {
+        // let html = '<ruby>&nbsp;　&nbsp;<rt> </rt>&nbsp;' + index + ')&nbsp;<rt> </rt>';
+        let html = '<ruby>&nbsp;　&nbsp;<rt> </rt>&nbsp; &nbsp;<rt> </rt>';
+
+        for (var i = 0; i < myArr.length; i++) {
+
+            if (value[i] == "< " || value[i] == "> " || value[i] == '《' || value[i] == '》' || value[i] == " ") {
+                // html = html + value[i] + "&nbsp;&nbsp;" + "<rt class='symbol'></rt>"
+                html = html + "<rt class='symbol'></rt>"
+            } else {
+                if (value[i] == "？" || value[i] == "!" || value[i] == "；" ||
+                    value[i] == "," || value[i] == "." ||
+                    value[i] == "，" || value[i] == "。" ||
+                    value[i] == "（" || value[i] == "）" ||
+                    value[i] == '“' || value[i] == '”' ||
+                    value[i] == '《' || value[i] == '》' ||
+                    value[i] == '「' || value[i] == '」' ||
+                    value[i] == "：" ||
+                    value[i] == "？" || value[i] == "！") {
+
+                    html = html + "<dd>&nbsp;" + value[i] + "&nbsp;<rt></rt></dd>"
+
+                    // if (value[i] == "\(") {
+                    //     html = html + "<dd>&nbsp;\(&nbsp;<rt></rt></dd>"
+                    // } else {
+                    //     if (value[i] == "\)") {
+                    //         html = html + "<dd>&nbsp;)&nbsp;<rt></rt></dd>"
+                    //     } else
+                    //         html = html + "<dd>&nbsp;" + value[i] + "&nbsp;<rt></rt></dd>"
+                    // }
+
+                } else {
+                    html = html + "<dd>&nbsp;" + value[i] + "&nbsp;<rt>" + myArr[i] + "</rt></dd>"
+                }
+
+            }
+
+        }
+        html += "</ruby>"
 
         document.getElementById(type).innerHTML = html;
     }
 
-    populateHTMLparagraph("paragraph");
+    function getPinyin(mainDataInput) {
+
+        let inputJSON = mainDataInput; // Load data directly from the JS file
+
+        let maintitle = inputJSON.title
+        if (inputJSON.title != "") {
+            maintitle = maintitle + " " + inputJSON.subtitle
+        }
+
+        document.getElementById("maintitle").innerHTML = maintitle;
+
+        let titlePinyin = pinyinUtil.getPinyin(inputJSON.title, ' ', true, true);
+        let subtitlePinyin = pinyinUtil.getPinyin(inputJSON.subtitle, ' ', true, true);
+        populateHTML("title", inputJSON.title, titlePinyin.split(" "));
+        if (inputJSON.subtitle != "") {
+            populateHTML("subtitle", inputJSON.subtitle, subtitlePinyin.split(" "));
+        }
+
+        let text = "";
+        for (var i = 0; i < inputJSON.paragraph.length; i++) {
+            let index = i + 1
+            let type = "paragraph" + i
+            text += `<p class="norm py-content" id="${type}"></p>`
+        }
+        document.getElementById("paragraph").innerHTML = text;
+
+        for (var i = 0; i < inputJSON.paragraph.length; i++) {
+            let index = i + 1
+            let type = "paragraph" + i
+            let paragraphTemp = inputJSON.paragraph[i].bodytext
+
+        }
+
+
+    }
+
 
 
 </script>
+
+
 
 </html>

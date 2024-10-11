@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Input Data -->
-    <script src="../DataSource/guanglun.js"></script>
+    <script src="./data/gl_data_index.js"></script>
     <title>Education - 广论</title>
     <style type="text/css">
         body {
@@ -104,7 +104,7 @@
         text += `
         <tr>
             <td>${index}</td>
-            <td><a href="./GL_Template.html?pageNo=${i}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;</a></td>
+            <td><a href="./GL_Template.html?pageNo=${i}&input=${inputJSON[i].filename}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;</a></td>
             <td>&nbsp;${inputJSON[i].testdate}&nbsp;</td>
         </tr>`
     }
