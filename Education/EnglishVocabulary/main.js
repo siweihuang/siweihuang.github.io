@@ -12,6 +12,12 @@ var mainData = [
     filename: "indexSec.html"
   },
   {
+    title: "牛津单词列表",
+    subtitle: "Oxford Word List",
+    category: "folder",
+    filename: "indexOxfordWordList.html"
+  },
+  {
     title: "前缀字首",
     subtitle: "Prefix",
     category: "folder",
