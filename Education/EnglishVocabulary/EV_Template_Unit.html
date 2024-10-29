@@ -173,7 +173,7 @@
                     await loadScript(scriptFile); // Wait for the JS file to load
                     // Log data from the dynamically loaded script after it's fully loaded
                     if (typeof mainData !== 'undefined') {
-                        console.log('Data from loaded script:', JSON.stringify(mainData));
+                        // console.log('Data from loaded script:', JSON.stringify(mainData));
                         processData(mainData, pageNo);
                     } else {
                         console.log('No data found in the loaded script.');

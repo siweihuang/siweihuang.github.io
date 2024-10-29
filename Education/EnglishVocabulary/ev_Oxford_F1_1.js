@@ -205,6 +205,116 @@ var mainData = {
       meaningCN: "n. 贻贝",
       sentence: "We ordered steamed mussels as an appetizer.",
       sentenceCN: "我们点了蒸贻贝作为开胃菜。"
+    },
+    {
+      word: "peach",
+      pronunciation: "/piːtʃ/",
+      meaning:
+        "n. a soft, round fruit with fuzzy skin and a sweet, juicy interior",
+      meaningCN: "n. 桃子",
+      sentence: "The peach tree in her garden was full of fruit.",
+      sentenceCN: "她花园里的桃树上挂满了果实。"
+    },
+    {
+      word: "pear",
+      pronunciation: "/pɛər/",
+      meaning:
+        "n. a sweet, bell-shaped fruit that is juicy and often green or yellow",
+      meaningCN: "n. 梨",
+      sentence: "She sliced a pear for her snack.",
+      sentenceCN: "她切了一片梨作为零食。"
+    },
+    {
+      word: "pepper",
+      pronunciation: "/ˈpɛpər/",
+      meaning:
+        "n. a vegetable that can be green, red, yellow, or orange, often used in cooking",
+      meaningCN: "n. 辣椒或胡椒",
+      sentence: "She added red and green peppers to the salad.",
+      sentenceCN: "她在沙拉里加了红辣椒和青辣椒。"
+    },
+    {
+      word: "pork",
+      pronunciation: "/pɔːrk/",
+      meaning: "n. meat from a pig",
+      meaningCN: "n. 猪肉",
+      sentence: "They served roasted pork with vegetables.",
+      sentenceCN: "他们提供了烤猪肉配蔬菜。"
+    },
+    {
+      word: "prawns",
+      pronunciation: "/prɔːnz/",
+      meaning:
+        "n. small sea creatures similar to shrimp, often eaten as seafood",
+      meaningCN: "n. 对虾",
+      sentence: "Grilled prawns are delicious with garlic sauce.",
+      sentenceCN: "烤大虾配蒜蓉酱非常美味。"
+    },
+    {
+      word: "raspberries",
+      pronunciation: "/ˈræzˌberiz/",
+      meaning: "n. small, soft, red or pink berries with a sweet-tart flavor",
+      meaningCN: "n. 树莓",
+      sentence: "Fresh raspberries are great in yogurt.",
+      sentenceCN: "新鲜的树莓拌酸奶很好吃。"
+    },
+    {
+      word: "roast",
+      pronunciation: "/rəʊst/",
+      meaning: "adj. cooked by prolonged exposure to heat, usually in an oven",
+      meaningCN: "adj. 烤的",
+      sentence: "The roast chicken was perfectly seasoned.",
+      sentenceCN: "烤鸡的调味非常完美。"
+    },
+    {
+      word: "salmon",
+      pronunciation: "/ˈsæmən/",
+      meaning:
+        "n. a type of large fish with pink flesh, often eaten as seafood",
+      meaningCN: "n. 三文鱼",
+      sentence: "Grilled salmon is both healthy and delicious.",
+      sentenceCN: "烤三文鱼既健康又美味。"
+    },
+    {
+      word: "seafood",
+      pronunciation: "/ˈsiːfuːd/",
+      meaning: "n. edible marine life, such as fish, shellfish, and sea plants",
+      meaningCN: "n. 海鲜",
+      sentence: "The restaurant specializes in fresh seafood dishes.",
+      sentenceCN: "这家餐厅专营新鲜的海鲜菜肴。"
+    },
+    {
+      word: "squid",
+      pronunciation: "/skwɪd/",
+      meaning:
+        "n. a sea animal with a soft body and tentacles, often used in cooking",
+      meaningCN: "n. 鱿鱼",
+      sentence: "Fried squid rings are a popular appetizer.",
+      sentenceCN: "炸鱿鱼圈是一道受欢迎的开胃菜。"
+    },
+    {
+      word: "steamed",
+      pronunciation: "/stiːmd/",
+      meaning: "adj. cooked using steam",
+      meaningCN: "adj. 蒸的",
+      sentence: "We had steamed vegetables as a side dish.",
+      sentenceCN: "我们有一道蒸蔬菜作为配菜。"
+    },
+    {
+      word: "tuna",
+      pronunciation: "/ˈtjuːnə/",
+      meaning: "n. a large, fast-swimming fish often canned or eaten as steak",
+      meaningCN: "n. 金枪鱼",
+      sentence: "He ordered a tuna salad for lunch.",
+      sentenceCN: "他点了一份金枪鱼沙拉作为午餐。"
+    },
+    {
+      word: "vegetable",
+      pronunciation: "/ˈvɛdʒtəbəl/",
+      meaning: "n. edible plants or parts of plants, commonly used in cooking",
+      meaningCN: "n. 蔬菜",
+      sentence: "Eating a variety of vegetables is important for health.",
+      sentenceCN: "食用多种蔬菜对健康很重要。"
     }
   ]
 };
