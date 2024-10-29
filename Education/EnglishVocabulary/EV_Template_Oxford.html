@@ -3,22 +3,28 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title id="maintitle"></title>
 
     <style type="text/css">
-        body {
-            font-family: 'Book Antiqua';
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            /* Prevent horizontal scrolling */
         }
 
         body {
+            font-family: 'Book Antiqua';
             background: #eaeaea;
         }
 
         .wrap {
             margin: 0 auto;
-            width: 1000px;
+            max-width: 100%;
+            height: auto;
         }
 
         .logo {
@@ -26,9 +32,7 @@
             margin-top: 10px;
         }
 
-        .logo img {
-            width: 350px;
-        }
+
 
         .logo p {
             color: #272727;
@@ -53,21 +57,11 @@
             -border-radius: .5em;
         }
 
-        .footer {
-            color: black;
-            position: absolute;
-            right: 10px;
-            bottom: 10px;
-        }
-
-        .footer a {
-            color: rgb(114, 173, 38);
-        }
-
         table {
             width: 100%;
             /* Full width of the parent container */
-            /* border-collapse: collapse; Remove spaces between borders */
+            /* border-collapse: collapse; */
+            /* Remove spaces between borders */
         }
 
         table,
@@ -98,22 +92,47 @@
             text-align: left;
             padding-left: 10px;
         }
+
+        .container {
+            width: 100%;
+            max-width: 100vw;
+            /* Keeps container within the viewport */
+            box-sizing: border-box;
+            padding: 0 10px;
+            /* Optional padding */
+        }
+
+
+
+        @media (min-width: 768px) {
+            .container {
+                /* Set a maximum width for larger devices */
+                margin: 0 auto;
+            }
+
+            th,
+            td {
+                padding: 8px;
+                /* Adjust padding for smaller screens */
+            }
+        }
     </style>
 
 </head>
 
 <body>
-
-    <!---728x90--->
-    <div class="wrap">
-        <div class="logo">
-            <h1>
-                <div id="tableTop1"></div>
-            </h1>
-            <h2>
-                <div id="tableTop2"></div>
-            </h2>
-            <div id="mainContent"></div>
+    <div class="container">
+        <!---728x90--->
+        <div class="wrap">
+            <div class="logo">
+                <h1>
+                    <div id="tableTop1"></div>
+                </h1>
+                <h2>
+                    <div id="tableTop2"></div>
+                </h2>
+                <div id="mainContent"></div>
+            </div>
         </div>
     </div>
 
@@ -226,7 +245,7 @@
 
                 }
                 if (inputJSON.paragraph[i].sentenceCN) {
-                    text += `<tr></tr><tr>`
+                    text += `<tr>`
                     text += `<td colspan="100%" class="leftGreen">${inputJSON.paragraph[i].sentenceCN}</td>`
                     text += `</tr>`
                 }
