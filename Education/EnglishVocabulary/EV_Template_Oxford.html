@@ -134,6 +134,8 @@
                 <div id="mainContent"></div>
             </div>
         </div>
+
+        <div style="text-align: center;margin-top: 20px;margin-bottom: 10px;" id="updatedData"></div>
     </div>
 
     <script>
@@ -207,10 +209,11 @@
         function processData(mainDataInput) {
 
             let inputJSON = mainDataInput; // Load data directly from the JS file
-            console.log(inputJSON.title)
+            // console.log(inputJSON.title)
             document.getElementById("maintitle").innerHTML = inputJSON.title;
             document.getElementById("tableTop1").innerHTML = inputJSON.title + " " + inputJSON.subtitle + " (" + inputJSON.paragraph.length + ")";
             // document.getElementById("tableTop2").innerHTML = inputJSON.subtitle;
+            document.getElementById("updatedData").innerHTML = "Last updated on " + inputJSON.lastUpdatedDate;
 
 
             let text = "";
