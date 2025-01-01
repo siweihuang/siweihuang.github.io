@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Table with Popup Slider, Keyboard Navigation, and Description Overlay</title>
+    <title id="maintitle"></title>
     <style>
         table {
             width: 100%;
@@ -119,29 +119,8 @@
 
 <body>
 
-    <h2 class="center">Image Table with Slider Popup and Description Overlay</h2>
-    <table class="center">
-        <tr>
-            <th>Serial No.</th>
-            <th>Description</th>
-            <th>Image</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Sample Image 1</td>
-            <td><img src="https://via.placeholder.com/150" onclick="openPopup(0)"></td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Sample Image 2</td>
-            <td><img src="https://via.placeholder.com/150" onclick="openPopup(1)"></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Sample Image 3</td>
-            <td><img src="https://via.placeholder.com/150" onclick="openPopup(2)"></td>
-        </tr>
-    </table>
+    <h2 class="center" id="header"></h2>
+    <div id="mainContent"></div>
 
     <!-- The Popup -->
     <div id="popup" class="popup">
@@ -155,20 +134,97 @@
     </div>
 
     <script>
-        const images = [
-            {
-                src: "https://via.placeholder.com/600x400",
-                description: "Sample Image 1 Description"
-            },
-            {
-                src: "https://via.placeholder.com/600x400/ff0000",
-                description: "Sample Image 2 Description"
-            },
-            {
-                src: "https://via.placeholder.com/600x400/00ff00",
-                description: "Sample Image 3 Description"
+        mainData = []
+        // console.log(JSON.stringify(mainData))
+        // Function to dynamically load JavaScript file
+        function loadScript(fileName) {
+            return new Promise(function (resolve, reject) {
+                const script = document.createElement('script');
+                script.src = "./data/" + fileName + ".js";
+                script.type = 'text/javascript';
+                script.onload = function () {
+                    // console.log(`${fileName} has been loaded successfully.`);
+                    resolve(); // Resolve the promise once the script is loaded
+                };
+                script.onerror = function () {
+                    reject(new Error(`Failed to load the script: ${fileName}`));
+                };
+                document.body.appendChild(script);
+            });
+        }
+        // Function to get the 'js' parameter from the URL
+        function getScriptParam() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('input'); // Get the value of 'js' parameter
+        }
+
+        // Load the JavaScript dynamically based on the URL parameter
+        window.onload = async function () {
+            const scriptFile = getScriptParam();
+            if (scriptFile) {
+                try {
+                    await loadScript(scriptFile); // Wait for the JS file to load
+                    // Log data from the dynamically loaded script after it's fully loaded
+                    if (typeof mainData !== 'undefined') {
+                        // console.log('Data from loaded script:', JSON.stringify(mainData));
+                        processData(mainData);
+                    } else {
+                        console.log('No data found in the loaded script.');
+                    }
+                } catch (error) {
+                    console.error(error);
+                }
+            } else {
+                console.log('No JS file specified.');
             }
-        ];
+        }
+
+        function processData(mainDataInput) {
+            images = []
+
+            let inputJSON = mainDataInput; // Load data directly from the JS file
+
+            document.getElementById("maintitle").innerHTML = inputJSON.pattern;
+            document.getElementById("header").innerHTML = inputJSON.pattern + "<br>" + inputJSON.belt_color;
+
+            let text = `<table class="center">
+                <tr>
+                    <th>Step No.</th>
+                    <th>Description</th>
+                    <th>Image</th>
+                </tr>
+            `
+
+            for (var i = 0; i < inputJSON.steps.length; i++) {
+                let index = i + 1
+                text += `
+                    <tr>
+                        <td>${index}</td>
+                        <td>${inputJSON.steps[i].description_en}<br>${inputJSON.steps[i].description_cn}</td>
+                        <td><img src="./images/${inputJSON.steps[i].image}" onclick="openPopup(${i})"></td>
+                    </tr>
+                `
+                images.push(
+                    {
+                        "src": "./images/" + inputJSON.steps[i].image,
+                        "description": index + ". " + inputJSON.steps[i].description_en + " " + inputJSON.steps[i].description_cn
+                    }
+                )
+            }
+
+            text += `
+                </table>
+            `
+            document.getElementById("mainContent").innerHTML = text;
+
+        }
+
+
+
+    </script>
+
+    <script>
+
         let currentIndex = 0;
 
         function openPopup(index) {
