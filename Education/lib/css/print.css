@@ -2,22 +2,16 @@
     body{font-family:KaiTi;宋体;Arial;}
     rt {font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";}
     body {
-            column-count: 2;
-    -webkit-column-count: 2;
-       -moz-column-count: 2;
-      -webkit-column-gap: 40px;
-         -moz-column-gap: 40px;
-              column-gap: 40px;
-     -webkit-column-rule: 1px dotted rgb(79, 185, 227); /* Chrome, Safari, Opera */
-        -moz-column-rule: 1px dotted rgb(79, 185, 227); /* Firefox */
-             column-rule: 1px dotted rgb(79, 185, 227);
+            column-count: 1;
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
     }
 
     @page
     {
         size: auto;   /* auto is the initial value */
         /* this affects the margin in the printer settings */
-        margin: 20mm 15mm 20mm 15mm;
+        margin: 10mm 15mm 10mm 15mm;
     }
 
     body
@@ -29,13 +23,15 @@
     .d-print-none{display:none!important}
     .card-title{margin-bottom:0.1rem!important;}
     .card-subtitle{margin-top:0rem!important;margin-bottom:0!important;font-size:small!important;}
-    .card-content{margin-top:0.3em;}
-    .py-content{margin-top:0.3em!important;}
+    .card-content{margin-top:0.1em;}
+    .py-content{text-align: center!important;margin-top:0.1em!important;}
     .text-center{text-align: center;}
     .text-left{text-align:left!important}
     .text-secondary{text-secondary:small;color:#6c757d!important}
     .mt-4 {margin-top:1.5rem!important}
-    .small{font-size:80%}
+    .small{font-size:100%}
     .font-italic{font-style:italic!important}
+
+    .dd{font-size:170%}
 }
 

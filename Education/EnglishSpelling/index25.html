@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel=icon href=./favicon.png>
-    <title>Technology</title>
+    <!-- Input Data -->
+    <script src="../DataSource/englishspelling25.js"></script>
+    <title>Education - English Spelling</title>
     <style type="text/css">
         body {
             font-family: 'Book Antiqua';
@@ -82,29 +83,36 @@
     <!---728x90--->
     <div class="wrap">
         <div class="logo">
-            <p>Welcome to Technology Main Page</p>
-
-            <table class="center">
-                <tr>
-                    <th>Release Date</th>
-                    <th>Module Name</th>
-                    <th>Release Date</th>
-                    <th>Module Name</th>
-                </tr>
-
-                <tr>
-                    <td>2024-10-28</td>
-                    <td><a href="Generate_QR_Code/index.html" target="_blank">Generate QR Code</a></td>
-                    <td>2025-01-01</td>
-                    <td><a href="Generate_Calendar/index.html" target="_blank">Generate Calendar</a></td>
-                </tr>
-
-            </table>
-
-
+            <h1>English Spelling 2025</h1>
+            <div id="mainContent"></div>
         </div>
     </div>
 
 </body>
+<script>
+    let inputJSON = mainData;
+
+    let text = `<table class="center">
+    <tr>
+        <th>SN</th>
+        <th>Week</th>
+        <th>Date</th>
+    </tr>`;
+    for (var i = 0; i < inputJSON.length; i++) {
+        let index = i + 1
+        let type = "paragraph" + i
+        text += `
+        <tr>
+            <td>${index}</td>
+            <td><a href="./ES_Template25.html?pageNo=${i}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;</a></td>
+            <td>&nbsp;${inputJSON[i].testdate}&nbsp;</td>
+        </tr>`
+    }
+
+    text += `
+</table>
+    `
+    document.getElementById("mainContent").innerHTML = text;
+</script>
 
 </html>

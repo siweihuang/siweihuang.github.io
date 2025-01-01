@@ -5,7 +5,7 @@ var mainData = {
   paragraph: [
     {
       word: "affectionate",
-      pronunciation: "/əˈfɛkʃənɪt/",
+      pronunciation: "/əˈfekʃənɪt/",
       meaning: "adj. showing fondness or tenderness",
       meaningCN: "adj. 充满爱意的，深情的",
       sentence:
@@ -46,7 +46,7 @@ var mainData = {
     },
     {
       word: "bad-tempered",
-      pronunciation: "/ˌbæd ˈtɛmpərd/",
+      pronunciation: "/ˌbæd ˈtempərd/",
       meaning: "adj. easily annoyed or angered",
       meaningCN: "adj. 脾气暴躁的",
       sentence: "He’s often bad-tempered in the mornings.",
@@ -70,7 +70,7 @@ var mainData = {
     },
     {
       word: "clever",
-      pronunciation: "/ˈklɛvər/",
+      pronunciation: "/ˈklevər/",
       meaning: "adj. quick to understand or learn",
       meaningCN: "adj. 聪明的，机智的",
       sentence: "She’s very clever and often comes up with creative solutions.",
@@ -78,7 +78,7 @@ var mainData = {
     },
     {
       word: "competitive",
-      pronunciation: "/kəmˈpɛtɪtɪv/",
+      pronunciation: "/kəmˈpetɪtɪv/",
       meaning: "adj. wanting to be more successful than others",
       meaningCN: "adj. 有竞争力的，好胜的",
       sentence: "He has a competitive nature and always wants to win.",
@@ -102,7 +102,7 @@ var mainData = {
     },
     {
       word: "friendly",
-      pronunciation: "/ˈfrɛndli/",
+      pronunciation: "/ˈfrendli/",
       meaning: "adj. kind and pleasant",
       meaningCN: "adj. 友好的",
       sentence: "He is friendly to everyone he meets.",
@@ -110,7 +110,7 @@ var mainData = {
     },
     {
       word: "generous",
-      pronunciation: "/ˈdʒɛnərəs/",
+      pronunciation: "/ˈdʒenərəs/",
       meaning: "adj. willing to give or share",
       meaningCN: "adj. 慷慨的",
       sentence: "She’s very generous with her time and always helps others.",
@@ -158,7 +158,7 @@ var mainData = {
     },
     {
       word: "independent",
-      pronunciation: "/ˌɪndɪˈpɛndənt/",
+      pronunciation: "/ˌɪndɪˈpendənt/",
       meaning: "adj. not relying on others for help or support",
       meaningCN: "adj. 独立的",
       sentence: "He is independent and prefers to do things on his own.",
@@ -174,7 +174,7 @@ var mainData = {
     },
     {
       word: "insensitive",
-      pronunciation: "/ɪnˈsɛnsɪtɪv/",
+      pronunciation: "/ɪnˈsensɪtɪv/",
       meaning: "adj. not noticing or caring about others' feelings",
       meaningCN: "adj. 不敏感的",
       sentence: "His insensitive comment hurt her feelings.",
@@ -190,7 +190,7 @@ var mainData = {
     },
     {
       word: "jealous",
-      pronunciation: "/ˈdʒɛləs/",
+      pronunciation: "/ˈdʒeləs/",
       meaning: "adj. feeling or showing envy",
       meaningCN: "adj. 嫉妒的",
       sentence: "She felt jealous when her friend got a new phone.",
@@ -246,7 +246,7 @@ var mainData = {
     },
     {
       word: "offend",
-      pronunciation: "/əˈfɛnd/",
+      pronunciation: "/əˈfend/",
       meaning: "v. to cause hurt feelings or upset",
       meaningCN: "v. 冒犯",
       sentence: "He didn’t mean to offend her with his joke.",
@@ -294,7 +294,7 @@ var mainData = {
     },
     {
       word: "rebellious",
-      pronunciation: "/rɪˈbɛljəs/",
+      pronunciation: "/rɪˈbeljəs/",
       meaning: "adj. resisting control or authority",
       meaningCN: "adj. 叛逆的",
       sentence: "She went through a rebellious phase as a teenager.",
@@ -318,7 +318,7 @@ var mainData = {
     },
     {
       word: "self-confident",
-      pronunciation: "/sɛlf ˈkɒnfɪdənt/",
+      pronunciation: "/self ˈkɒnfɪdənt/",
       meaning: "adj. believing in one’s abilities",
       meaningCN: "adj. 自信的",
       sentence: "She is self-confident and never doubts herself.",
@@ -326,7 +326,7 @@ var mainData = {
     },
     {
       word: "selfish",
-      pronunciation: "/ˈsɛlfɪʃ/",
+      pronunciation: "/ˈselfɪʃ/",
       meaning: "adj. caring only about oneself",
       meaningCN: "adj. 自私的",
       sentence: "It was selfish of him to take the last piece of cake.",
@@ -334,7 +334,7 @@ var mainData = {
     },
     {
       word: "sensible",
-      pronunciation: "/ˈsɛnsɪbl/",
+      pronunciation: "/ˈsensɪbl/",
       meaning: "adj. showing good judgement",
       meaningCN: "adj. 明智的",
       sentence: "It’s sensible to save money for emergencies.",
@@ -342,7 +342,7 @@ var mainData = {
     },
     {
       word: "sensitive",
-      pronunciation: "/ˈsɛnsɪtɪv/",
+      pronunciation: "/ˈsensɪtɪv/",
       meaning: "adj. easily hurt or responsive to others' feelings",
       meaningCN: "adj. 敏感的",
       sentence: "He is sensitive to criticism and gets upset easily.",
@@ -414,7 +414,7 @@ var mainData = {
     },
     {
       word: "unfriendly",
-      pronunciation: "/ʌnˈfrɛndli/",
+      pronunciation: "/ʌnˈfrendli/",
       meaning: "adj. not kind or pleasant",
       meaningCN: "adj. 不友好的",
       sentence: "She can seem unfriendly at first, but she’s actually nice.",
@@ -446,7 +446,7 @@ var mainData = {
     },
     {
       word: "unselfish",
-      pronunciation: "/ʌnˈsɛlfɪʃ/",
+      pronunciation: "/ʌnˈselfɪʃ/",
       meaning: "adj. putting others before oneself",
       meaningCN: "adj. 无私的",
       sentence: "She is unselfish and always thinks of others first.",

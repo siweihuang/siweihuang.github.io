@@ -77,7 +77,7 @@ var mainData = {
     },
     {
       word: "courgette",
-      pronunciation: "/kʊəˈʒɛt/",
+      pronunciation: "/kʊəˈʒet/",
       meaning: "n. a green vegetable, also known as zucchini",
       meaningCN: "n. 西葫芦",
       sentence: "She sautéed the courgettes with garlic.",
@@ -109,7 +109,7 @@ var mainData = {
     },
     {
       word: "egg",
-      pronunciation: "/ɛɡ/",
+      pronunciation: "/eɡ/",
       meaning:
         "n. an oval object laid by a female bird, especially a chicken, often eaten as food",
       meaningCN: "n. 鸡蛋",
@@ -167,7 +167,7 @@ var mainData = {
     },
     {
       word: "lemon",
-      pronunciation: "/ˈlɛmən/",
+      pronunciation: "/ˈlemən/",
       meaning: "n. a yellow citrus fruit with a sour taste",
       meaningCN: "n. 柠檬",
       sentence: "She added lemon slices to her tea.",
@@ -191,7 +191,7 @@ var mainData = {
     },
     {
       word: "melon",
-      pronunciation: "/ˈmɛlən/",
+      pronunciation: "/ˈmelən/",
       meaning:
         "n. a large, round fruit with a thick rind and sweet, juicy flesh",
       meaningCN: "n. 甜瓜",
@@ -218,7 +218,7 @@ var mainData = {
     },
     {
       word: "pear",
-      pronunciation: "/pɛər/",
+      pronunciation: "/peər/",
       meaning:
         "n. a sweet, bell-shaped fruit that is juicy and often green or yellow",
       meaningCN: "n. 梨",
@@ -227,7 +227,7 @@ var mainData = {
     },
     {
       word: "pepper",
-      pronunciation: "/ˈpɛpər/",
+      pronunciation: "/ˈpepər/",
       meaning:
         "n. a vegetable that can be green, red, yellow, or orange, often used in cooking",
       meaningCN: "n. 辣椒或胡椒",
@@ -311,7 +311,7 @@ var mainData = {
     },
     {
       word: "vegetable",
-      pronunciation: "/ˈvɛdʒtəbəl/",
+      pronunciation: "/ˈvedʒtəbəl/",
       meaning: "n. edible plants or parts of plants, commonly used in cooking",
       meaningCN: "n. 蔬菜",
       sentence: "Eating a variety of vegetables is important for health.",
