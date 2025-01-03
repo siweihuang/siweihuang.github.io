@@ -85,7 +85,7 @@ var mainData = [
     level: "Advanced",
     video: "https://www.youtube.com/watch?v=YJMfV1HY398",
     category: "file",
-    filename: "Taegeuk_5_O_Jang",
+    filename: "Taegeuk_6_Yook_Jang",
     foldername: ""
   },
   {
@@ -96,7 +96,7 @@ var mainData = [
     level: "Advanced",
     video: "https://www.youtube.com/watch?v=POfoHAkhwlQ&t=1s",
     category: "file",
-    filename: "Taegeuk_5_O_Jang",
+    filename: "Taegeuk_7_Chil_Jang",
     foldername: ""
   },
   {
@@ -106,7 +106,10 @@ var mainData = [
     rank: "1st Geup",
     level: "Advanced",
     video:
-      "https://www.youtube.com/watch?v=zPSt3azIo48&pp=ygUSdGFlZ2V1ayA4IHBhbCBqYW5n"
+      "https://www.youtube.com/watch?v=zPSt3azIo48&pp=ygUSdGFlZ2V1ayA4IHBhbCBqYW5n",
+    category: "file",
+    filename: "Taegeuk_8_Pal_Jang",
+    foldername: ""
   },
   {
     belt_color: "Black belt",
@@ -114,6 +117,9 @@ var mainData = [
     meaning: "",
     rank: "1st Dan",
     level: "Beginner black belt",
-    video: ""
+    video: "",
+    category: "file",
+    filename: "",
+    foldername: ""
   }
 ];

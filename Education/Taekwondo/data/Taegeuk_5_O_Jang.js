@@ -1,6 +1,7 @@
 var mainData = {
   belt_color: "Blue Belt (B4)",
   pattern: "Taegeuk 5 - O Jang",
+  folder: "Taegeuk_5",
   meaning: "太极第五章 巽 (风)<br>Wind",
   steps: [
     {
@@ -28,22 +29,58 @@ var mainData = {
       image: "Taegeuk_5_Step_4.png"
     },
     {
-      step: "5",
-      description_en: "Turn Left 2x Inside Block",
+      step: "5a",
+      description_en: "Turn Left, Left Inside Block",
+      description_cn: "左转、左手内格挡",
+      image: "Taegeuk_5_Step_5a.png"
+    },
+    {
+      step: "5b",
+      description_en: "Right Inside Block",
+      description_cn: "右手内格挡",
+      image: "Taegeuk_5_Step_5b.png"
+    },
+    {
+      step: "5c",
+      description_en: "Turn Left, 2x Inside Block",
       description_cn: "左转、两次内格挡（先左手再右手）",
-      image: "Taegeuk_5_Step_5.png"
+      image: "Taegeuk_5_Step_5c.png"
     },
     {
-      step: "6",
-      description_en: "Kick, Back Fist, Inside Block",
-      description_cn: "右脚前踢、右手背拳、左手内格挡",
-      image: "Taegeuk_5_Step_6.png"
+      step: "6a",
+      description_en: "Kick",
+      description_cn: "右脚前踢",
+      image: "Taegeuk_5_Step_6a.png"
     },
     {
-      step: "7",
-      description_en: "Kick, Back Fist, Inside Block",
-      description_cn: "左脚前踢、左手背拳、右手内格挡",
-      image: "Taegeuk_5_Step_7.png"
+      step: "6b",
+      description_en: "Back Fist",
+      description_cn: "右手背拳",
+      image: "Taegeuk_5_Step_6b.png"
+    },
+    {
+      step: "6c",
+      description_en: "Inside Block",
+      description_cn: "左手内格挡",
+      image: "Taegeuk_5_Step_6c.png"
+    },
+    {
+      step: "7a",
+      description_en: "Kick",
+      description_cn: "左脚前踢",
+      image: "Taegeuk_5_Step_7a.png"
+    },
+    {
+      step: "7b",
+      description_en: "Back Fist",
+      description_cn: "左手背拳",
+      image: "Taegeuk_5_Step_7b.png"
+    },
+    {
+      step: "7c",
+      description_en: "Inside Block",
+      description_cn: "右手内格挡",
+      image: "Taegeuk_5_Step_7c.png"
     },
     {
       step: "8",
@@ -76,16 +113,34 @@ var mainData = {
       image: "Taegeuk_5_Step_12.png"
     },
     {
-      step: "13",
-      description_en: "Turn Left Low Block, Inside Block",
-      description_cn: "左转、左手下格挡，右手内格挡",
-      image: "Taegeuk_5_Step_13.png"
+      step: "13a",
+      description_en: "Turn Left, Low Block,",
+      description_cn: "左转、左手下格挡",
+      image: "Taegeuk_5_Step_13a.png"
     },
     {
-      step: "14",
-      description_en: "Kick, Low Block, Inside Block",
-      description_cn: "右脚前踢、右手下格挡，左手内格挡",
-      image: "Taegeuk_5_Step_14.png"
+      step: "13b",
+      description_en: "Inside Block",
+      description_cn: "右手内格挡",
+      image: "Taegeuk_5_Step_13b.png"
+    },
+    {
+      step: "14a",
+      description_en: "Kick",
+      description_cn: "右脚前踢",
+      image: "Taegeuk_5_Step_14a.png"
+    },
+    {
+      step: "14b",
+      description_en: "Low Block",
+      description_cn: "右手下格挡",
+      image: "Taegeuk_5_Step_14b.png"
+    },
+    {
+      step: "14c",
+      description_en: "Inside Block",
+      description_cn: "左手内格挡",
+      image: "Taegeuk_5_Step_14c.png"
     },
     {
       step: "15",
@@ -94,10 +149,22 @@ var mainData = {
       image: "Taegeuk_5_Step_15.png"
     },
     {
-      step: "16",
-      description_en: "Side Kick, Elbow Strike",
-      description_cn: "右脚侧踢、左手肘击",
-      image: "Taegeuk_5_Step_16.png"
+      step: "16a",
+      description_en: "Side Kick (Part 1)",
+      description_cn: "右脚侧踢 - 起",
+      image: "Taegeuk_5_Step_16a.png"
+    },
+    {
+      step: "16b",
+      description_en: "Side Kick (Part 2)",
+      description_cn: "右脚侧踢 - 落",
+      image: "Taegeuk_5_Step_16b.png"
+    },
+    {
+      step: "16c",
+      description_en: "Elbow Strike",
+      description_cn: "左手肘击",
+      image: "Taegeuk_5_Step_16c.png"
     },
     {
       step: "17",
@@ -106,22 +173,52 @@ var mainData = {
       image: "Taegeuk_5_Step_17.png"
     },
     {
-      step: "18",
-      description_en: "Side Kick, Elbow Strike",
-      description_cn: "左脚侧踢、右手肘击",
-      image: "Taegeuk_5_Step_18.png"
+      step: "18a",
+      description_en: "Side Kick (Part 1)",
+      description_cn: "左脚侧踢 - 起",
+      image: "Taegeuk_5_Step_18a.png"
     },
     {
-      step: "19",
-      description_en: "Turn Left Low Block, Inside Block",
-      description_cn: "左转、左手下格挡，右手内格挡",
-      image: "Taegeuk_5_Step_19.png"
+      step: "18b",
+      description_en: "Side Kick (Part 2)",
+      description_cn: "左脚侧踢 - 落",
+      image: "Taegeuk_5_Step_18b.png"
     },
     {
-      step: "20",
-      description_en: "Kick, Back Fist",
-      description_cn: "右脚前踢、滑步向前一步、右手背拳",
-      image: "Taegeuk_5_Step_20.png"
+      step: "18c",
+      description_en: "Elbow Strike",
+      description_cn: "右手肘击",
+      image: "Taegeuk_5_Step_18c.png"
+    },
+    {
+      step: "19a",
+      description_en: "Turn Left Low Block",
+      description_cn: "左转、左手下格挡",
+      image: "Taegeuk_5_Step_19a.png"
+    },
+    {
+      step: "19b",
+      description_en: "Inside Block",
+      description_cn: "右手内格挡",
+      image: "Taegeuk_5_Step_19b.png"
+    },
+    {
+      step: "20a",
+      description_en: "Kick",
+      description_cn: "右脚前踢",
+      image: "Taegeuk_5_Step_20a.png"
+    },
+    {
+      step: "20b",
+      description_en: "Slide Forward",
+      description_cn: "滑步向前一步",
+      image: "Taegeuk_5_Step_20b.png"
+    },
+    {
+      step: "20c",
+      description_en: "Back Fist",
+      description_cn: "右手背拳",
+      image: "Taegeuk_5_Step_20c.png"
     },
     {
       step: "21",

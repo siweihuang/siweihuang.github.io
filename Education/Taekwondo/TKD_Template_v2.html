@@ -106,7 +106,7 @@
             width: 100%;
             text-align: center;
             padding: 10px 0;
-            font-size: 18px;
+            font-size: 36px;
         }
 
         .center {
@@ -199,15 +199,15 @@
                 let index = i + 1
                 text += `
                     <tr>
-                        <td>${index}</td>
+                        <td>${inputJSON.steps[i].step}</td>
                         <td>${inputJSON.steps[i].description_en}<br>${inputJSON.steps[i].description_cn}</td>
-                        <td><img src="./images/${inputJSON.steps[i].image}" onclick="openPopup(${i})"></td>
+                        <td><img src="./images/${inputJSON.folder}/${inputJSON.steps[i].image}" onclick="openPopup(${i})"></td>
                     </tr>
                 `
                 images.push(
                     {
-                        "src": "./images/" + inputJSON.steps[i].image,
-                        "description": index + ". " + inputJSON.steps[i].description_en + " " + inputJSON.steps[i].description_cn
+                        "src": "./images/" + inputJSON.folder + "/" + inputJSON.steps[i].image,
+                        "description": inputJSON.steps[i].step + ". " + inputJSON.steps[i].description_en + " " + inputJSON.steps[i].description_cn
                     }
                 )
             }
