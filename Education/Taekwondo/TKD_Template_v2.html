@@ -204,12 +204,12 @@
                     <tr>
                         <td onclick="startSlideshow(${i})">${inputJSON.steps[i].step}</td>
                         <td>${inputJSON.steps[i].description_en}<br>${inputJSON.steps[i].description_cn}</td>
-                        <td><img src="./images/${inputJSON.folder}/${inputJSON.steps[i].image}" onclick="openPopup(${i})"></td>
+                        <td><img src="./images/${inputJSON.folder}/${inputJSON.steps[i].image}_small.png" onclick="openPopup(${i})"></td>
                     </tr>
                 `
                 images.push(
                     {
-                        "src": "./images/" + inputJSON.folder + "/" + inputJSON.steps[i].image,
+                        "src": "./images/" + inputJSON.folder + "/" + inputJSON.steps[i].image + ".png",
                         "description": inputJSON.steps[i].step + ". " + inputJSON.steps[i].description_en + " " + inputJSON.steps[i].description_cn
                     }
                 )
