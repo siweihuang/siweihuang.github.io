@@ -48,7 +48,7 @@ var mainData = {
     },
     {
       step: "3f",
-      description_en: "2x Punch 1/2",
+      description_en: "2x Punch 2/2",
       description_cn: "跟着出左拳",
       image: "Taegeuk_8_Step_3f"
     },

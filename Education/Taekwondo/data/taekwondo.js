@@ -6,6 +6,7 @@ var mainData = [
     rank: "10th Geup",
     level: "Beginner",
     video: "",
+    video2: "",
     category: "file",
     filename: "Taegeuk_5_O_Jang",
     foldername: ""
@@ -17,6 +18,7 @@ var mainData = [
     rank: "9th Geup",
     level: "Beginner",
     video: "",
+    video2: "",
     category: "file",
     filename: "Taegeuk_5_O_Jang",
     foldername: ""
@@ -29,6 +31,7 @@ var mainData = [
     level: "Beginner",
     video:
       "https://www.youtube.com/watch?v=WvnQmtjBmo8&pp=ygUSdGFlZ2V1ayAxIGlsIGphbmcg",
+    video2: "",
     category: "file",
     filename: "Taegeuk_5_O_Jang",
     foldername: ""
@@ -40,6 +43,7 @@ var mainData = [
     rank: "7th Geup",
     level: "Beginner",
     video: "https://www.youtube.com/watch?v=u_-gfpYK5NQ",
+    video2: "",
     category: "file",
     filename: "Taegeuk_5_O_Jang",
     foldername: ""
@@ -51,6 +55,7 @@ var mainData = [
     rank: "6th Geup",
     level: "Intermediate",
     video: "https://www.youtube.com/watch?v=FggbmUaZlkA",
+    video2: "",
     category: "file",
     filename: "Taegeuk_5_O_Jang",
     foldername: ""
@@ -62,6 +67,7 @@ var mainData = [
     rank: "5th Geup",
     level: "Intermediate",
     video: "https://www.youtube.com/watch?v=Pg-qye6A7fA",
+    video2: "",
     category: "file",
     filename: "Taegeuk_5_O_Jang",
     foldername: ""
@@ -73,6 +79,8 @@ var mainData = [
     rank: "4th Geup",
     level: "Intermediate",
     video: "https://www.youtube.com/watch?v=965K1JjpAVA",
+    video2:
+      "https://www.youtube.com/watch?v=VdqNEAHWCBM&list=PLSFr5pEwo7gSwvfg4bjxoF3liyfJkCLAj&t=726s",
     category: "file",
     filename: "Taegeuk_5_O_Jang",
     foldername: ""
@@ -84,6 +92,8 @@ var mainData = [
     rank: "3rd Geup",
     level: "Advanced",
     video: "https://www.youtube.com/watch?v=YJMfV1HY398",
+    video2:
+      "https://www.youtube.com/watch?v=jcBwWo4wN7c&list=PLSFr5pEwo7gSwvfg4bjxoF3liyfJkCLAj&t=742s",
     category: "file",
     filename: "Taegeuk_6_Yook_Jang",
     foldername: ""
@@ -95,6 +105,8 @@ var mainData = [
     rank: "2nd Geup",
     level: "Advanced",
     video: "https://www.youtube.com/watch?v=POfoHAkhwlQ&t=1s",
+    video2:
+      "https://www.youtube.com/watch?v=6FUM1p6qqhQ&list=PLSFr5pEwo7gSwvfg4bjxoF3liyfJkCLAj&t=1266s",
     category: "file",
     filename: "Taegeuk_7_Chil_Jang",
     foldername: ""
@@ -107,6 +119,7 @@ var mainData = [
     level: "Advanced",
     video:
       "https://www.youtube.com/watch?v=zPSt3azIo48&pp=ygUSdGFlZ2V1ayA4IHBhbCBqYW5n",
+    video2: "https://www.youtube.com/watch?v=Gr_Je2ZkgkI&t=923s",
     category: "file",
     filename: "Taegeuk_8_Pal_Jang",
     foldername: ""
@@ -118,6 +131,7 @@ var mainData = [
     rank: "1st Dan",
     level: "Beginner black belt",
     video: "",
+    video2: "",
     category: "file",
     filename: "",
     foldername: ""
