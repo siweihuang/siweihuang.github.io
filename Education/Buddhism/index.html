@@ -1,166 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Input Data -->
-    <script src="./data/buddhism.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="佛教经典在线阅读 - 包含多种佛经的中文版本">
     <title>Buddhism - 佛经</title>
-    <style type="text/css">
-        body {
-            font-family: 'Book Antiqua';
-        }
-
-        body {
-            background: #eaeaea;
-        }
-
-        .wrap {
-            margin: 0 auto;
-            width: 1000px;
-        }
-
-        .logo {
-            text-align: center;
-            margin-top: 200px;
-        }
-
-        .logo img {
-            width: 350px;
-        }
-
-        .logo p {
-            color: #272727;
-            font-size: 40px;
-            margin-top: 1px;
-        }
-
-        .logo p span {
-            color: lightgreen;
-        }
-
-        .sub a {
-            color: #fff;
-            background: #272727;
-            text-decoration: none;
-            padding: 10px 20px;
-            font-size: 13px;
-            font-family: arial, serif;
-            font-weight: bold;
-            -webkit-border-radius: .5em;
-            -moz-border-radius: .5em;
-            -border-radius: .5em;
-        }
-
-        .footer {
-            color: black;
-            position: absolute;
-            right: 10px;
-            bottom: 10px;
-        }
-
-        .footer a {
-            color: rgb(114, 173, 38);
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid black;
-            font-size: 30px;
-        }
-
-        .center {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/stylesIndex.css">
+    <script src="./data/buddhism.js" defer></script>
+    <script src="./js/mainIndex.js" defer></script>
 </head>
 
 <body>
-
-    <!---728x90--->
-    <div class="wrap">
-        <div class="logo">
+    <main class="wrap">
+        <header class="logo">
             <h1>Buddhism 佛经</h1>
-            <div id="mainContent"></div>
-        </div>
-    </div>
+            <div id="mainContent" role="main"></div>
+        </header>
+    </main>
 
+    <footer class="update-date" aria-label="最后更新时间">
+        Last updated on 25/09/2024
+    </footer>
 </body>
-<script>
-    let inputJSON = mainData;
-
-    let text = `    <table>
-    <tr>
-        <th>目录</th>
-        <th>经名</th>
-        <th>作者/译师</th>
-        <th></th>
-        <th>目录</th>
-        <th>经名</th>
-        <th>作者/译师</th>
-    </tr>`;
-    let rows = Math.ceil(inputJSON.length / 2)
-    // console.log(`rows is ${rows}`)
-    for (var i = 0; i < rows; i++) {
-        let i1 = i * 2
-        let index1 = i * 2 + 1
-        let i2 = i * 2 + 1
-        let index2 = i * 2 + 2
-        let type = "paragraph" + i
-
-        if (inputJSON[i1].category == "file") {
-            text += `
-            <tr>
-                <td>${index1}</td>
-                <td><a href="./BU_Template.html?pageNo=${i}&input=${inputJSON[i1].filename}" target="_blank">&nbsp;${inputJSON[i1].title}&nbsp;</a></td>
-                <td>&nbsp;${inputJSON[i].subtitle}&nbsp;</td>
-                <td></td>
-            `
-        } else {
-            text += `
-            <tr>
-                <td>${index1}</td>
-                <td><a href="./${inputJSON[i1].filename}" target="_blank">&nbsp;${inputJSON[i1].title}&nbsp;</a></td>
-                <td>&nbsp;${inputJSON[i].subtitle}&nbsp;</td>
-                <td></td>
-            `
-        }
-
-        if (inputJSON[i2]) {
-            //console.log(inputJSON[i2].category)
-            if (inputJSON[i2].category == "file") {
-                text += `
-                <td>${index2}</td>
-                <td><a href="./BU_Template.html?input=${inputJSON[i2].filename}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;</a></td>
-                <td>&nbsp;${inputJSON[i2].subtitle}&nbsp;</td>
-                `
-            } else {
-                text += `
-                <td>${index2}</td>
-                <td><a href="./${inputJSON[i2].filename}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;</a></td>
-                <td>&nbsp;${inputJSON[i2].subtitle}&nbsp;</td>
-                `
-            }
-        } else {
-            text += `
-                <td></td>
-                <td></td>
-            `
-        }
-        text += `
-            </tr>`
-    }
-
-    text += `
-        </table>
-    `
-    document.getElementById("mainContent").innerHTML = text;
-</script>
-
-
-<div style="text-align: center;margin-top: 40px"> Last updated on 25/09/2024</div>
 
 </html>
