@@ -20,17 +20,41 @@
         .grid-container {
             display: flex;
             flex-wrap: wrap;
-            width: 1000px;
+            justify-content: center;
+            /* 水平居中 */
+            align-items: center;
+            /* 垂直居中 */
+            /* 使容器占满整个视口高度 */
             /* 10个字 * 100px */
             margin: 0 auto;
         }
 
         .grid-item {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border: 1px solid #2e2e2e;
             position: relative;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* 垂直居中 */
+            align-items: center;
+            /* 水平居中 */
+        }
+
+        .grid-item-Big {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #796363;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* 垂直居中 */
+            align-items: center;
+            /* 水平居中 */
         }
 
         .pinyin {
@@ -42,12 +66,30 @@
             color: #333;
         }
 
+        .pinyinBig {
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 26px;
+            color: #333;
+        }
+
         .character {
             position: absolute;
             top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 32px;
+            font-size: 5vmax;
+            color: #000;
+        }
+
+        .characterBig {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10vmax;
             color: #000;
         }
     </style>
@@ -103,40 +145,62 @@
     document.getElementById("maintitle").innerHTML = inputJSON.testdate;
 
     function populateHTMLparagraph(type) {
-        let showPinYin = true
-        let html = ""
+        try {
+            let showPinYin = true
+            let html = ""
 
-        var title = inputJSON.title
-        var subtitle = inputJSON.subtitle
+            var title = inputJSON.title
+            var subtitle = inputJSON.subtitle
 
-        html += `<div class="slide"><h1>华文听写 2025</h1><p style="text-align: center;font-size: 6vmax;">`
-        html += title
-        html += `</p></div>`
+            html += `<div class="slide"><h1>华文听写 2025</h1><p style="text-align: center;font-size: 6vmax;">`
+            html += title
+            html += `</p></div>`
 
-        for (var j = 0; j < inputJSON.sentences.length; j++) {
-            // pronunciation
-            let paragraphTemp = inputJSON.sentences[j]
-            html += `<div class="slide"><h1>`
-            var displayID = j + 1
-            html = html + subtitle + " - " + displayID
+            for (var j = 0; j < inputJSON.sentences.length; j++) {
+                // pronunciation
+                let sentenceTemp = inputJSON.sentences[j]
+                let pinyinTemp = inputJSON.pronunciation[j]
+                html += `<div class="slide"><h1>`
+                var displayID = j + 1
+                html = html + subtitle + " - " + displayID
 
-            if (paragraphTemp.length > 6) {
-                html += `</h1><div class="vertical-center"><p style="text-align: center;font-size:  5vmax;">`
-            } else {
-                html += `</h1><div class="vertical-center"><p style="text-align: center;font-size:  6vmax;">`
+                if (sentenceTemp.length > 10) {
+                    html += `</h1><div class="grid-container vertical-center" id="grid-container">`
+                    // 遍历句子中的每个字符
+                    for (let k = 0; k < sentenceTemp.length; k++) {
+                        html += `<div class="grid-item ">`
+                        html += `<div class="pinyin">${pinyinTemp.split(' ')[k]}</div>`
+                        html += `<div class="character">${sentenceTemp[k]}</div>`
+                        html += `</div>`
+                    }
+
+                    html += `</div></div>`
+                } else {
+                    html += `</h1><div class="grid-container vertical-center" id="grid-container">`
+                    // 遍历句子中的每个字符
+                    for (let k = 0; k < sentenceTemp.length; k++) {
+                        html += `<div class="grid-item-Big ">`
+                        html += `<div class="pinyinBig">${pinyinTemp.split(' ')[k]}</div>`
+                        html += `<div class="characterBig">${sentenceTemp[k]}</div>`
+                        html += `</div>`
+                    }
+
+                    html += `</div></div>`
+                }
+
+
+
+
             }
 
-            html += paragraphTemp
+            html += `<div class="slide"><h1>`
+            html += subtitle
+            html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 5vmax;"><a>结 束</a></p></div></div>`
 
-            html += `</p></div></div>`
-
+            document.getElementById(type).innerHTML = html;
+        } catch (error) {
+            console.error('加载数据失败:', error);
         }
-
-        html += `<div class="slide"><h1>`
-        html += subtitle
-        html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 5vmax;"><a>结 束</a></p></div></div>`
-
-        document.getElementById(type).innerHTML = html;
     }
 
     populateHTMLparagraph("paragraph");
