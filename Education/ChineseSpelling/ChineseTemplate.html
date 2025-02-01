@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态生成田字格</title>
+    <style>
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1000px;
+            /* 10个字 * 100px */
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #2e2e2e;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .pinyin {
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            color: #333;
+        }
+
+        .character {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container" id="grid-container">
+        <!-- 这里的内容将由 JavaScript 动态生成 -->
+    </div>
+
+    <script>
+        // 加载 JSON 数据并生成田字格
+        async function loadData() {
+            try {
+                // 加载 JSON 文件
+                // const response = await fetch('../../public/download/app/School/ChineseSpelling2025-Unit-02.json');
+                const data = {
+                    "category": "华文听写 2025",
+                    "title": "第二课，我们是兄弟姐妹",
+                    "subtitle": "第二课",
+                    "testdate": "2025年2月4日(星期二)",
+                    "group": [
+                        "识读词语",
+                        "识读词语",
+                        "识读词语",
+                        "识读词语",
+                        "识读词语",
+                        "识读词语",
+                        "识读词语",
+                        "识读词语",
+                        "识读词语",
+                        "识写字词",
+                        "识写字词",
+                        "识写字词",
+                        "识写字词",
+                        "识写字词",
+                        "识写字词",
+                        "识写字词",
+                        "识写字词",
+                        "识写字词",
+                        "识写字词",
+                        "词语搭配",
+                        "词语搭配",
+                        "词语搭配",
+                        "词语搭配",
+                        "词语搭配",
+                        "词语搭配",
+                        "句式",
+                        "句式",
+                        "默写"
+                    ],
+                    "pronunciation": [
+                        "nǐ yì yán",
+                        "wǒ yì yǔ",
+                        "mào zi , wài tào",
+                        "yān huā tào",
+                        "jǐn jiē zhe",
+                        "qīng pén dà yǔ",
+                        "hū hū dì",
+                        "gǎn jǐn , chēng sǎn",
+                        "shí fēn",
+                        "píng guǒ , cí yǔ",
+                        "yú wán , dǎ gǔ",
+                        "gū gu",
+                        "wū yún mì bù",
+                        "kào dé jǐn jǐn de",
+                        "nuǎn nuǎn de , biǎo shì",
+                        "hū rán",
+                        "líng jī yí dòng",
+                        "jǐ zài yì qǐ",
+                        "dān xīn , bú pà",
+                        "biǎo shì tóng yì",
+                        "jué de dān xīn",
+                        "kào dé jǐn jǐn de",
+                        "yí chuàn yú wán",
+                        "yí gè xiǎo gǔ",
+                        "gǎn jǐn huí jiā",
+                        "wǒ lěng dé zhí fā dǒu",
+                        "wǒ hé jiě jie xiào dé shí fēn kāi xīn",
+                        "zhè jiàn shì ràng wǒ míng bái le yǐ hòu bù guǎn zuò shén me shì qíng dōu yào xiǎo xīn ， cái néng bì miǎn fā shēng yì wài 。"
+                    ],
+                    "sentences": [
+                        "你一言",
+                        "我一语",
+                        "帽子、外套",
+                        "烟花套",
+                        "紧接着",
+                        "倾盆大雨",
+                        "呼呼地",
+                        "赶紧、撑伞",
+                        "十分",
+                        "苹果、词语",
+                        "鱼丸、打鼓",
+                        "姑姑",
+                        "乌云密布",
+                        "靠得紧紧的",
+                        "暖暖的、表示",
+                        "忽然",
+                        "灵机一动",
+                        "挤在一起",
+                        "担心、不怕",
+                        "表示同意",
+                        "觉得担心",
+                        "靠得紧紧的",
+                        "一串鱼丸",
+                        "一个小鼓",
+                        "赶紧回家",
+                        "我冷得直发抖",
+                        "我和姐姐笑得十分开心",
+                        "这件事让我明白了以后不管做什么事情都要小心，才能避免发生意外。"
+                    ]
+                }
+
+
+                // 获取容器
+                const gridContainer = document.getElementById('grid-container');
+
+                // 遍历拼音和句子数据
+                for (let i = 0; i < data.sentences.length; i++) {
+                    const sentence = data.sentences[i]; // 中文句子
+                    const pinyin = data.pronunciation[i]; // 拼音
+
+                    // 遍历句子中的每个字符
+                    for (let j = 0; j < sentence.length; j++) {
+                        // 创建 grid-item
+                        const gridItem = document.createElement('div');
+                        gridItem.classList.add('grid-item');
+
+                        // 创建拼音元素
+                        const pinyinElement = document.createElement('div');
+                        pinyinElement.classList.add('pinyin');
+                        pinyinElement.textContent = pinyin.split(' ')[j]; // 获取对应拼音
+
+                        // 创建汉字元素
+                        const characterElement = document.createElement('div');
+                        characterElement.classList.add('character');
+                        characterElement.textContent = sentence[j]; // 获取对应汉字
+
+                        // 将拼音和汉字添加到 grid-item 中
+                        gridItem.appendChild(pinyinElement);
+                        gridItem.appendChild(characterElement);
+
+                        // 将 grid-item 添加到容器中
+                        gridContainer.appendChild(gridItem);
+                    }
+                }
+            } catch (error) {
+                console.error('加载数据失败:', error);
+            }
+        }
+
+        // 调用函数加载数据
+        loadData();
+    </script>
+</body>
+
+</html>

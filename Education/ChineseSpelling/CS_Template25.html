@@ -4,9 +4,53 @@
 <head>
     <meta charset="utf-8">
     <title id="maintitle"></title>
-
     <!-- Input Data -->
     <script src="../DataSource/chinesespelling25.js"></script>
+
+    <style>
+        @font-face {
+            font-family: 'Kaiti';
+            src: url('../../public/fonts/simkai.woff') format('woff');
+        }
+
+        body {
+            font-family: 'Kaiti' !important;
+        }
+
+        .grid-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 1000px;
+            /* 10个字 * 100px */
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #2e2e2e;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .pinyin {
+            position: absolute;
+            top: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            color: #333;
+        }
+
+        .character {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 32px;
+            color: #000;
+        }
+    </style>
 
     <!-- configuration parameters -->
     <meta name="defaultView" content="slideshow" />
@@ -42,9 +86,7 @@
         <div id="paragraph"></div>
     </div>
 </body>
-<script type="text/javascript" src="../lib/dict/pinyin_dict_withtone.js"></script>
-<script type="text/javascript" src="../lib/dict/pinyin_dict_polyphone.js"></script>
-<script type="text/javascript" src="../lib/dict/pinyinUtil.js"></script>
+
 <script>
     const params = new URLSearchParams(window.location.search)
     var pageNo = ''
@@ -66,11 +108,14 @@
 
         var title = inputJSON.title
         var subtitle = inputJSON.subtitle
+
         html += `<div class="slide"><h1>华文听写 2025</h1><p style="text-align: center;font-size: 6vmax;">`
         html += title
         html += `</p></div>`
-        for (var j = 0; j < inputJSON.words.length; j++) {
-            let paragraphTemp = inputJSON.words[j]
+
+        for (var j = 0; j < inputJSON.sentences.length; j++) {
+            // pronunciation
+            let paragraphTemp = inputJSON.sentences[j]
             html += `<div class="slide"><h1>`
             var displayID = j + 1
             html = html + subtitle + " - " + displayID
@@ -81,31 +126,10 @@
                 html += `</h1><div class="vertical-center"><p style="text-align: center;font-size:  6vmax;">`
             }
 
-            if (showPinYin) {
-                html += `<ruby>`
-                let paragraphPinyinTemp = pinyinUtil.getPinyin(paragraphTemp, ' ', true, true);
-                let myArr = paragraphPinyinTemp.split(" ")
-                for (var k = 0; k < myArr.length; k++) {
-                    html = html + myArr[k] + "&nbsp;"
-                }
-                html += "<br>"
-                for (var k = 0; k < myArr.length; k++) {
-                    html = html + paragraphTemp[k] + "&nbsp;"
-                }
-                html += `</ruby>`
-
-            } else {
-                html += paragraphTemp
-            }
-
-            // Add audio 
-            // let weekNo = pageNo * 1 + 1;
-            // var audioID = 0;
-            // audioID = j + 1;
-            // var audioSrc1 = `${weekNo}-${j}.mp3`;
-            // html += `<audio id="audio${audioID}" src="..\\..\\public\\download\\mp3\\Chinese\\AY2023\\ww${weekNo}\\${audioSrc1}"></audio>`
+            html += paragraphTemp
 
             html += `</p></div></div>`
+
         }
 
         html += `<div class="slide"><h1>`
@@ -116,7 +140,6 @@
     }
 
     populateHTMLparagraph("paragraph");
-
 
 </script>
 
