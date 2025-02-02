@@ -168,6 +168,7 @@ function go(step) {
   jl.selectedIndex = snum;
   currentSlide();
   number = 0;
+  document.getElementById("wordDiv").innerHTML = ""; // Added on 02-Feb-2025
 }
 
 function goTo(target) {
@@ -266,11 +267,16 @@ function keys(key) {
         } else {
           subgo(1);
         }
-        // Added on 02-Feb-2025
+        // Added on 02-Feb-2025 Start
         if (snum == lmax) {
-          console.log("go to 0");
-          goTo(0);
+          var divContent = document.getElementById("wordDiv").innerHTML;
+          //console.log("divContent:" + divContent + ":");
+          if (divContent == "") {
+            console.log("go to 0");
+            goTo(0);
+          }
         }
+        // Added on 02-Feb-2025 End
         break;
       case 33: // page up
       case 37: // leftkey
@@ -293,7 +299,7 @@ function keys(key) {
         showHide("k");
         break;
       case 80: // KeyP
-        console.log("KeyP is clicked:" + snum + ":");
+        //console.log("KeyP is clicked:" + snum + ":");
         var audio = document.getElementById("audio" + snum * 30);
         if (audio) {
           audio.play();
@@ -332,7 +338,7 @@ function clicker(e) {
     // Double check if the character is clicked or the white space is cliked
     // to determine whether to jump to next page or display a modal
     var divContent = document.getElementById("wordDiv").innerHTML;
-    console.log("divContent:" + divContent + ":");
+    //console.log("divContent:" + divContent + ":");
     if (divContent == "") {
       if (!incrementals[snum] || incpos >= incrementals[snum].length) {
         go(1);
@@ -340,7 +346,7 @@ function clicker(e) {
         subgo(1);
       }
       // Added on 2023-07-28 For clicking on the mobile device, for auto playing the sentences
-      console.log("clicker is clicked:" + snum + ":lmax:" + lmax + ":");
+      //console.log("clicker is clicked:" + snum + ":lmax:" + lmax + ":");
       if (snum == lmax) {
         console.log("go to 0");
         goTo(0);
@@ -457,9 +463,9 @@ function createControls() {
     // hideDiv +
     ">" +
     '<div id="navLinks">' +
-    '<a accesskey="t" id="toggle" href="javascript:toggle();">&#216;</a>' +
-    '<a accesskey="z" id="prev" href="javascript:go(-1);">&laquo;</a>' +
-    '<a accesskey="x" id="next" href="javascript:go(1);">&raquo;</a>' +
+    // '<a accesskey="t" id="toggle" href="javascript:toggle();">&#216;</a>' +
+    '<div id="navLinkLeft"><a accesskey="z" id="prev" href="javascript:go(-1);" style="font-size: 48px;">&laquo;</a></div>' +
+    '<div id="navLinkRight"><a accesskey="x" id="next" href="javascript:go(1);" style="font-size: 48px;">&raquo;</a>' +
     '<div id="navList"' +
     // hideList +
     '><select id="jumplist" onchange="go(\'j\');"></select></div>' +

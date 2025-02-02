@@ -104,7 +104,7 @@
             left: 50%;
             transform: translateX(-50%);
             /* 水平居中 */
-            width: 300px;
+            width: 500px;
             padding: 20px;
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -148,7 +148,7 @@
 
         /* 汉字点击区域样式 */
         .hanzi {
-            font-size: 50px;
+            font-size: 80px;
             cursor: pointer;
             text-align: center;
             margin-top: 20px;
@@ -253,7 +253,7 @@
                     html += `</h1><div class="grid-container vertical-center" id="grid-container">`
                     // 遍历句子中的每个字符
                     for (let k = 0; k < sentenceTemp.length; k++) {
-                        html += `<div class="grid-item ">`
+                        html += `<div class="grid-item" onclick="openModal('${sentenceTemp[k]}')">`
                         html += `<div class="pinyin">${pinyinTemp.split(' ')[k]}</div>`
                         html += `<div class="character">${sentenceTemp[k]}</div>`
                         html += `</div>`
@@ -273,21 +273,19 @@
                     html += `</div></div>`
                 }
 
-
-
-
             }
 
             html += `<div class="slide"><h1>`
             html += subtitle
             html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 5vmax;"><a>结 束</a></p></div></div>`
 
+
             // Added on 02-Feb-2025
             html += `
                 <div class="overlay" id="overlay"></div>
                 <div class="modal" id="modal">
                     <span class="close-btn" onclick="closeModal('')">×</span>
-                    <div id="hanzi-writer-target" style="width: 200px; height: 200px; margin: 0 auto;"></div>
+                    <div id="hanzi-writer-target" style="width: 400px; height: 400px; margin: 0 auto;"></div>
                     <div class="button-container">
                         <!-- <button onclick="startAnimation()">重新播放</button> -->
                         <button onclick="closeModal('')">关闭</button>
@@ -330,8 +328,8 @@
         document.getElementById('hanzi-writer-target').innerHTML = '';
 
         var writer = HanziWriter.create('hanzi-writer-target', character, {
-            width: 200,
-            height: 200,
+            width: 400,
+            height: 400,
             showCharacter: false,
             showOutline: true,
             strokeAnimationSpeed: 1, // 笔画动画速度
