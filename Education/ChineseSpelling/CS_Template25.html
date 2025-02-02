@@ -32,7 +32,7 @@
         .grid-item {
             width: 120px;
             height: 120px;
-            border: 1px solid #2e2e2e;
+            border: 1px solid #796363;
             position: relative;
             box-sizing: border-box;
             display: flex;
@@ -89,8 +89,93 @@
             top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 10vmax;
+            font-size: 9vmax;
             color: #000;
+        }
+    </style>
+
+    <style>
+        /* 模态框样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 20%;
+            /* 距离顶部 20% */
+            left: 50%;
+            transform: translateX(-50%);
+            /* 水平居中 */
+            width: 300px;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            text-align: center;
+            /* 内容居中 */
+        }
+
+        /* 遮罩层样式 */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        /* 关闭按钮样式 */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 24px;
+            /* 增大字体大小 */
+            padding: 5px 10px;
+            /* 增加内边距 */
+            line-height: 1;
+            /* 确保图标垂直居中 */
+            color: #333;
+            /* 设置颜色 */
+        }
+
+        .close-btn:hover {
+            color: #000;
+            /* 鼠标悬停时颜色变深 */
+        }
+
+        /* 汉字点击区域样式 */
+        .hanzi {
+            font-size: 50px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* 按钮容器样式 */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            /* 按钮之间的间距 */
+            margin-top: 20px;
+        }
+
+        /* 按钮样式 */
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
         }
     </style>
 
@@ -179,7 +264,7 @@
                     html += `</h1><div class="grid-container vertical-center" id="grid-container">`
                     // 遍历句子中的每个字符
                     for (let k = 0; k < sentenceTemp.length; k++) {
-                        html += `<div class="grid-item-Big ">`
+                        html += `<div class="grid-item-Big" onclick="openModal('${sentenceTemp[k]}')">`
                         html += `<div class="pinyinBig">${pinyinTemp.split(' ')[k]}</div>`
                         html += `<div class="characterBig">${sentenceTemp[k]}</div>`
                         html += `</div>`
@@ -197,6 +282,21 @@
             html += subtitle
             html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 5vmax;"><a>结 束</a></p></div></div>`
 
+            // Added on 02-Feb-2025
+            html += `
+                <div class="overlay" id="overlay"></div>
+                <div class="modal" id="modal">
+                    <span class="close-btn" onclick="closeModal('')">×</span>
+                    <div id="hanzi-writer-target" style="width: 200px; height: 200px; margin: 0 auto;"></div>
+                    <div class="button-container">
+                        <!-- <button onclick="startAnimation()">重新播放</button> -->
+                        <button onclick="closeModal('')">关闭</button>
+                        <button onclick="closeModal('next')">关闭并跳去下一页</button>
+                    </div>
+                </div>
+                <div id="wordDiv"></div>`
+
+
             document.getElementById(type).innerHTML = html;
         } catch (error) {
             console.error('加载数据失败:', error);
@@ -205,6 +305,76 @@
 
     populateHTMLparagraph("paragraph");
 
+</script>
+
+<!-- 引入 Hanzi Writer 库 -->
+<script src="../lib/js/hanzi-writer.min.js"></script>
+<script>
+    let writer = null; // 用于存储 Hanzi Writer 实例
+
+    // 打开模态框
+    function openModal(character) {
+        console.log("Open " + character)
+        document.getElementById('wordDiv').innerHTML = character;
+        const modal = document.getElementById('modal');
+        const overlay = document.getElementById('overlay');
+        modal.style.display = 'block';
+        overlay.style.display = 'block';
+
+        // 销毁之前的 Hanzi Writer 实例
+        if (writer) {
+            writer._svg.remove(); // 移除 SVG 元素
+            writer = null; // 清空实例
+        }
+
+        document.getElementById('hanzi-writer-target').innerHTML = '';
+
+        var writer = HanziWriter.create('hanzi-writer-target', character, {
+            width: 200,
+            height: 200,
+            showCharacter: false,
+            showOutline: true,
+            strokeAnimationSpeed: 1, // 笔画动画速度
+            delayBetweenStrokes: 300, // 笔画之间的延迟
+            padding: 5,
+            delayBetweenLoops: 3000
+        });
+
+        writer.loopCharacterAnimation();
+
+        // // 初始化 Hanzi Writer
+        // writer = HanziWriter.create('hanzi-writer-target', character, {
+        //     width: 200,
+        //     height: 200,
+        //     showCharacter: false,
+        //     showOutline: true,
+        //     strokeAnimationSpeed: 1, // 笔画动画速度
+        //     delayBetweenStrokes: 300, // 笔画之间的延迟
+        // });
+
+        // // 自动开始动画
+        // writer.animateCharacter();
+    }
+
+    // 关闭模态框
+    function closeModal(command) {
+        if (command != "") {
+            document.getElementById('wordDiv').innerHTML = "";
+        }
+
+        const modal = document.getElementById('modal');
+        const overlay = document.getElementById('overlay');
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
+
+    }
+
+    // 重新播放动画
+    function startAnimation() {
+        if (writer) {
+            writer.animateCharacter();
+        }
+    }
 </script>
 
 </html>
