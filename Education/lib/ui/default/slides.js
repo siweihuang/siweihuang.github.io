@@ -454,14 +454,14 @@ function createControls() {
   }
   controlsDiv.innerHTML =
     '<form action="#" id="controlForm"' +
-    hideDiv +
+    // hideDiv +
     ">" +
     '<div id="navLinks">' +
     '<a accesskey="t" id="toggle" href="javascript:toggle();">&#216;</a>' +
     '<a accesskey="z" id="prev" href="javascript:go(-1);">&laquo;</a>' +
     '<a accesskey="x" id="next" href="javascript:go(1);">&raquo;</a>' +
     '<div id="navList"' +
-    hideList +
+    // hideList +
     '><select id="jumplist" onchange="go(\'j\');"></select></div>' +
     "</div></form>";
   if (controlVis == "hidden") {
@@ -469,7 +469,7 @@ function createControls() {
   } else {
     var hidden = document.getElementById("jumplist");
   }
-  addClass(hidden, "hideme");
+  addClass(hidden, "hideme_1");
 }
 
 function fontScale() {
