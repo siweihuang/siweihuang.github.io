@@ -11,16 +11,36 @@
     <script src="./Main_Data.js"></script>
 
     <style>
+        @font-face {
+            font-family: 'Kaiti';
+            src: url('../../public/fonts/simkai.woff') format('woff');
+        }
+
         dd {
             display: block;
             border: 1px solid #4CAF50;
-            height: 50px;
-            line-height: 50px;
+            height: 100px;
+            width: 100px;
+            line-height: 100px;
             color: #000;
             text-decoration: none;
             text-align: center;
-            padding: 0px 8px;
             margin-top: 20px;
+            font-family: 'Kaiti' !important;
+            font-size: 60px;
+        }
+
+        ddd {
+            display: block;
+            height: 100px;
+            width: 100px;
+            line-height: 100px;
+            color: #000;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 20px;
+            font-family: 'Kaiti' !important;
+            font-size: 60px;
         }
 
         .button {
@@ -35,17 +55,49 @@
             margin: 4px 2px;
             cursor: pointer;
         }
+
+        /* 按钮样式 */
+        #toggleButton {
+            position: fixed;
+            /* 固定定位 */
+            top: 40px;
+            right: 10px;
+            padding: 10px 20px;
+            color: white;
+            /* 字体颜色为白色 */
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            z-index: 1000;
+            /* 确保按钮在最上层 */
+        }
+
+        /* 拼音样式 */
+        rt {
+            font-size: 12px;
+            /* 拼音字体大小 */
+            color: #666;
+            /* 拼音颜色 */
+        }
+
+        /* 隐藏拼音时的样式 */
+        .hide-rt rt {
+            display: none;
+        }
     </style>
 
 </head>
 
 <body>
-
+    <button id="toggleButton">显示拼音</button>
     <div class="align-items-center justify-content-center" style="width:100%;">
 
         <div class="d-flex flex-column align-items-center justify-content-center">
             <br>
             <div class="card text-center md-3" style="width: 95%;">
+
                 <div class="card-body">
 
                     <h3 class="card-title mr-1">
@@ -82,19 +134,21 @@
             }
             i++
         }
-        console.log("pageNo:" + pageNo)
+        // console.log("pageNo:" + pageNo)
 
         function populateHTML(type, value, myArr) {
             let html = '';
             for (var i = 0; i < myArr.length; i++) {
-                html = html + "<ruby>" + "&nbsp;" + value[i] + "&nbsp;<rt>" + myArr[i] + "</rt>" + "</ruby>"
+                html = html + "<ruby class='hide-rt'>" + "&nbsp;" + value[i] + "&nbsp;<rt>" + myArr[i] + "</rt>" + "</ruby>"
             }
             document.getElementById(type).innerHTML = html;
         }
 
         function populateHTMLparagraph(type, value, myArr, index) {
             // let html = '<ruby>&nbsp;　&nbsp;<rt> </rt>&nbsp;' + index + ')&nbsp;<rt> </rt>';
-            let html = '<ruby>&nbsp;　&nbsp;<rt> </rt>&nbsp; &nbsp;<rt> </rt>';
+            let html = '<ruby class="hide-rt"><rt> </rt><ddd>&nbsp; &nbsp;</ddd><rt> </rt>';
+            html += '<rt> </rt><ddd>&nbsp; &nbsp;</ddd><rt> </rt>';
+            // let html = '<ruby>';
 
             for (var i = 0; i < myArr.length; i++) {
 
@@ -108,9 +162,9 @@
                         value[i] == '“' || value[i] == '”' ||
                         value[i] == '《' || value[i] == '》' ||
                         value[i] == "？" || value[i] == "！") {
-                        html = html + "<dd>&nbsp;" + value[i] + "&nbsp;<rt></rt></dd>"
+                        html = html + "<dd>" + value[i] + "<rt></rt></dd>"
                     } else {
-                        html = html + "<dd>&nbsp;" + value[i] + "&nbsp;<rt>" + myArr[i] + "</rt></dd>"
+                        html = html + "<dd>" + value[i] + "<rt>" + myArr[i] + "</rt></dd>"
                     }
 
                 }
@@ -153,6 +207,29 @@
 
 
         getPinyin();
+    </script>
+
+    <script>
+        // 获取按钮和拼音 div 的引用
+        const toggleButton = document.getElementById('toggleButton');
+        const rubyElements = document.querySelectorAll('ruby');
+
+        // 添加点击事件监听器
+        toggleButton.addEventListener('click', function () {
+            rubyElements.forEach(ruby => {
+                if (ruby.classList.contains('hide-rt')) {
+                    // 如果拼音是隐藏的，显示拼音
+                    ruby.classList.remove('hide-rt');
+                    toggleButton.textContent = '隐藏拼音';
+                    toggleButton.style.backgroundColor = '#0F9ED5';
+                } else {
+                    // 如果拼音是显示的，隐藏拼音
+                    ruby.classList.add('hide-rt');
+                    toggleButton.textContent = '显示拼音';
+                    toggleButton.style.backgroundColor = '#4CAF50';
+                }
+            });
+        });
     </script>
 
 </body>
