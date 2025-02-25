@@ -1,66 +1,119 @@
-body {
-  font-family: "Book Antiqua";
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Book Antiqua;
 }
 
+/* Body styling */
 body {
-  background: #eaeaea;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
 }
 
+/* Wrapper */
 .wrap {
-  margin: 0 auto;
-  width: 1000px;
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
+/* Header */
+header.logo {
   text-align: center;
-  margin-top: 200px;
+  padding: 20px 0;
+  background: #92d050;
+  color: white;
+  border-radius: 8px 8px 0 0;
 }
 
-.logo img {
-  width: 350px;
+header h1 {
+  font-size: 24px;
 }
 
-.logo p {
-  color: #272727;
-  font-size: 40px;
-  margin-top: 1px;
+/* Sections */
+section {
+  margin: 20px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.logo p span {
-  color: lightgreen;
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
 }
 
-.sub a {
-  color: #fff;
-  background: #272727;
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table th {
+  background: #92d050;
+  color: white;
+}
+
+/* Links */
+a {
+  color: #0073e6;
   text-decoration: none;
-  padding: 10px 20px;
-  font-size: 13px;
-  font-family: arial, serif;
   font-weight: bold;
-  -webkit-border-radius: 0.5em;
-  -moz-border-radius: 0.5em;
-  -border-radius: 0.5em;
 }
 
-.footer {
-  color: black;
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
+a:hover {
+  text-decoration: underline;
 }
 
-.footer a {
-  color: rgb(114, 173, 38);
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #92d050;
+  color: white;
+  border-radius: 0 0 8px 8px;
 }
 
-table,
-th,
-td {
-  border: 1px solid black;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
 
-.center {
-  margin-left: auto;
-  margin-right: auto;
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #0073e6;
+  }
 }

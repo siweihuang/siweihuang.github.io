@@ -8,6 +8,8 @@
 	<link rel="icon" href="./favicon.png">
 	<link rel="stylesheet" href="styles.css">
 	<title>Welcome to Main Page</title>
+	<script defer src="data.js"></script>
+	<script defer src="script.js"></script>
 </head>
 
 <body>
@@ -18,172 +20,45 @@
 
 		<section class="recent-releases">
 			<h2>Recent Releases</h2>
-			<table>
+			<table id="recent-table">
 				<thead>
 					<tr>
-						<th>Release Date (2024)</th>
-						<th>Module Name</th>
-						<th>Release Date (2025)</th>
+						<th>Release Date</th>
 						<th>Module Name</th>
 					</tr>
 				</thead>
-				<tbody>
-					<tr>
-						<td>2024-01-03</td>
-						<td><a href="Education/ChineseSpelling/index24.html" target="_blank" rel="noopener">华文听写
-								2024</a></td>
-						<td>2025-01-01</td>
-						<td><a href="Education/ChineseSpelling/index25.html" target="_blank" rel="noopener">华文听写
-								2025</a></td>
-					</tr>
-					<tr>
-						<td>2024-01-03</td>
-						<td><a href="Education/EnglishSpelling/index24.html" target="_blank" rel="noopener">English
-								Spelling 2024</a></td>
-						<td>2025-01-01</td>
-						<td><a href="Education/EnglishSpelling/index25.html" target="_blank" rel="noopener">English
-								Spelling 2025</a></td>
-					</tr>
-					<tr>
-						<td>2024-01-03</td>
-						<td><a href="Education/Taekwondo/index.html" target="_blank" rel="noopener">Taekwondo
-								Grading</a></td>
-						<td>2025-02-01</td>
-						<td><a href="Education/Tools/Pinyin.html" target="_blank" rel="noopener">中文转拼音</a></td>
+				<tbody></tbody>
+			</table>
+		</section>
 
-					</tr>
+		<section class="pin-releases">
+			<h2>Pin Releases</h2>
+			<table id="pin-table">
+				<thead>
 					<tr>
-						<td>2024-09-22</td>
-						<td><a href="Education/Buddhism/index.html" target="_blank" rel="noopener">Buddhism</a></td>
-						<td></td>
-						<td></td>
+						<th>Release Date</th>
+						<th>Module Name</th>
 					</tr>
-					<tr>
-						<td>2024-10-08</td>
-						<td><a href="Education/EnglishVocabulary/index.html" target="_blank" rel="noopener">English
-								Vocabulary</a></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>2024-10-13</td>
-						<td><a href="Education/Jokes/index.html" target="_blank" rel="noopener">Jokes
-								幽默笑话</a></td>
-						<td></td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>2024-10-28</td>
-						<td><a href="Technology/index.html" target="_blank" rel="noopener">Technology</a>
-						</td>
-						<td></td>
-						<td></td>
-					</tr>
-				</tbody>
+				</thead>
+				<tbody></tbody>
 			</table>
 		</section>
 
 		<section class="archive-releases">
 			<h2>Archive Releases</h2>
-			<table>
+			<table id="archive-table">
 				<thead>
 					<tr>
-						<th>Release Date (2021)</th>
-						<th>Module Name</th>
-						<th>Release Date (2022)</th>
-						<th>Module Name</th>
-						<th>Release Date (2023)</th>
+						<th>Release Date</th>
 						<th>Module Name</th>
 					</tr>
 				</thead>
-				<tbody>
-					<tr>
-						<td>2021-06-07</td>
-						<td><a href="Technology/StringToBase64/index.html" target="_blank" rel="noopener">Convert String
-								To
-								Base64</a></td>
-						<td>2022-01-01</td>
-						<td><a href="Education/index.html" target="_blank" rel="noopener">Education</a></td>
-						<td>2023-01-11</td>
-						<td><a href="Education/ChineseSpelling/index23.html" target="_blank" rel="noopener">华文听写
-								2023</a></td>
-					</tr>
-					<tr>
-						<td>2021-06-07</td>
-						<td><a href="Technology/ImageToBase64/index.html" target="_blank" rel="noopener">Image To
-								Base64</a></td>
-						<td>2022-07-25</td>
-						<td><a href="Education/ChinesePinyinHTML/index.html" target="_blank" rel="noopener">中文古文列表</a>
-						</td>
-						<td>2023-01-15</td>
-						<td><a href="Education/EnglishSpelling/index23.html" target="_blank" rel="noopener">English
-								Spelling 2023</a></td>
-					</tr>
-					<tr>
-						<td>2021-06-10</td>
-						<td><a href="Technology/JsonToString/index.html" target="_blank" rel="noopener">JSON to String /
-								Formatter</a></td>
-						<td>2022-09-15</td>
-						<td><a href="Education/ChineseSpelling/index.html" target="_blank" rel="noopener">华文听写 2022</a>
-						</td>
-						<td>2023-06-28</td>
-						<td><a href="Education/EnglishSpelling/indexVocabulary.html" target="_blank"
-								rel="noopener">English Vocabulary</a></td>
-					</tr>
-					<tr>
-						<td>2021-06-12</td>
-						<td><a href="Technology/TestMD5/index.html" target="_blank" rel="noopener">Crypto JS Test
-								Page</a></td>
-						<td>2022-09-15</td>
-						<td><a href="Education/EnglishSpelling/index.html" target="_blank" rel="noopener">English
-								Spelling 2022</a></td>
-						<td>2023-07-05</td>
-						<td><a href="Tools/webpinyin/index.html" target="_blank" rel="noopener">中文在线拼音输入</a></td>
-					</tr>
-					<tr>
-						<td>2021-06-29</td>
-						<td><a href="Technology/Network/index.html" target="_blank" rel="noopener">Network Get Your
-								Public IP</a>
-						</td>
-						<td>2022-09-30</td>
-						<td><a href="Education/ReadingNotes/index.html" target="_blank" rel="noopener">Reading Notes</a>
-						</td>
-						<td>2023-07-31</td>
-						<td><a href="Education/EnglishPhonics/index.html" target="_blank" rel="noopener">English
-								Phonics</a></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td>2022-09-30</td>
-						<td><a href="Technology/HTML_Presentation/index.html" target="_blank" rel="noopener">HTML
-								Presentation</a>
-						</td>
-						<td>2023-09-10</td>
-						<td><a href="Education/Games/index.html" target="_blank" rel="noopener">Cariboo Game</a></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td>2022-10-10</td>
-						<td><a href="Education/EnglishComprehension/index.html" target="_blank" rel="noopener">English
-								Comprehension</a></td>
-						<td>2023-10-19</td>
-						<td><a href="Education/Mandarin/ChinesePinyinChart.html" target="_blank"
-								rel="noopener">普通话拼音表</a></td>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td>2022-10-20</td>
-						<td><a href="Education/Songs/index.html" target="_blank" rel="noopener">Songs</a></td>
-					</tr>
-				</tbody>
+				<tbody></tbody>
 			</table>
 		</section>
 
 		<footer>
-			<p>Last updated on 01/02/2025 V1</p>
+			<p>Last updated on <span id="last-updated"></span></p>
 		</footer>
 	</main>
 </body>
