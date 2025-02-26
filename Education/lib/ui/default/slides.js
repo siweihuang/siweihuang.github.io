@@ -464,8 +464,8 @@ function createControls() {
     ">" +
     '<div id="navLinks">' +
     // '<a accesskey="t" id="toggle" href="javascript:toggle();">&#216;</a>' +
-    '<div id="navLinkLeft"><a accesskey="z" id="prev" href="javascript:go(-1);" style="font-size: 48px;">&laquo;</a></div>' +
-    '<div id="navLinkRight"><a accesskey="x" id="next" href="javascript:go(1);" style="font-size: 48px;">&raquo;</a>' +
+    '<div id="navLinkLeft"><a accesskey="z" id="prev" href="javascript:go(-1);" style="font-size: 32px;">&laquo;</a></div>' +
+    '<div id="navLinkRight"><a accesskey="x" id="next" href="javascript:go(1);" style="font-size: 32px;">&raquo;</a>' +
     '<div id="navList"' +
     // hideList +
     '><select id="jumplist" onchange="go(\'j\');"></select></div>' +
