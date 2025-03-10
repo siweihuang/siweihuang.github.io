@@ -114,7 +114,7 @@ var mainData = [
   {
     belt_color: "Black tip (R1)",
     pattern: "Taegeuk 8<br>Pal Jang",
-    meaning: "太极第八章 乾 (大地)<br>Earth",
+    meaning: "太极第八章 坤 (大地)<br>Earth",
     rank: "1st Geup",
     level: "Advanced",
     video:
@@ -126,12 +126,12 @@ var mainData = [
   },
   {
     belt_color: "Black belt",
-    pattern: "",
-    meaning: "",
+    pattern: "Poomsae Koryo",
+    meaning: "高丽品势 (型)",
     rank: "1st Dan",
     level: "Beginner black belt",
     video: "",
-    video2: "",
+    video2: "https://www.youtube.com/watch?v=mGa60JDtWmg&t=52s",
     category: "file",
     filename: "",
     foldername: ""

@@ -6,6 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Input Data -->
     <script src="./data/taekwondo.js"></script>
+    <script src="./data/taekwondo_poomsae.js"></script>
     <title>Martial Arts - Taekwondo</title>
     <style type="text/css">
         body {
@@ -75,6 +76,10 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        .textcenter {
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -85,12 +90,21 @@
         <div class="logo">
             <h1>Taekwondo Grading Patterns 跆拳道十级九段 - 太极八卦</h1>
             <div id="mainContent"></div>
+            <br>
+            <hr>
+            <h1>Taekwondo Dan Grade Poomsae 有段者品势</h1>
+            <div id="mainContentPoomsae"></div>
         </div>
     </div>
+
+    <footer class="textcenter">
+        <p>Last updated on 10-Mar-2025</p>
+    </footer>
 
 </body>
 <script>
     let inputJSON = mainData;
+    let inputJSON_2 = mainDataPoomsae;
 
     let text = `<table class="center">
     <tr>
@@ -117,6 +131,33 @@
 </table>
     `
     document.getElementById("mainContent").innerHTML = text;
+
+
+    text = `<table class="center">
+    <tr>
+        <th>Current Belt Colour</th>
+        <th>Poomsae</th>
+        <th>Rank</th>
+        <th>Group</th>
+        <th>Level</th>
+    </tr>`;
+    for (var i = 0; i < inputJSON_2.length; i++) {
+        let index = i + 1
+        let type = "paragraph" + i
+        text += `
+        <tr>
+            <td><a href="./TKD_Template_v2.html?input=${inputJSON_2[i].filename}&interval=3" target="_blank">&nbsp;${inputJSON_2[i].belt_color}&nbsp;</a></td>
+            <td><a href="${inputJSON_2[i].video}" target="_blank">&nbsp;${inputJSON_2[i].pattern}&nbsp;</a></td>
+            <td>${inputJSON_2[i].meaning}</td>
+            <td><a href="${inputJSON_2[i].video2}" target="_blank">&nbsp;${inputJSON_2[i].rank}&nbsp;</a></td>
+            <td>${inputJSON_2[i].level}</td>
+        </tr>`
+    }
+
+    text += `
+</table>
+    `
+    document.getElementById("mainContentPoomsae").innerHTML = text;
 </script>
 
 </html>
