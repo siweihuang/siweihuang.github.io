@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="maintitle"></title>
 
     <link media="screen" rel="stylesheet" href="./css/bootstrap.min.css">
@@ -17,7 +18,7 @@
         }
 
         dd {
-            display: block;
+            display: inline-block;
             border: 1px solid #4CAF50;
             height: 100px;
             width: 100px;
@@ -31,7 +32,7 @@
         }
 
         ddd {
-            display: block;
+            display: inline-block;
             height: 100px;
             width: 100px;
             line-height: 100px;
@@ -51,7 +52,7 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 32px;
+            font-size: 18px;
             margin: 4px 2px;
             cursor: pointer;
         }
@@ -91,7 +92,7 @@
 </head>
 
 <body>
-    <button id="toggleButton">显示拼音</button>
+    <button id="toggleButton">拼</button>
     <div class="align-items-center justify-content-center" style="width:100%;">
 
         <div class="d-flex flex-column align-items-center justify-content-center">
@@ -145,10 +146,10 @@
         }
 
         function populateHTMLparagraph(type, value, myArr, index) {
-            // let html = '<ruby>&nbsp;　&nbsp;<rt> </rt>&nbsp;' + index + ')&nbsp;<rt> </rt>';
-            let html = '<ruby class="hide-rt"><rt> </rt><ddd>&nbsp; &nbsp;</ddd><rt> </rt>';
-            html += '<rt> </rt><ddd>&nbsp; &nbsp;</ddd><rt> </rt>';
-            // let html = '<ruby>';
+            //let html = '<ruby>&nbsp;　&nbsp;<rt> </rt>&nbsp;' + index + ')&nbsp;<rt> </rt>';
+            //let html = '<ruby class="hide-rt"><rt> </rt><ddd>&nbsp; &nbsp;</ddd><rt> </rt>';
+            //html += '<rt> </rt><ddd>&nbsp; &nbsp;</ddd><rt> </rt>';
+            let html = '<ruby class="hide-rt">';
 
             for (var i = 0; i < myArr.length; i++) {
 
@@ -220,12 +221,12 @@
                 if (ruby.classList.contains('hide-rt')) {
                     // 如果拼音是隐藏的，显示拼音
                     ruby.classList.remove('hide-rt');
-                    toggleButton.textContent = '隐藏拼音';
+                    toggleButton.textContent = '字';
                     toggleButton.style.backgroundColor = '#0F9ED5';
                 } else {
                     // 如果拼音是显示的，隐藏拼音
                     ruby.classList.add('hide-rt');
-                    toggleButton.textContent = '显示拼音';
+                    toggleButton.textContent = '拼';
                     toggleButton.style.backgroundColor = '#4CAF50';
                 }
             });

@@ -78,37 +78,35 @@
     }
 
     // Load the JavaScript dynamically based on the URL parameter
-    window.onload = async function () {
-        const scriptFile = getScriptParam('input');
-        const pageNo = getScriptParam('pageno');
-        if (scriptFile) {
-            try {
-                let fileName = "./data/" + scriptFile + ".js";
+    window.onload = function () {
+        var scriptFile = getScriptParam('input');
+        var pageNo = getScriptParam('pageno');
 
-                await loadScript(fileName); // Wait for the JS file to load
-                // Log data from the dynamically loaded script after it's fully loaded
-                if (typeof mainData !== 'undefined') {
-                    // console.log('Data from loaded script:', JSON.stringify(mainData));
-                    processData(mainData[0], pageNo);
-                    startup(); // Added 
-                } else {
-                    console.log('No data found in the loaded script.');
-                }
-            } catch (error) {
-                console.error(error);
-            }
+        if (scriptFile) {
+            var fileName = "./data/" + scriptFile + ".js";
+            loadScript(fileName)
+                .then(function () {
+                    if (typeof mainData !== 'undefined') {
+                        processData(mainData[0], pageNo);
+                        startup();
+                    } else {
+                        console.log('No data found in the loaded script.');
+                    }
+                })
+                .catch(function (error) {
+                    console.error(error);
+                });
         } else {
             console.log('No JS file specified.');
         }
-    }
+    };
 
-    async function processData(inputJSON) {
+    function processData(inputJSON) {
         console.log(JSON.stringify(inputJSON));
-        let title = inputJSON.title;
+        var title = inputJSON.title;
 
         document.getElementById("maintitle").innerHTML = title;
         populateHTMLparagraph(inputJSON, "paragraph");
-
     }
 
     function populateHTMLparagraph(inputJSON, type) {

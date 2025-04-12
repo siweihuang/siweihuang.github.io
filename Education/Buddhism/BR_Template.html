@@ -79,7 +79,7 @@
         function loadScript(fileName) {
             return new Promise(function (resolve, reject) {
                 const script = document.createElement('script');
-                script.src = "./data/" + fileName;
+                script.src = fileName;
                 script.type = 'text/javascript';
                 script.onload = function () {
                     // console.log(`${fileName} has been loaded successfully.`);
@@ -98,25 +98,26 @@
         }
 
         // Load the JavaScript dynamically based on the URL parameter
-        window.onload = async function () {
-            const scriptFile = getScriptParam();
+        window.onload = function () {
+            var scriptFile = getScriptParam();
+
             if (scriptFile) {
-                try {
-                    await loadScript(scriptFile); // Wait for the JS file to load
-                    // Log data from the dynamically loaded script after it's fully loaded
-                    if (typeof mainData !== 'undefined') {
-                        // console.log('Data from loaded script:', JSON.stringify(mainData));
-                        getPinyin(mainData);
-                    } else {
-                        console.log('No data found in the loaded script.');
-                    }
-                } catch (error) {
-                    console.error(error);
-                }
+                var fileName = "./data/" + scriptFile + ".js";
+                loadScript(fileName)
+                    .then(function () {
+                        if (typeof mainData !== 'undefined') {
+                            getPinyin(mainData);
+                        } else {
+                            console.log('No data found in the loaded script.');
+                        }
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
             } else {
                 console.log('No JS file specified.');
             }
-        }
+        };
 
         function populateHTML(type, value, myArr) {
             let html = '';
