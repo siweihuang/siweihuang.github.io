@@ -40,5 +40,17 @@ const mainList = [
     subtitle: "第五课",
     testdate: "2025-03-20 (星期四)",
     filename: "AY2025_P4_ChineseSpelling_05_D"
+  },
+  {
+    title: "第七课，他的脸红了 (HSH)",
+    subtitle: "第七课",
+    testdate: "2025-- (星期二)",
+    filename: "AY2025_P4_ChineseSpelling_07_H"
+  },
+  {
+    title: "第八课，马路如虎口 (HSH)",
+    subtitle: "第八课",
+    testdate: "2025-- (星期二)",
+    filename: "AY2025_P4_ChineseSpelling_08_H"
   }
 ];
