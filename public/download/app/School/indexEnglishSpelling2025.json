@@ -18,5 +18,20 @@
     "DisplayName": "P4 Vocabulary (1)",
     "FileName": "EnglishSpelling2025-Vocabulary-1.json",
     "TestDate": "10/03/2025"
+  },
+  {
+    "DisplayName": "Unit 4 - The World Beyond Us",
+    "FileName": "EnglishSpelling2025-Unit-04.json",
+    "TestDate": "10/04/2025"
+  },
+  {
+    "DisplayName": "Unit 5 - Ruby's Sunflower",
+    "FileName": "EnglishSpelling2025-Unit-05.json",
+    "TestDate": "25/04/2025"
+  },
+  {
+    "DisplayName": "Unit 6 - Dinosaurs Exist!",
+    "FileName": "EnglishSpelling2025-Unit-06.json",
+    "TestDate": "19/05/2025"
   }
 ]
