@@ -52,5 +52,11 @@ const mainList = [
     subtitle: "第八课",
     testdate: "2025-- (星期二)",
     filename: "AY2025_P4_ChineseSpelling_08_H"
+  },
+  {
+    title: "第九课，爱心无障碍 (HSH)",
+    subtitle: "第九课",
+    testdate: "2025-05-26 (星期一)",
+    filename: "AY2025_P4_ChineseSpelling_09_H"
   }
 ];
