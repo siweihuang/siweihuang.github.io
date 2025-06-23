@@ -1,5 +1,5 @@
 const data = {
-  lastUpdated: "21/05/2025 V1",
+  lastUpdated: "23/06/2025 V1",
   recentReleases: [
     {
       date: "2025-01-01",
@@ -16,6 +16,10 @@ const data = {
     {
       date: "2025-05-11",
       name: "<a href='Education/JiaGuWen/index.html' target='_blank' rel='noopener'>甲骨文数据库</a>"
+    },
+    {
+      date: "2025-06-23",
+      name: "<a href='Education/EnglishPhonics/index_NewConcept.html' target='_blank' rel='noopener'>New Concept English</a>"
     }
   ],
   pinReleases: [
