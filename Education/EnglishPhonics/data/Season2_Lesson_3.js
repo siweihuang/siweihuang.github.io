@@ -85,7 +85,7 @@ var mainData = {
       fullPhonetic: "/dɪˈsɪʒən/",
       translation: "n.决定",
       syllables: [
-        { syllable: "de", phonetic: "/di/", color: "color1" },
+        { syllable: "de", phonetic: "/dɪ/", color: "color1" },
         { syllable: "ci", phonetic: "/ˈsɪ/", color: "color2" },
         { syllable: "sion", phonetic: "/ʒən/", color: "color3" }
       ]

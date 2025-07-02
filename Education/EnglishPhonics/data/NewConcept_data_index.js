@@ -1,5 +1,61 @@
 var mainData = [
   {
+    title: "English",
+    subtitle: "Phonics",
+    category: "file",
+    filename: "English-Phonics",
+    foldername: ""
+  },
+  {
+    title: "English Business",
+    subtitle: "RES Words",
+    category: "file",
+    filename: "English-RES_Words",
+    foldername: ""
+  },
+  {
+    title: "English Spelling 2025 Unit 5",
+    subtitle: "Ruby's Sunflower",
+    category: "file",
+    filename: "EnglishSpelling2025-Unit-05",
+    foldername: ""
+  },
+  {
+    title: "English Spelling 2025 Unit 6",
+    subtitle: "Dinosaurs Exist!",
+    category: "file",
+    filename: "EnglishSpelling2025-Unit-06",
+    foldername: ""
+  },
+  {
+    title: "English Spelling 2025 Unit 7",
+    subtitle: "Heartbeats in the Dark",
+    category: "file",
+    filename: "EnglishSpelling2025-Unit-07",
+    foldername: ""
+  },
+  {
+    title: "English Level 4",
+    subtitle: "Unit 1",
+    category: "file",
+    filename: "English-Level-4-Unit-01",
+    foldername: ""
+  },
+  {
+    title: "English Level 5",
+    subtitle: "Unit 1",
+    category: "file",
+    filename: "English-Level-5-Unit-01",
+    foldername: ""
+  },
+  {
+    title: "English Level 7",
+    subtitle: "Unit 1",
+    category: "file",
+    filename: "English-Level-7-Unit-01",
+    foldername: ""
+  },
+  {
     title: "Season 2 All Lesson",
     subtitle: "",
     category: "file",

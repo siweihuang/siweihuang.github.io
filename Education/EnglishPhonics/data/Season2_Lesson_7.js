@@ -109,13 +109,9 @@ var mainData = {
       fullPhonetic: "/ˈpreʃəs/",
       translation: "adj.珍贵的",
       syllables: [
-        { syllable: "pre", phonetic: "/ˈprɛ/", color: "color1" },
+        { syllable: "pre", phonetic: "/ˈpre/", color: "color1" },
         { syllable: "cious", phonetic: "/ʃəs/", color: "color2" }
-      ],
-      correction: {
-        original_spelling: "preclous",
-        standard_spelling: "precious"
-      }
+      ]
     },
     {
       word: "stone",

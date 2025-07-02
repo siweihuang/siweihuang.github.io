@@ -84,7 +84,7 @@ var mainData = {
       translation: "n.注意",
       syllables: [
         { syllable: "a", phonetic: "/ə/", color: "color1" },
-        { syllable: "tten", phonetic: "/ˈteɪn/", color: "color2" },
+        { syllable: "tten", phonetic: "/ˈten/", color: "color2" },
         { syllable: "tion", phonetic: "/ʃən/", color: "color3" }
       ]
     },
@@ -247,7 +247,7 @@ var mainData = {
       fullPhonetic: "/dɪˈsɪʒən/",
       translation: "n.决定",
       syllables: [
-        { syllable: "de", phonetic: "/di/", color: "color1" },
+        { syllable: "de", phonetic: "/dɪ/", color: "color1" },
         { syllable: "ci", phonetic: "/ˈsɪ/", color: "color2" },
         { syllable: "sion", phonetic: "/ʒən/", color: "color3" }
       ]
@@ -540,13 +540,9 @@ var mainData = {
       fullPhonetic: "/ˈpreʃəs/",
       translation: "adj.珍贵的",
       syllables: [
-        { syllable: "pre", phonetic: "/ˈprɛ/", color: "color1" },
+        { syllable: "pre", phonetic: "/ˈpre/", color: "color1" },
         { syllable: "cious", phonetic: "/ʃəs/", color: "color2" }
-      ],
-      correction: {
-        original_spelling: "preclous",
-        standard_spelling: "precious"
-      }
+      ]
     },
     {
       word: "stone",

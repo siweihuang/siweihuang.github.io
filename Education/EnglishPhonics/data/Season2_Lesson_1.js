@@ -84,7 +84,7 @@ var mainData = {
       translation: "n.注意",
       syllables: [
         { syllable: "a", phonetic: "/ə/", color: "color1" },
-        { syllable: "tten", phonetic: "/ˈteɪn/", color: "color2" },
+        { syllable: "tten", phonetic: "/ˈten/", color: "color2" },
         { syllable: "tion", phonetic: "/ʃən/", color: "color3" }
       ]
     },

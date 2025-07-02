@@ -47,8 +47,26 @@
             transition: transform 0.2s;
         }
 
+        /* 更新发音标签样式 - 与card-index对称 */
+        .pronunciation-display {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 2px 8px;
+            background-color: #f9fdf0;
+            color: #E25624;
+            border-radius: 8px 0 4px 0;
+            font-size: 11px;
+            font-weight: bold;
+            border: 1px solid #d4e6a3;
+            box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.1);
+            line-height: 1.2;
+        }
+
         /* 序号标签样式 - 右上角固定位置 */
         .card-index {
+            z-index: 1;
+            /* 确保索引在发音标签上层 */
             position: absolute;
             top: 0;
             left: 0;
@@ -172,15 +190,48 @@
             display: block;
         }
 
+        /* 新增弹窗标签样式 */
+        .modal-tags {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5%;
+            pointer-events: none;
+            /* 防止阻挡点击事件 */
+        }
+
+        .modal-card-index {
+            padding: 3px 12px;
+            background-color: #f9fdf0;
+            color: #1e2714;
+            border-radius: 0 15px 15px 0;
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid #d4e6a3;
+        }
+
+        .modal-pronunciation-display {
+            padding: 3px 12px;
+            background-color: #f9fdf0;
+            color: #E25624;
+            border-radius: 15px 0 0 15px;
+            font-size: 14px;
+            font-weight: bold;
+            border: 1px solid #d4e6a3;
+        }
+
         .modal-content {
             max-width: 90%;
-            margin: 40px auto;
+            margin: 60px auto 40px;
             text-align: center;
             background-color: #ffffff;
         }
 
         .modal-word {
-            font-size: 42px;
+            font-size: 82px;
             font-weight: bold;
             margin-bottom: 30px;
             color: #333;
@@ -213,12 +264,20 @@
         }
 
         .modal-full-phonetic {
+            cursor: pointer;
+            transition: all 0.2s;
             font-size: 28px;
             color: #666;
             margin: 30px 0;
             padding: 15px 0;
             border-top: 2px dashed #eee;
             border-bottom: 2px dashed #eee;
+        }
+
+        .modal-full-phonetic:hover {
+            color: #E25624;
+            /* Your theme color */
+            text-shadow: 0 0 2px rgba(226, 86, 36, 0.3);
         }
 
         .modal-translation {
@@ -248,6 +307,72 @@
         .modal-arrow:hover {
             background: #f0f0f0;
             color: #000;
+        }
+
+        /* 新增常用搭配样式 */
+        .modal-collocations {
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #f0f7ff;
+            border-radius: 8px;
+            border-left: 4px solid #197DC7;
+            max-width: 80%;
+            font-size: 18px;
+            display: none;
+            /* 默认隐藏 */
+        }
+
+        .modal-collocation-item {
+            margin: 8px 0;
+            padding: 8px 5px;
+            /* 增加内边距 */
+            font-size: 26px;
+            display: flex;
+            /* 启用flex布局 */
+            align-items: center;
+            /* 垂直居中 */
+            justify-content: center;
+            /* 水平居中 */
+            text-align: center;
+            /* 文字居中 */
+            min-height: 30px;
+            /* 最小高度 */
+        }
+
+        .modal-collocation-item:last-child {
+            border-bottom: none;
+        }
+
+        /* 新增的例句样式 */
+        .modal-sentences {
+            margin: 15px auto;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #6c757d;
+            max-width: 80%;
+            font-size: 26px;
+        }
+
+        .sentence-en {
+            margin-bottom: 10px;
+            font-style: italic;
+            color: #333;
+        }
+
+        .sentence-zh {
+            color: #666;
+            padding-left: 25px;
+            border-left: 2px solid #ddd;
+        }
+
+        .sentence-en em,
+        .sentence-zh em {
+            color: #E25624;
+            /* 使用您主题中的红色 */
+            font-style: normal;
+            font-weight: bold;
+            text-shadow: 0 0 1px rgba(226, 86, 36, 0.3);
         }
 
         .close-btn {
@@ -288,6 +413,34 @@
                 padding: 10px 20px;
                 font-size: 20px;
             }
+
+            .modal-collocations {
+                font-size: 16px;
+                padding: 10px;
+                margin: 15px auto;
+            }
+
+            .modal-collocation-item {
+                padding: 6px 3px;
+                min-height: 26px;
+                font-size: 16px;
+            }
+
+            .modal-sentences {
+                font-size: 16px;
+                padding: 10px;
+                margin: 15px auto;
+            }
+
+            .modal-card-index,
+            .modal-pronunciation-display {
+                font-size: 12px;
+                padding: 2px 8px;
+            }
+
+            .modal-content {
+                margin: 50px auto 30px;
+            }
         }
     </style>
 </head>
@@ -297,6 +450,8 @@
         <div class="lesson-title" id="maintitle"></div>
         <div class="lesson-subtitle" id="subtitle"></div>
     </div>
+
+
 
     <!-- 单词卡片容器 -->
     <div id="wordCardsContainer"></div>
@@ -309,13 +464,34 @@
     <div class="word-modal" id="wordModal">
         <button class="close-btn">×</button>
         <div class="modal-content">
+            <!-- 新增序号和发音标签容器 -->
+            <div class="modal-tags">
+                <div class="modal-card-index" id="modalCardIndex">01</div>
+                <div class="modal-pronunciation-display" id="modalPronunciationDisplay"></div>
+            </div>
+
             <div class="modal-word" id="modalWord">Word</div>
             <div class="modal-syllables" id="modalSyllables"></div>
             <div class="modal-full-phonetic" id="modalFullPhonetic">/phonetic/</div>
             <div class="modal-translation" id="modalTranslation">Translation</div>
+
+            <!-- 新增的常用搭配区域 -->
+            <div class="modal-collocations" id="modalCollocations"></div>
+
+            <!-- 新增的例句展示区域 -->
+            <div class="modal-sentences">
+                <div class="sentence-en">
+                    <strong></strong>
+                    <span id="modalSentenceEn"></span>
+                </div>
+                <div class="sentence-zh">
+                    <span id="modalSentenceZh"></span>
+                </div>
+            </div>
+
             <div class="modal-nav">
-                <button class="modal-arrow" id="prevWord">← 上一个</button>
-                <button class="modal-arrow" id="nextWord">下一个 →</button>
+                <button class="modal-arrow" id="prevWord">← </button>
+                <button class="modal-arrow" id="nextWord"> →</button>
             </div>
         </div>
     </div>
@@ -417,7 +593,11 @@
                     });
 
                     card.innerHTML = `
-                        <div class="card-index">${indexStr}</div>    
+                        <div class="card-index">${indexStr}</div>
+                            <!-- 新增右上角中文发音标签 -->
+                        ${word.chinesePronunciation ? `
+                            <div class="pronunciation-display">${word.chinesePronunciation}</div>
+                        ` : ''}    
                         <div class="word">${word.word}</div>
                         <div class="syllables-row">${syllablesHTML}</div>
                         <div class="full-phonetic">${word.fullPhonetic}</div>
@@ -435,12 +615,70 @@
                 });
             }
 
+
+            // Create audio element
+            const audioPlayer = new Audio();
+
             // 显示Modal
             function showWordModal(index) {
                 const word = wordData[index];
+
+                // Add click event to phonetic text
+                const fullPhoneticElement = document.getElementById('modalFullPhonetic');
+                fullPhoneticElement.style.cursor = 'pointer'; // Show it's clickable
+                fullPhoneticElement.onclick = function () {
+                    playWordAudio(word.word, index);
+                };
+
+                // 更新序号和中文发音标签
+                document.getElementById('modalCardIndex').textContent =
+                    (index + 1).toString().padStart(2, '0');
+
+                const pronunciationEl = document.getElementById('modalPronunciationDisplay');
+                if (word.chinesePronunciation) {
+                    pronunciationEl.textContent = word.chinesePronunciation;
+                    pronunciationEl.style.display = 'block';
+                } else {
+                    pronunciationEl.style.display = 'none';
+                }
+
                 modalWord.textContent = word.word;
                 modalFullPhonetic.textContent = word.fullPhonetic;
                 modalTranslation.textContent = word.translation;
+
+                // 处理常用搭配显示
+                const collocationsContainer = document.getElementById('modalCollocations');
+                if (word.CommonCollocation && word.CommonCollocation.length > 0) {
+                    collocationsContainer.style.display = 'block';
+                    collocationsContainer.innerHTML = `
+                        ${word.CommonCollocation.map(item => `
+                            <div class="modal-collocation-item">${item}</div>
+                        `).join('')}
+                    `;
+                } else {
+                    collocationsContainer.style.display = 'none';
+                }
+
+                // 获取例句容器元素
+                const sentencesContainer = document.querySelector('.modal-sentences');
+
+                // 检查是否有例句数据
+                if (word.sentences && word.sentences.length > 0) {
+                    // 显示例句容器
+                    sentencesContainer.style.display = 'block';
+
+                    // 英文例句处理（全词匹配）
+                    const enHighlighted = word.sentences[0].en.replace(
+                        new RegExp(`\\b${word.word}\\b`, 'gi'),
+                        '<em>$&</em>'
+                    );
+
+                    document.getElementById('modalSentenceEn').innerHTML = enHighlighted;
+                    document.getElementById('modalSentenceZh').textContent = word.sentences[0].zh;
+                } else {
+                    // 隐藏例句容器
+                    sentencesContainer.style.display = 'none';
+                }
 
                 // 清空并重新渲染音节
                 modalSyllables.innerHTML = '';
@@ -457,6 +695,23 @@
                 modal.classList.add('active');
             }
 
+            function playWordAudio(word, index) {
+                // Clean the word for filename (remove special chars)
+                const cleanWord = word.toLowerCase().replace(/[^a-z]/g, '');
+                const audioPath = `./audio/${cleanWord}.mp3`;
+
+                audioPlayer.src = audioPath;
+                audioPlayer.play().catch(e => {
+                    console.error("Audio playback failed:", e);
+                    // Fallback: Use text-to-speech if audio file doesn't exist
+                    if (window.speechSynthesis) {
+                        const utterance = new SpeechSynthesisUtterance(word);
+                        utterance.lang = 'en-US';
+                        speechSynthesis.speak(utterance);
+                    }
+                });
+            }
+
             // 关闭Modal
             function closeModal() {
                 modal.classList.remove('active');
@@ -467,11 +722,13 @@
             prevBtn.addEventListener('click', () => {
                 currentIndex = (currentIndex - 1 + wordData.length) % wordData.length;
                 showWordModal(currentIndex);
+
             });
 
             nextBtn.addEventListener('click', () => {
                 currentIndex = (currentIndex + 1) % wordData.length;
                 showWordModal(currentIndex);
+
             });
 
             closeBtn.addEventListener('click', closeModal);
