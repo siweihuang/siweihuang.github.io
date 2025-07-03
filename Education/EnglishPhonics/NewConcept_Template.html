@@ -145,6 +145,57 @@
             color: #999;
         }
 
+        /* 新增单词导航容器样式 */
+        .modal-word-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        /* 导航按钮样式 */
+        .modal-word-prev,
+        .modal-word-next {
+            /* 复用原有箭头样式 */
+            background: none;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #555;
+            padding: 15px 25px;
+            transition: all 0.3s;
+
+            /* 新增定位样式 */
+            position: relative;
+            margin: 0;
+        }
+
+        /* 悬停效果保持统一 */
+        .modal-word-prev:hover,
+        .modal-word-next:hover {
+            background: #f0f0f0;
+            color: #000;
+        }
+
+        .prev-word {
+            margin-right: 15px;
+        }
+
+        .next-word {
+            margin-left: 15px;
+        }
+
+        /* 调整原有modal-word样式 */
+        .modal-word {
+            font-size: 42px;
+            font-weight: bold;
+            margin: 0 20px;
+            flex-grow: 1;
+            text-align: center;
+        }
+
         /* 颜色定义 */
         .color1 {
             color: #E25624;
@@ -441,6 +492,17 @@
             .modal-content {
                 margin: 50px auto 30px;
             }
+
+            .modal-word-prev,
+            .modal-word-next {
+                padding: 10px 20px;
+                font-size: 20px;
+            }
+
+            .modal-word {
+                font-size: 32px;
+                margin: 0 10px;
+            }
         }
     </style>
 </head>
@@ -470,7 +532,12 @@
                 <div class="modal-pronunciation-display" id="modalPronunciationDisplay"></div>
             </div>
 
-            <div class="modal-word" id="modalWord">Word</div>
+            <div class="modal-word-container">
+                <button class="odal-arrow modal-word-prev" id="modalPrevWord">←</button>
+                <div class="modal-word" id="modalWord">Word</div>
+                <button class="modal-arrow modal-word-next" id="modalNextWord">→</button>
+            </div>
+
             <div class="modal-syllables" id="modalSyllables"></div>
             <div class="modal-full-phonetic" id="modalFullPhonetic">/phonetic/</div>
             <div class="modal-translation" id="modalTranslation">Translation</div>
@@ -623,6 +690,23 @@
             function showWordModal(index) {
                 const word = wordData[index];
 
+                // 更新导航按钮状态
+                // document.getElementById('modalPrevWord').style.visibility =
+                //     index > 0 ? 'visible' : 'hidden';
+                // document.getElementById('modalNextWord').style.visibility =
+                //     index < wordData.length - 1 ? 'visible' : 'hidden';
+
+                // 添加按钮事件
+                document.getElementById('modalPrevWord').onclick = (e) => {
+                    e.stopPropagation();
+                    showPrevWord();
+                };
+
+                document.getElementById('modalNextWord').onclick = (e) => {
+                    e.stopPropagation();
+                    showNextWord();
+                };
+
                 // Add click event to phonetic text
                 const fullPhoneticElement = document.getElementById('modalFullPhonetic');
                 fullPhoneticElement.style.cursor = 'pointer'; // Show it's clickable
@@ -695,6 +779,17 @@
                 modal.classList.add('active');
             }
 
+            // 修改导航函数防止事件冒泡
+            function showPrevWord() {
+                currentIndex = (currentIndex - 1 + wordData.length) % wordData.length;
+                showWordModal(currentIndex);
+            }
+
+            function showNextWord() {
+                currentIndex = (currentIndex + 1) % wordData.length;
+                showWordModal(currentIndex);
+            }
+
             function playWordAudio(word, index) {
                 // Clean the word for filename (remove special chars)
                 const cleanWord = word.toLowerCase().replace(/[^a-z]/g, '');
@@ -720,14 +815,12 @@
 
             // 事件监听
             prevBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex - 1 + wordData.length) % wordData.length;
-                showWordModal(currentIndex);
+                showPrevWord();
 
             });
 
             nextBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % wordData.length;
-                showWordModal(currentIndex);
+                showNextWord()
 
             });
 
