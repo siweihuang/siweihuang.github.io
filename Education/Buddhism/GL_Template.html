@@ -54,7 +54,7 @@
 
 <script>
     mainData = []
-    console.log(JSON.stringify(mainData))
+    // console.log(JSON.stringify(mainData))
     // Function to dynamically load JavaScript file
     function loadScript(fileName) {
         return new Promise(function (resolve, reject) {
@@ -102,7 +102,7 @@
     };
 
     function processData(inputJSON) {
-        console.log(JSON.stringify(inputJSON));
+        // console.log(JSON.stringify(inputJSON));
         var title = inputJSON.title;
 
         document.getElementById("maintitle").innerHTML = title;
@@ -124,7 +124,7 @@
             html += `<div class="slide"><h1>`
             var displayID = j + 1
             html = html + subtitle + " - " + displayID
-            html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 3.5vmax;">`
+            html += `</h1><div class="vertical-center"><p style="text-align: center;font-size: 3vmax;">`
             html += paragraphTemp
 
             html += `</p></div></div>`
