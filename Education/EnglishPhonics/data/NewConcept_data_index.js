@@ -7,6 +7,27 @@ var mainData = [
     foldername: ""
   },
   {
+    title: "Oxford Phonics World",
+    subtitle: "Level 1",
+    category: "file",
+    filename: "Oxford_Phonics_Level1",
+    foldername: ""
+  },
+  {
+    title: "Oxford Phonics World",
+    subtitle: "Level 5",
+    category: "file",
+    filename: "Oxford_Phonics_Level5",
+    foldername: ""
+  },
+  {
+    title: "杨妈英语",
+    subtitle: "Phonics",
+    category: "file",
+    filename: "English-Phonics-Part2",
+    foldername: ""
+  },
+  {
     title: "English Business",
     subtitle: "RES Words",
     category: "file",
