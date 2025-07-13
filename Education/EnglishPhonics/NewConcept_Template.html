@@ -790,7 +790,7 @@
                 <div class="word-image-container">
                     ${word.image ? `
                         <img src="./images/${word.image}" alt="${word.word}" class="word-image">
-                    ` : '<div class="word-image-placeholder">No Image</div>'}
+                    ` : `<div class="syllables-row">${syllablesHTML}</div>`}
                 </div>
 
                 <h3 class="word">${word.word}</h3>
@@ -831,11 +831,11 @@
             elements.closeBtn.addEventListener('click', closeModal);
 
             // Click outside modal to close
-            elements.wordModal.addEventListener('click', (e) => {
-                if (e.target === elements.wordModal) {
-                    closeModal();
-                }
-            });
+            // elements.wordModal.addEventListener('click', (e) => {
+            //     if (e.target === elements.wordModal) {
+            //         closeModal();
+            //     }
+            // });
 
             // Keyboard navigation in modal
             document.addEventListener('keydown', (e) => {

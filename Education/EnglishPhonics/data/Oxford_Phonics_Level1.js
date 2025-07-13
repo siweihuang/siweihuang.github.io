@@ -10,12 +10,12 @@ var mainData = {
       syllables: [
         {
           syllable: "al",
-          phonetic: "/ˈæl/",
+          phonetic: "/ˈæ/",
           color: "color1"
         },
         {
           syllable: "li",
-          phonetic: "/ɪ/",
+          phonetic: "/lɪ/",
           color: "color2"
         },
         {
@@ -333,12 +333,12 @@ var mainData = {
     {
       word: "desk",
       image: "desk.jpg",
-      fullPhonetic: "/dɛsk/",
+      fullPhonetic: "/desk/",
       translation: "n. 书桌",
       syllables: [
         {
           syllable: "desk",
-          phonetic: "/dɛsk/",
+          phonetic: "/desk/",
           color: "color1"
         }
       ],
@@ -429,12 +429,12 @@ var mainData = {
     {
       word: "egg",
       image: "egg.jpg",
-      fullPhonetic: "/ɛɡ/",
+      fullPhonetic: "/eɡ/",
       translation: "n. 鸡蛋",
       syllables: [
         {
           syllable: "egg",
-          phonetic: "/ɛɡ/",
+          phonetic: "/eɡ/",
           color: "color1"
         }
       ],
@@ -453,12 +453,12 @@ var mainData = {
     {
       word: "elbow",
       image: "elbow.jpg",
-      fullPhonetic: "/ˈɛl.boʊ/",
+      fullPhonetic: "/ˈel.boʊ/",
       translation: "n. 肘部",
       syllables: [
         {
           syllable: "el",
-          phonetic: "/ˈɛl/",
+          phonetic: "/ˈel/",
           color: "color1"
         },
         {
@@ -482,12 +482,12 @@ var mainData = {
     {
       word: "elephant",
       image: "elephant.jpg",
-      fullPhonetic: "/ˈɛl.ɪ.fənt/",
+      fullPhonetic: "/ˈel.ɪ.fənt/",
       translation: "n. 大象",
       syllables: [
         {
           syllable: "el",
-          phonetic: "/ˈɛl/",
+          phonetic: "/ˈel/",
           color: "color1"
         },
         {
@@ -516,12 +516,12 @@ var mainData = {
     {
       word: "envelope",
       image: "envelope.jpg",
-      fullPhonetic: "/ˈɛn.və.loʊp/",
+      fullPhonetic: "/ˈen.və.loʊp/",
       translation: "n. 信封",
       syllables: [
         {
           syllable: "en",
-          phonetic: "/ˈɛn/",
+          phonetic: "/ˈen/",
           color: "color1"
         },
         {
@@ -1525,6 +1525,787 @@ var mainData = {
         "strong ox — 强壮的牛",
         "ox cart — 牛车",
         "plow with ox — 用牛耕地"
+      ]
+    },
+    {
+      word: "panda",
+      image: "panda.jpg",
+      fullPhonetic: "/ˈpændə/",
+      translation: "n. 熊猫",
+      syllables: [
+        { syllable: "pan", phonetic: "/ˈpæn/", color: "color1" },
+        { syllable: "da", phonetic: "/də/", color: "color2" }
+      ],
+      sentences: [
+        { en: "The panda eats bamboo every day.", zh: "熊猫每天吃竹子。" }
+      ],
+      CommonCollocation: [
+        "giant panda — 大熊猫",
+        "panda cub — 熊猫宝宝",
+        "panda reserve — 熊猫保护区"
+      ]
+    },
+    {
+      word: "peach",
+      image: "peach.jpg",
+      fullPhonetic: "/piːtʃ/",
+      translation: "n. 桃子",
+      syllables: [{ syllable: "peach", phonetic: "/piːtʃ/", color: "color1" }],
+      sentences: [
+        {
+          en: "She picked a ripe peach from the tree.",
+          zh: "她从树上摘了一个熟透的桃子。"
+        }
+      ],
+      CommonCollocation: [
+        "peach tree — 桃树",
+        "peach juice — 桃汁",
+        "ripe peach — 熟桃子"
+      ]
+    },
+    {
+      word: "pen",
+      image: "pen.jpg",
+      fullPhonetic: "/pen/",
+      translation: "n. 笔",
+      syllables: [{ syllable: "pen", phonetic: "/pen/", color: "color1" }],
+      sentences: [
+        {
+          en: "He wrote his name with a blue pen.",
+          zh: "他用一支蓝色的笔写下了自己的名字。"
+        }
+      ],
+      CommonCollocation: [
+        "blue pen — 蓝笔",
+        "pen cap — 笔帽",
+        "ink pen — 墨水笔"
+      ]
+    },
+    {
+      word: "pineapple",
+      image: "pineapple.jpg",
+      fullPhonetic: "/ˈpaɪnæpl/",
+      translation: "n. 菠萝",
+      syllables: [
+        { syllable: "pine", phonetic: "/ˈpaɪn/", color: "color1" },
+        { syllable: "ap", phonetic: "/æ/", color: "color2" },
+        { syllable: "ple", phonetic: "/pl/", color: "color3" }
+      ],
+      sentences: [
+        {
+          en: "She made a pineapple cake for dessert.",
+          zh: "她做了一个菠萝蛋糕作甜点。"
+        }
+      ],
+      CommonCollocation: [
+        "pineapple juice — 菠萝汁",
+        "fresh pineapple — 新鲜菠萝",
+        "pineapple cake — 菠萝蛋糕"
+      ]
+    },
+    {
+      word: "queen",
+      image: "queen.jpg",
+      fullPhonetic: "/kwiːn/",
+      translation: "n. 女王",
+      syllables: [{ syllable: "queen", phonetic: "/kwiːn/", color: "color1" }],
+      sentences: [
+        {
+          en: "The queen wore a beautiful crown.",
+          zh: "女王戴着一顶漂亮的王冠。"
+        }
+      ],
+      CommonCollocation: [
+        "queen bee — 蜂后",
+        "beauty queen — 选美皇后",
+        "queen's palace — 女王的宫殿"
+      ]
+    },
+    {
+      word: "question",
+      image: "question.jpg",
+      fullPhonetic: "/ˈkwestʃən/",
+      translation: "n. 问题，疑问",
+      syllables: [
+        { syllable: "ques", phonetic: "/ˈkwes/", color: "color1" },
+        { syllable: "tion", phonetic: "/tʃən/", color: "color2" }
+      ],
+      sentences: [
+        {
+          en: "She asked a smart question in class.",
+          zh: "她在课堂上提了一个聪明的问题。"
+        }
+      ],
+      CommonCollocation: [
+        "ask a question — 提问",
+        "answer the question — 回答问题",
+        "question mark — 问号"
+      ]
+    },
+    {
+      word: "quilt",
+      image: "quilt.jpg",
+      fullPhonetic: "/kwɪlt/",
+      translation: "n. 被子",
+      syllables: [{ syllable: "quilt", phonetic: "/kwɪlt/", color: "color1" }],
+      sentences: [
+        {
+          en: "She covered the baby with a warm quilt.",
+          zh: "她用一条暖和的被子盖住了宝宝。"
+        }
+      ],
+      CommonCollocation: [
+        "warm quilt — 暖被子",
+        "quilt cover — 被罩",
+        "patchwork quilt — 拼布被"
+      ]
+    },
+    {
+      word: "quiz",
+      image: "quiz.jpg",
+      fullPhonetic: "/kwɪz/",
+      translation: "n. 小测验",
+      syllables: [{ syllable: "quiz", phonetic: "/kwɪz/", color: "color1" }],
+      sentences: [
+        {
+          en: "They took a short quiz after the lesson.",
+          zh: "他们在课程后参加了一个小测验。"
+        }
+      ],
+      CommonCollocation: [
+        "pop quiz — 突击测验",
+        "online quiz — 在线测验",
+        "math quiz — 数学小测"
+      ]
+    },
+    {
+      word: "rabbit",
+      image: "rabbit.jpg",
+      fullPhonetic: "/ˈræbɪt/",
+      translation: "n. 兔子",
+      syllables: [
+        { syllable: "rab", phonetic: "/ˈræb/", color: "color1" },
+        { syllable: "bit", phonetic: "/ɪt/", color: "color2" }
+      ],
+      sentences: [
+        {
+          en: "The rabbit hopped around the garden.",
+          zh: "兔子在花园里跳来跳去。"
+        }
+      ],
+      CommonCollocation: [
+        "white rabbit — 白兔",
+        "rabbit hole — 兔子洞",
+        "pet rabbit — 宠物兔"
+      ]
+    },
+    {
+      word: "rice",
+      image: "rice.jpg",
+      fullPhonetic: "/raɪs/",
+      translation: "n. 米饭；稻米",
+      syllables: [{ syllable: "rice", phonetic: "/raɪs/", color: "color1" }],
+      sentences: [
+        { en: "He ate a bowl of rice for lunch.", zh: "他午餐吃了一碗米饭。" }
+      ],
+      CommonCollocation: [
+        "bowl of rice — 一碗米饭",
+        "fried rice — 炒饭",
+        "rice cooker — 电饭锅"
+      ]
+    },
+    {
+      word: "robot",
+      image: "robot.jpg",
+      fullPhonetic: "/ˈrəʊbɒt/",
+      translation: "n. 机器人",
+      syllables: [
+        { syllable: "ro", phonetic: "/ˈrəʊ/", color: "color1" },
+        { syllable: "bot", phonetic: "/bɒt/", color: "color2" }
+      ],
+      sentences: [
+        {
+          en: "The robot helped clean the house.",
+          zh: "机器人帮助打扫了房子。"
+        }
+      ],
+      CommonCollocation: [
+        "robot toy — 机器人玩具",
+        "robot cleaner — 扫地机器人",
+        "smart robot — 智能机器人"
+      ]
+    },
+    {
+      word: "rose",
+      image: "rose.jpg",
+      fullPhonetic: "/rəʊz/",
+      translation: "n. 玫瑰",
+      syllables: [{ syllable: "rose", phonetic: "/rəʊz/", color: "color1" }],
+      sentences: [
+        { en: "She gave her mother a red rose.", zh: "她送给妈妈一朵红玫瑰。" }
+      ],
+      CommonCollocation: [
+        "red rose — 红玫瑰",
+        "rose garden — 玫瑰园",
+        "rose petal — 玫瑰花瓣"
+      ]
+    },
+    {
+      word: "seal",
+      image: "seal.jpg",
+      fullPhonetic: "/siːl/",
+      translation: "n. 海豹；印章",
+      syllables: [{ syllable: "seal", phonetic: "/siːl/", color: "color1" }],
+      sentences: [
+        {
+          en: "The seal clapped its flippers happily.",
+          zh: "海豹高兴地拍打着鳍。"
+        }
+      ],
+      CommonCollocation: [
+        "seal pup — 小海豹",
+        "rubber seal — 橡胶密封圈",
+        "seal the deal — 达成协议"
+      ]
+    },
+    {
+      word: "soap",
+      image: "soap.jpg",
+      fullPhonetic: "/səʊp/",
+      translation: "n. 肥皂",
+      syllables: [{ syllable: "soap", phonetic: "/səʊp/", color: "color1" }],
+      sentences: [
+        { en: "Wash your hands with soap and water.", zh: "用肥皂和水洗手。" }
+      ],
+      CommonCollocation: [
+        "bar of soap — 一块肥皂",
+        "soap bubbles — 肥皂泡",
+        "hand soap — 洗手液"
+      ]
+    },
+    {
+      word: "socks",
+      image: "socks.jpg",
+      fullPhonetic: "/sɒks/",
+      translation: "n. 袜子（复数）",
+      syllables: [{ syllable: "socks", phonetic: "/sɒks/", color: "color1" }],
+      sentences: [
+        { en: "He wore striped socks today.", zh: "他今天穿了条纹袜子。" }
+      ],
+      CommonCollocation: [
+        "striped socks — 条纹袜子",
+        "cotton socks — 棉袜",
+        "sports socks — 运动袜"
+      ]
+    },
+    {
+      word: "sun",
+      image: "sun.jpg",
+      fullPhonetic: "/sʌn/",
+      translation: "n. 太阳",
+      syllables: [{ syllable: "sun", phonetic: "/sʌn/", color: "color1" }],
+      sentences: [{ en: "The sun is shining brightly.", zh: "阳光明媚。" }],
+      CommonCollocation: [
+        "sunshine — 阳光",
+        "sun hat — 遮阳帽",
+        "sun rise — 日出"
+      ]
+    },
+    {
+      word: "teacher",
+      image: "teacher.jpg",
+      fullPhonetic: "/ˈtiːtʃər/",
+      translation: "n. 老师",
+      syllables: [
+        { syllable: "teach", phonetic: "/ˈtiːtʃ/", color: "color1" },
+        { syllable: "er", phonetic: "/ər/", color: "color2" }
+      ],
+      sentences: [
+        {
+          en: "The teacher gave us a fun activity.",
+          zh: "老师给我们安排了一个有趣的活动。"
+        }
+      ],
+      CommonCollocation: [
+        "math teacher — 数学老师",
+        "English teacher — 英语老师",
+        "substitute teacher — 代课老师"
+      ]
+    },
+    {
+      word: "tent",
+      image: "tent.jpg",
+      fullPhonetic: "/tent/",
+      translation: "n. 帐篷",
+      syllables: [{ syllable: "tent", phonetic: "/tent/", color: "color1" }],
+      sentences: [
+        {
+          en: "We slept in a tent by the lake.",
+          zh: "我们在湖边的帐篷里睡觉。"
+        }
+      ],
+      CommonCollocation: [
+        "camping tent — 野营帐篷",
+        "tent pole — 帐篷杆",
+        "set up a tent — 搭帐篷"
+      ]
+    },
+    {
+      word: "tiger",
+      image: "tiger.jpg",
+      fullPhonetic: "/ˈtaɪɡər/",
+      translation: "n. 老虎",
+      syllables: [
+        { syllable: "ti", phonetic: "/ˈtaɪ/", color: "color1" },
+        { syllable: "ger", phonetic: "/ɡər/", color: "color2" }
+      ],
+      sentences: [
+        {
+          en: "The tiger roared loudly in the forest.",
+          zh: "老虎在森林里大声咆哮。"
+        }
+      ],
+      CommonCollocation: [
+        "white tiger — 白虎",
+        "tiger cub — 虎崽",
+        "Bengal tiger — 孟加拉虎"
+      ]
+    },
+    {
+      word: "turtle",
+      image: "turtle.jpg",
+      fullPhonetic: "/ˈtɜːrtl/",
+      translation: "n. 乌龟",
+      syllables: [
+        { syllable: "tur", phonetic: "/ˈtɜːr/", color: "color1" },
+        { syllable: "tle", phonetic: "/tl/", color: "color2" }
+      ],
+      sentences: [
+        {
+          en: "The turtle crawled slowly across the sand.",
+          zh: "乌龟慢慢地爬过沙滩。"
+        }
+      ],
+      CommonCollocation: [
+        "sea turtle — 海龟",
+        "baby turtle — 小乌龟",
+        "turtle shell — 龟壳"
+      ]
+    },
+    {
+      word: "umbrella",
+      image: "umbrella.jpg",
+      fullPhonetic: "/ʌmˈbrelə/",
+      translation: "n. 伞",
+      syllables: [
+        { syllable: "um", phonetic: "/ʌm/", color: "color1" },
+        { syllable: "brel", phonetic: "/ˈbrel/", color: "color2" },
+        { syllable: "la", phonetic: "/ə/", color: "color3" }
+      ],
+      sentences: [
+        {
+          en: "She carried a red umbrella in the rain.",
+          zh: "她在雨中撑着一把红伞。"
+        }
+      ],
+      CommonCollocation: [
+        "rain umbrella — 雨伞",
+        "folding umbrella — 折叠伞",
+        "umbrella stand — 伞架"
+      ]
+    },
+    {
+      word: "umpire",
+      image: "umpire.jpg",
+      fullPhonetic: "/ˈʌmpaɪər/",
+      translation: "n. 裁判员（尤指网球、棒球）",
+      syllables: [
+        { syllable: "um", phonetic: "/ˈʌm/", color: "color1" },
+        { syllable: "pire", phonetic: "/paɪər/", color: "color2" }
+      ],
+      sentences: [
+        {
+          en: "The umpire made a fair call during the match.",
+          zh: "裁判在比赛中做出了公正的判罚。"
+        }
+      ],
+      CommonCollocation: [
+        "baseball umpire — 棒球裁判",
+        "line umpire — 边线裁判",
+        "tennis umpire — 网球裁判"
+      ]
+    },
+    {
+      word: "uncle",
+      image: "uncle.jpg",
+      fullPhonetic: "/ˈʌŋkl/",
+      translation: "n. 叔叔；舅舅",
+      syllables: [
+        { syllable: "un", phonetic: "/ˈʌŋ/", color: "color1" },
+        { syllable: "cle", phonetic: "/kl/", color: "color2" }
+      ],
+      sentences: [
+        { en: "My uncle lives in Canada.", zh: "我叔叔住在加拿大。" }
+      ],
+      CommonCollocation: [
+        "uncle and aunt — 叔叔和婶婶",
+        "maternal uncle — 舅舅",
+        "funny uncle — 有趣的叔叔"
+      ]
+    },
+    {
+      word: "up",
+      image: "up.jpg",
+      fullPhonetic: "/ʌp/",
+      translation: "adv. 向上",
+      syllables: [{ syllable: "up", phonetic: "/ʌp/", color: "color1" }],
+      sentences: [{ en: "Look up at the stars.", zh: "抬头看看星星。" }],
+      CommonCollocation: ["stand up — 站起来", "wake up — 醒来", "go up — 上去"]
+    },
+    {
+      word: "van",
+      image: "van.jpg",
+      fullPhonetic: "/væn/",
+      translation: "n. 小货车；面包车",
+      syllables: [{ syllable: "van", phonetic: "/væn/", color: "color1" }],
+      sentences: [
+        {
+          en: "They delivered the boxes in a white van.",
+          zh: "他们用一辆白色的面包车运送箱子。"
+        }
+      ],
+      CommonCollocation: [
+        "delivery van — 送货车",
+        "ice cream van — 冰淇淋车",
+        "police van — 警车"
+      ]
+    },
+    {
+      word: "vest",
+      image: "vest.jpg",
+      fullPhonetic: "/vest/",
+      translation: "n. 背心",
+      syllables: [{ syllable: "vest", phonetic: "/vest/", color: "color1" }],
+      sentences: [
+        {
+          en: "He wore a warm vest in winter.",
+          zh: "他冬天穿了一件暖和的背心。"
+        }
+      ],
+      CommonCollocation: [
+        "life vest — 救生衣",
+        "sweater vest — 毛衣背心",
+        "bulletproof vest — 防弹背心"
+      ]
+    },
+    {
+      word: "vet",
+      image: "vet.jpg",
+      fullPhonetic: "/vet/",
+      translation: "n. 兽医",
+      syllables: [{ syllable: "vet", phonetic: "/vet/", color: "color1" }],
+      sentences: [
+        {
+          en: "The vet took care of the sick dog.",
+          zh: "兽医照顾了那只生病的狗。"
+        }
+      ],
+      CommonCollocation: [
+        "animal vet — 动物医生",
+        "vet clinic — 兽医诊所",
+        "call the vet — 请兽医"
+      ]
+    },
+    {
+      word: "violin",
+      image: "violin.jpg",
+      fullPhonetic: "/ˌvaɪəˈlɪn/",
+      translation: "n. 小提琴",
+      syllables: [
+        { syllable: "vi", phonetic: "/ˌvaɪ/", color: "color1" },
+        { syllable: "o", phonetic: "/ə/", color: "color2" },
+        { syllable: "lin", phonetic: "/ˈlɪn/", color: "color3" }
+      ],
+      sentences: [
+        {
+          en: "She plays the violin beautifully.",
+          zh: "她拉小提琴的声音非常优美。"
+        }
+      ],
+      CommonCollocation: [
+        "violin case — 小提琴盒",
+        "violin bow — 小提琴弓",
+        "learn the violin — 学小提琴"
+      ]
+    },
+    {
+      word: "box",
+      image: "box.jpg",
+      fullPhonetic: "/bɒks/",
+      translation: "n. 盒子",
+      syllables: [{ syllable: "box", phonetic: "/bɒks/", color: "color1" }],
+      sentences: [
+        { en: "She opened the gift box carefully.", zh: "她小心地打开礼品盒。" }
+      ],
+      CommonCollocation: [
+        "gift box — 礼品盒",
+        "cardboard box — 纸箱",
+        "lunch box — 午餐盒"
+      ]
+    },
+    {
+      word: "fox",
+      image: "fox.jpg",
+      fullPhonetic: "/fɒks/",
+      translation: "n. 狐狸",
+      syllables: [{ syllable: "fox", phonetic: "/fɒks/", color: "color1" }],
+      sentences: [
+        {
+          en: "The fox ran quickly into the woods.",
+          zh: "狐狸迅速跑进了树林。"
+        }
+      ],
+      CommonCollocation: [
+        "sly fox — 狡猾的狐狸",
+        "red fox — 赤狐",
+        "fox den — 狐狸洞"
+      ]
+    },
+    {
+      word: "six",
+      image: "six.jpg",
+      fullPhonetic: "/sɪks/",
+      translation: "num. 六",
+      syllables: [{ syllable: "six", phonetic: "/sɪks/", color: "color1" }],
+      sentences: [{ en: "I have six crayons.", zh: "我有六支蜡笔。" }],
+      CommonCollocation: [
+        "six years old — 六岁",
+        "six apples — 六个苹果",
+        "group of six — 六人小组"
+      ]
+    },
+    {
+      word: "watch",
+      image: "watch.jpg",
+      fullPhonetic: "/wɒtʃ/",
+      translation: "n. 手表；v. 观看",
+      syllables: [{ syllable: "watch", phonetic: "/wɒtʃ/", color: "color1" }],
+      sentences: [{ en: "He looked at his watch.", zh: "他看了看手表。" }],
+      CommonCollocation: [
+        "digital watch — 数字表",
+        "watch TV — 看电视",
+        "watch closely — 仔细观察"
+      ]
+    },
+    {
+      word: "water",
+      image: "water.jpg",
+      fullPhonetic: "/ˈwɔːtər/",
+      translation: "n. 水",
+      syllables: [
+        { syllable: "wa", phonetic: "/ˈwɔː/", color: "color1" },
+        { syllable: "ter", phonetic: "/tər/", color: "color2" }
+      ],
+      sentences: [
+        { en: "Drink some water after playing.", zh: "玩耍后喝点水。" }
+      ],
+      CommonCollocation: [
+        "bottle of water — 一瓶水",
+        "boil water — 烧水",
+        "fresh water — 淡水"
+      ]
+    },
+    {
+      word: "wax",
+      image: "wax.jpg",
+      fullPhonetic: "/wæks/",
+      translation: "n. 蜡",
+      syllables: [{ syllable: "wax", phonetic: "/wæks/", color: "color1" }],
+      sentences: [{ en: "The candle is made of wax.", zh: "蜡烛是由蜡做的。" }],
+      CommonCollocation: [
+        "wax paper — 蜡纸",
+        "car wax — 汽车蜡",
+        "ear wax — 耳垢"
+      ]
+    },
+    {
+      word: "web",
+      image: "web.jpg",
+      fullPhonetic: "/web/",
+      translation: "n. 网，蜘蛛网",
+      syllables: [{ syllable: "web", phonetic: "/web/", color: "color1" }],
+      sentences: [
+        {
+          en: "The spider spun a web in the corner.",
+          zh: "蜘蛛在角落里织了网。"
+        }
+      ],
+      CommonCollocation: [
+        "spider web — 蜘蛛网",
+        "world wide web — 万维网",
+        "web page — 网页"
+      ]
+    },
+    {
+      word: "wolf",
+      image: "wolf.jpg",
+      fullPhonetic: "/wʊlf/",
+      translation: "n. 狼",
+      syllables: [{ syllable: "wolf", phonetic: "/wʊlf/", color: "color1" }],
+      sentences: [
+        { en: "The wolf howled at the moon.", zh: "狼对着月亮嚎叫。" }
+      ],
+      CommonCollocation: [
+        "lone wolf — 独行狼",
+        "wolf pack — 狼群",
+        "grey wolf — 灰狼"
+      ]
+    },
+    {
+      word: "yacht",
+      image: "yacht.jpg",
+      fullPhonetic: "/jɒt/",
+      translation: "n. 游艇",
+      syllables: [{ syllable: "yacht", phonetic: "/jɒt/", color: "color1" }],
+      sentences: [
+        { en: "They sailed on a luxury yacht.", zh: "他们乘坐豪华游艇出航。" }
+      ],
+      CommonCollocation: [
+        "sail a yacht — 驾驶游艇",
+        "yacht club — 游艇俱乐部",
+        "private yacht — 私人游艇"
+      ]
+    },
+    {
+      word: "yak",
+      image: "yak.jpg",
+      fullPhonetic: "/jæk/",
+      translation: "n. 牦牛",
+      syllables: [{ syllable: "yak", phonetic: "/jæk/", color: "color1" }],
+      sentences: [
+        { en: "The yak lives high in the mountains.", zh: "牦牛生活在高山上。" }
+      ],
+      CommonCollocation: [
+        "wild yak — 野牦牛",
+        "yak milk — 牦牛奶",
+        "yak hair — 牦牛毛"
+      ]
+    },
+    {
+      word: "yogurt",
+      image: "yogurt.jpg",
+      fullPhonetic: "/ˈjoʊɡərt/",
+      translation: "n. 酸奶",
+      syllables: [
+        { syllable: "yo", phonetic: "/ˈjoʊ/", color: "color1" },
+        { syllable: "gurt", phonetic: "/ɡərt/", color: "color2" }
+      ],
+      sentences: [
+        {
+          en: "I eat yogurt with fruit for breakfast.",
+          zh: "我早餐吃水果酸奶。"
+        }
+      ],
+      CommonCollocation: [
+        "fruit yogurt — 水果酸奶",
+        "plain yogurt — 原味酸奶",
+        "frozen yogurt — 冻酸奶"
+      ]
+    },
+    {
+      word: "yo-yo",
+      image: "yo-yo.jpg",
+      fullPhonetic: "/ˈjoʊˌjoʊ/",
+      translation: "n. 溜溜球",
+      syllables: [
+        { syllable: "yo", phonetic: "/ˈjoʊ/", color: "color1" },
+        { syllable: "yo", phonetic: "/joʊ/", color: "color2" }
+      ],
+      sentences: [
+        { en: "The yo-yo spins up and down.", zh: "溜溜球上下旋转。" }
+      ],
+      CommonCollocation: [
+        "play yo-yo — 玩溜溜球",
+        "yo-yo tricks — 溜溜球花招",
+        "yo-yo string — 溜溜球绳子"
+      ]
+    },
+    {
+      word: "zebra",
+      image: "zebra.jpg",
+      fullPhonetic: "/ˈziːbrə/",
+      translation: "n. 斑马",
+      syllables: [
+        { syllable: "ze", phonetic: "/ˈziː/", color: "color1" },
+        { syllable: "bra", phonetic: "/brə/", color: "color2" }
+      ],
+      sentences: [
+        { en: "A zebra has black and white stripes.", zh: "斑马有黑白条纹。" }
+      ],
+      CommonCollocation: [
+        "zebra crossing — 斑马线",
+        "zebra herd — 斑马群",
+        "zebra pattern — 斑马纹"
+      ]
+    },
+    {
+      word: "zero",
+      image: "zero.jpg",
+      fullPhonetic: "/ˈzɪəroʊ/",
+      translation: "num. 零",
+      syllables: [
+        { syllable: "ze", phonetic: "/ˈzɪə/", color: "color1" },
+        { syllable: "ro", phonetic: "/roʊ/", color: "color2" }
+      ],
+      sentences: [
+        {
+          en: "There were zero mistakes in the test.",
+          zh: "考试中没有任何错误。"
+        }
+      ],
+      CommonCollocation: [
+        "zero point — 零分",
+        "zero degree — 零度",
+        "zero tolerance — 零容忍"
+      ]
+    },
+    {
+      word: "zipper",
+      image: "zipper.jpg",
+      fullPhonetic: "/ˈzɪpər/",
+      translation: "n. 拉链",
+      syllables: [
+        { syllable: "zip", phonetic: "/ˈzɪp/", color: "color1" },
+        { syllable: "per", phonetic: "/ər/", color: "color2" }
+      ],
+      sentences: [
+        {
+          en: "I closed my jacket with the zipper.",
+          zh: "我用拉链拉上了夹克。"
+        }
+      ],
+      CommonCollocation: [
+        "zipper pull — 拉链头",
+        "broken zipper — 坏掉的拉链",
+        "zipper bag — 拉链袋"
+      ]
+    },
+    {
+      word: "zoo",
+      image: "zoo.jpg",
+      fullPhonetic: "/zuː/",
+      translation: "n. 动物园",
+      syllables: [{ syllable: "zoo", phonetic: "/zuː/", color: "color1" }],
+      sentences: [
+        {
+          en: "We saw lions and elephants at the zoo.",
+          zh: "我们在动物园看到了狮子和大象。"
+        }
+      ],
+      CommonCollocation: [
+        "zoo animal — 动物园动物",
+        "zoo keeper — 动物园管理员",
+        "go to the zoo — 去动物园"
       ]
     }
   ]
