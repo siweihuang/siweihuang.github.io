@@ -1,6 +1,6 @@
 var mainData = {
   title: "Wordly Wise 3OOO Online",
-  subtitle: "Level 5 Word List",
+  subtitle: "Level 5 Word List Lesson 1",
   wordData: [
     {
       word: "abdicate",
@@ -45,13 +45,13 @@ var mainData = {
           color: "color1"
         },
         {
-          syllable: "bol",
-          phonetic: "/ˈbɒl/",
+          syllable: "bo",
+          phonetic: "/ˈbɒ/",
           color: "color2"
         },
         {
-          syllable: "ish",
-          phonetic: "/ɪʃ/",
+          syllable: "lish",
+          phonetic: "/lɪʃ/",
           color: "color3"
         }
       ],
@@ -104,13 +104,13 @@ var mainData = {
           color: "color1"
         },
         {
-          syllable: "cel",
-          phonetic: "/ˈsel/",
+          syllable: "ce",
+          phonetic: "/ˈse/",
           color: "color2"
         },
         {
-          syllable: "er",
-          phonetic: "/ə/",
+          syllable: "ler",
+          phonetic: "/lə/",
           color: "color3"
         },
         {
@@ -169,12 +169,12 @@ var mainData = {
         },
         {
           syllable: "com",
-          phonetic: "/ˈkɒm/",
+          phonetic: "/ˈkɒ/",
           color: "color2"
         },
         {
           syllable: "mo",
-          phonetic: "/ə/",
+          phonetic: "/mə/",
           color: "color3"
         },
         {
@@ -323,13 +323,13 @@ var mainData = {
       translation: "n. 极度痛苦",
       syllables: [
         {
-          syllable: "ag",
-          phonetic: "/ˈæɡ/",
+          syllable: "a",
+          phonetic: "/ˈæ/",
           color: "color1"
         },
         {
-          syllable: "o",
-          phonetic: "/ə/",
+          syllable: "go",
+          phonetic: "/ɡə/",
           color: "color2"
         },
         {

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Input Data -->
-    <script src="./data/NewConcept_data_index.js"></script>
+    <script src="./data/A_NewConcept_data_index.js"></script>
     <title>New Concept English</title>
     <style type="text/css">
         body {
@@ -108,18 +108,41 @@
         let i2 = i * 2 + 1
         let index2 = i * 2 + 2
         let type = "paragraph" + i
-        text += `
-        <tr>
-            <td>${index1}</td>
-            <td><a href="./NewConcept_Template.html?input=${inputJSON[i1].filename}" target="_blank">&nbsp;${inputJSON[i1].title}&nbsp;&nbsp;${inputJSON[i1].subtitle}&nbsp;</a></td>
-            <td></td>    
-        `
+
+        if (inputJSON[i1].category == "file") {
+            text += `
+                <tr>
+                    <td>${index1}</td>
+                    <td><a href="./NewConcept_Template.html?input=${inputJSON[i1].filename}" target="_blank">&nbsp;${inputJSON[i1].title}&nbsp;&nbsp;${inputJSON[i1].subtitle}&nbsp;</a></td>
+                    <td></td>    
+            `
+        }
+
+        if (inputJSON[i1].category == "file_slide") {
+            text += `
+                <tr>
+                    <td>${index1}</td>
+                    <td><a href="./template_textslide.html?input=${inputJSON[i1].filename}" target="_blank">&nbsp;${inputJSON[i1].title}&nbsp;&nbsp;${inputJSON[i1].subtitle}&nbsp;</a></td>
+                    <td></td>    
+            `
+        }
+
 
         if (inputJSON[i2]) {
-            text += `
-            <td>${index2}</td>    
-            <td><a href="./NewConcept_Template.html?&input=${inputJSON[i2].filename}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;&nbsp;${inputJSON[i2].subtitle}&nbsp;</a></td>
-            `
+
+            if (inputJSON[i2].category == "file") {
+                text += `
+                <td>${index2}</td>    
+                <td><a href="./NewConcept_Template.html?&input=${inputJSON[i2].filename}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;&nbsp;${inputJSON[i2].subtitle}&nbsp;</a></td>
+                `
+            }
+
+            if (inputJSON[i2].category == "file_slide") {
+                text += `
+                <td>${index2}</td>    
+                <td><a href="./template_textslide.html?&input=${inputJSON[i2].filename}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;&nbsp;${inputJSON[i2].subtitle}&nbsp;</a></td>
+                `
+            }
         } else {
             text += `
                 <td></td>

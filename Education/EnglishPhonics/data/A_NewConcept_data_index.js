@@ -14,10 +14,52 @@ var mainData = [
     foldername: ""
   },
   {
-    title: "Wordly Wise 3OOO Online",
-    subtitle: "Level 5 Word List",
+    title: "Oxford Phonics World",
+    subtitle: "Level 2",
     category: "file",
-    filename: "WW3000_DTR_WordList_L5",
+    filename: "Oxford_Phonics_Level2",
+    foldername: ""
+  },
+  {
+    title: "TLL Sentences",
+    subtitle: "Part 1",
+    category: "file_slide",
+    filename: "TLL_Sentences_1",
+    foldername: ""
+  },
+  {
+    title: "Grammar",
+    subtitle: "Short Paragraph",
+    category: "file_slide",
+    filename: "Grammar_Short_Paragraph",
+    foldername: ""
+  },
+  {
+    title: "小学英语",
+    subtitle: "五年级",
+    category: "file_slide",
+    filename: "Primary_5_Sentences",
+    foldername: ""
+  },
+  {
+    title: "Wordly Wise 3OOO Online",
+    subtitle: "Level 5 Word List Lesson 1",
+    category: "file",
+    filename: "WW3000_DTR_WordList_L5_Lesson1",
+    foldername: ""
+  },
+  {
+    title: "Wordly Wise 3OOO Online",
+    subtitle: "Level 5 Word List Lesson 2",
+    category: "file",
+    filename: "WW3000_DTR_WordList_L5_Lesson2",
+    foldername: ""
+  },
+  {
+    title: "Wordly Wise 3OOO Online",
+    subtitle: "Level 5 Word List Lesson 3",
+    category: "file",
+    filename: "WW3000_DTR_WordList_L5_Lesson3",
     foldername: ""
   },
   {

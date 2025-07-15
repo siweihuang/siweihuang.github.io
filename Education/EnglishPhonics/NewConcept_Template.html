@@ -858,6 +858,10 @@
             elements.modalFullPhonetic.addEventListener('click', () => {
                 playWordAudio(wordData[currentIndex].word);
             });
+
+            elements.modalWord.addEventListener('click', () => {
+                playWordAudio(wordData[currentIndex].word);
+            });
         }
 
         // Show word modal
@@ -941,12 +945,28 @@
             audioPlayer.src = `./audio/${cleanWord}.mp3`;
 
             audioPlayer.play().catch(e => {
-                console.error("Audio playback failed:", e);
-                if (window.speechSynthesis) {
-                    const utterance = new SpeechSynthesisUtterance(word);
-                    utterance.lang = 'en-US';
-                    speechSynthesis.speak(utterance);
-                }
+                // console.error("Audio playback failed:", e);
+                console.warn("Local audio failed, falling back to Youdao audio...");
+                // Construct Youdao audio URL
+                const youdaoUrl = `https://dict.youdao.com/dictvoice?type=1&audio=${encodeURIComponent(cleanWord)}`;
+
+                // Create new Audio object for fallback
+                const fallbackAudio = new Audio(youdaoUrl);
+
+                // Optionally, handle if even Youdao audio fails
+                fallbackAudio.onerror = function () {
+                    console.error("Youdao audio also failed.");
+                };
+
+                fallbackAudio.play().catch(err => {
+                    console.error("Failed to play fallback audio:", err);
+                });
+
+                // if (window.speechSynthesis) {
+                //     const utterance = new SpeechSynthesisUtterance(word);
+                //     utterance.lang = 'en-US';
+                //     speechSynthesis.speak(utterance);
+                // }
             });
         }
 
