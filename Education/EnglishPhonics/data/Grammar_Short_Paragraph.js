@@ -29,6 +29,10 @@ var mainData = {
     {
       en: "The news that she was married is true.",
       cn: "她已婚的消息是真的。"
+    },
+    {
+      en: "Hello! I have a cute pet cat. <u>Its</u> name is Mimi. Mimi is two years old. She <u>has</u> white fur and big green eyes. Every morning, Mimi <u>meows</u> meow to wake me up! She likes to play <u>with</u> a yellow ball. I love <u>her</u> very much!",
+      cn: "你好！我有一只可爱的宠物猫。<u>它的</u>名字叫咪咪。咪咪两岁了，<u>它</u>有白色的毛和大大的绿眼睛。每天早上，咪咪都会<u>喵喵</u>叫来叫醒我！它喜欢<u>玩</u>一个黄色的球。我非常爱<u>它</u>！"
     }
   ]
 };
