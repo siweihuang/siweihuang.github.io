@@ -21,24 +21,38 @@ var mainData = [
     foldername: ""
   },
   {
-    title: "Wordly Wise 3OOO Online",
-    subtitle: "Level 5 Word List Lesson 1",
-    category: "file",
-    filename: "WW3000_DTR_WordList_L5_Lesson1",
+    title: "TLL Sentences",
+    subtitle: "",
+    category: "folder",
+    filename: "index_TLL.html",
+    foldername: ""
+  },
+  {
+    title: "Ind 365",
+    subtitle: "Part 1",
+    category: "file_slide",
+    filename: "Ind_365_Part_1",
+    foldername: ""
+  },
+  {
+    title: "Grammar",
+    subtitle: "Short Paragraph",
+    category: "file_slide",
+    filename: "Grammar_Short_Paragraph",
+    foldername: ""
+  },
+  {
+    title: "小学英语",
+    subtitle: "五年级",
+    category: "file_slide",
+    filename: "Primary_5_Sentences",
     foldername: ""
   },
   {
     title: "Wordly Wise 3OOO Online",
-    subtitle: "Level 5 Word List Lesson 2",
-    category: "file",
-    filename: "WW3000_DTR_WordList_L5_Lesson2",
-    foldername: ""
-  },
-    {
-  title: "Wordly Wise 3OOO Online",
-  subtitle: "Level 11 Word List Lesson 4",
-    category: "file",
-    filename: "WW3000_DTR_WordList_L11_Lesson4",
+    subtitle: "Word List",
+    category: "folder",
+    filename: "index_WW3000.html",
     foldername: ""
   },
   {

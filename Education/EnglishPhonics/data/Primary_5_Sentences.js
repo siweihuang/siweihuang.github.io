@@ -27,6 +27,15 @@ var mainData = {
         "He is hard-working. He is very helpful at home.<br>" +
         "He is strict, too. He makes me finish my homework!",
       cn: ""
+    },
+    {
+      en:
+        "My Parents<br>" +
+        "I have a busy father <br>and a kind mother.<br>" +
+        "My father is a policeman.<br>He is tall and strong.<br>" +
+        "My mother is a teacher.<br>She is beautiful. <br>She can cook delicious food.<br>" +
+        "I love my parents, <br>and they love me too.",
+      cn: ""
     }
   ]
 };
