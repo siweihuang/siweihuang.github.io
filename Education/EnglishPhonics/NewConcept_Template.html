@@ -658,11 +658,11 @@
 
             <div class="modal-word-image-container">
                 <img class="modal-word-image" id="modalWordImage">
+                <div class="fallback-modal modal-syllables" id="modalSyllables" style="display: none;"></div>
             </div>
 
         </div>
 
-        <div class="modal-syllables" id="modalSyllables"></div>
         <div class="modal-full-phonetic" id="modalFullPhonetic">/phonetic/</div>
         <div class="modal-translation" id="modalTranslation">Translation</div>
 
@@ -788,9 +788,8 @@
                 card.innerHTML = `
                 <div class="card-index">${indexStr}</div>    
                 <div class="word-image-container">
-                    ${word.image ? `
-                        <img src="./images/${word.image}" alt="${word.word}" class="word-image">
-                    ` : `<div class="syllables-row">${syllablesHTML}</div>`}
+                    <img src="./images/${word.image}" alt="${word.word}" class="word-image">
+                    <div class="fallback syllables-row" style="display: none;">${syllablesHTML}</div>
                 </div>
 
                 <h3 class="word">${word.word}</h3>
@@ -799,7 +798,16 @@
                 `;
 
                 elements.wordCardsContainer.appendChild(card);
+
+                const img = card.querySelector('img.word-image');
+                const fallbackDiv = card.querySelector('.fallback');
+
+                img.onerror = function () {
+                    img.style.display = 'none';
+                    fallbackDiv.style.display = 'flex';
+                };
             });
+
         }
 
         // Setup event listeners
@@ -926,6 +934,19 @@
             }
 
             elements.wordModal.classList.add('active');
+
+            const img_modal = elements.wordModal.querySelector('img.modal-word-image');
+            const fallbackDiv_modal = elements.wordModal.querySelector('.fallback-modal');
+
+            img_modal.onerror = function () {
+                img_modal.style.display = 'none';
+                fallbackDiv_modal.style.display = 'flex';
+            };
+
+            img_modal.onload = function () {
+                img_modal.style.display = 'block';
+                fallbackDiv_modal.style.display = 'none';
+            };
         }
 
         // Navigation functions

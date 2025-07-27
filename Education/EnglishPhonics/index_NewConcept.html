@@ -127,6 +127,15 @@
             `
         }
 
+        if (inputJSON[i1].category == "folder") {
+            text += `
+                <tr>
+                    <td>${index1}</td>
+                    <td><a href="./${inputJSON[i1].filename}" target="_blank">&nbsp;${inputJSON[i1].title}&nbsp;&nbsp;${inputJSON[i1].subtitle}&nbsp;</a></td>
+                    <td></td>    
+            `
+        }
+
 
         if (inputJSON[i2]) {
 

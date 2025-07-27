@@ -7,6 +7,13 @@ var mainData = [
     foldername: ""
   },
   {
+    title: "BBC Phonics",
+    subtitle: "英语音标教程",
+    category: "folder",
+    filename: "index_BBC_Phonics.html",
+    foldername: ""
+  },
+  {
     title: "Oxford Phonics World",
     subtitle: "Level 1",
     category: "file",
