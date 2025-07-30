@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Input Data -->
-    <script src="./data/A_index_TLL.js"></script>
-    <title>TLL</title>
+    <script src="./data/A_index_Season2.js"></script>
+    <title>New Concept English Season 2</title>
     <style type="text/css">
         body {
             font-family: 'Book Antiqua';
@@ -83,7 +83,7 @@
     <!---728x90--->
     <div class="wrap">
         <div class="logo">
-            <h1>TLL</h1>
+            <h1>New Concept English</h1>
             <div id="mainContent"></div>
         </div>
     </div>
@@ -123,6 +123,15 @@
                 <tr>
                     <td>${index1}</td>
                     <td><a href="./template_textslide.html?input=${inputJSON[i1].filename}" target="_blank">&nbsp;${inputJSON[i1].title}&nbsp;&nbsp;${inputJSON[i1].subtitle}&nbsp;</a></td>
+                    <td></td>    
+            `
+        }
+
+        if (inputJSON[i1].category == "folder") {
+            text += `
+                <tr>
+                    <td>${index1}</td>
+                    <td><a href="./${inputJSON[i1].filename}" target="_blank">&nbsp;${inputJSON[i1].title}&nbsp;&nbsp;${inputJSON[i1].subtitle}&nbsp;</a></td>
                     <td></td>    
             `
         }
@@ -167,6 +176,6 @@
 </script>
 
 
-<div style="text-align: center;margin-top: 40px"> 咖啡先生的英语课<br>Last updated on 23/07/2025</div>
+<div style="text-align: center;margin-top: 40px"> Last updated on 23/06/2025</div>
 
 </html>

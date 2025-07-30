@@ -1,30 +1,30 @@
 var mainData = [
   {
-    title: "TLL Sentences",
+    title: "LL Sentences",
     subtitle: "Part 1",
     category: "file_slide",
-    filename: "TLL_Sentences_1",
+    filename: "LL_Sentences_1",
     foldername: ""
   },
   {
-    title: "TLL Sentences",
+    title: "LL Sentences",
     subtitle: "Part 2",
     category: "file_slide",
-    filename: "TLL_Sentences_2",
+    filename: "LL_Sentences_2",
     foldername: ""
   },
   {
     title: "Primary 4 Term Test",
     subtitle: "Term 1",
     category: "file_slide",
-    filename: "TLL_Sentences_3",
+    filename: "LL_Sentences_3",
     foldername: ""
   },
   {
     title: "Term 1",
     subtitle: "Week 11",
     category: "file_slide",
-    filename: "TLL_Sentences_4",
+    filename: "LL_Sentences_4",
     foldername: ""
   }
 ];

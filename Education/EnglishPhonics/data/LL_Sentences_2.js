@@ -1,5 +1,5 @@
 var mainData = {
-  title: "TLL Sentences",
+  title: "LL Sentences",
   subtitle: "Part 2",
   paragraph: [
     {

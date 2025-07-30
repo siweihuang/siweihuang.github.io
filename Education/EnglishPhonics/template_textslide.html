@@ -133,6 +133,18 @@
 <body>
     <header>
         <h1 id="slide-title">Slide Viewer</h1>
+        <button id="print-btn" style="
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px 15px;
+            background-color: #ffffff;
+            color: #4285f4;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        ">Print PDF</button>
     </header>
 
     <div class="content">
@@ -267,6 +279,113 @@
 
         // Initialize on load
         window.addEventListener('load', init);
+
+        document.getElementById("print-btn").addEventListener("click", async () => {
+            const start = parseInt(prompt(`请输入起始页码 (1 - ${sentences.length})`));
+            const end = parseInt(prompt(`请输入结束页码 (不能小于起始页码，最大为 ${sentences.length})`));
+
+            if (
+                isNaN(start) || isNaN(end) ||
+                start < 1 || end > sentences.length || start > end
+            ) {
+                alert("无效的页码输入！");
+                return;
+            }
+
+            let htmlContent = `
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>${title || "打印内容"}</title>
+        <style>
+            body {
+                font-family: 'Book Antiqua', '楷体', sans-serif;
+                margin: 40px;
+                line-height: 1.8;
+                color: #222;
+                text-align: center;
+                background-color: #f8f9fa;
+            }
+
+            h1 {
+                color: #4285f4;
+                font-size: 32px;
+                margin-bottom: 40px;
+            }
+
+            .slide {
+                margin-bottom: 50px;
+                padding-bottom: 20px;
+                border-bottom: 1px dashed #ccc;
+                page-break-inside: avoid;
+                background-color: #f8f9fa;
+                padding: 20px;
+                border-radius: 8px;
+            }
+
+            .slide-number {
+                font-size: 16px;
+                color: #999;
+                margin-bottom: 10px;
+            }
+
+            .english {
+                font-size: 64px;
+                color: #1a73e8;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+
+            .chinese {
+                font-size: 48px;
+                color: #444;
+                font-weight: normal;
+            }
+
+            @media print {
+                body {
+                    background-color: #f8f9fa !important;
+                    -webkit-print-color-adjust: exact;
+                    print-color-adjust: exact;
+                    margin: 15mm;
+                }
+
+                .slide {
+                    background-color: #f8f9fa !important;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>${title || '打印预览'}</h1>
+    `;
+
+            for (let i = start - 1; i <= end - 1; i++) {
+                htmlContent += `
+        <div class="slide">
+            <div class="slide-number">第 ${i + 1} 页</div>
+            <div class="english">${sentences[i].en}</div>
+            <div class="chinese">${sentences[i].cn}</div>
+        </div>`;
+            }
+
+            htmlContent += `
+        <script>
+            window.onload = function() {
+                window.print();
+            }
+        <\/script>
+    </body>
+    </html>`;
+
+            const printWindow = window.open("", "_blank");
+            printWindow.document.open();
+            printWindow.document.write(htmlContent);
+            printWindow.document.close();
+        });
+
+
+
 
     </script>
 </body>

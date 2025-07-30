@@ -23,7 +23,8 @@
         }
 
         h1,
-        h2 {
+        h2,
+        h3 {
             text-align: center;
             color: #333;
         }
@@ -34,10 +35,16 @@
             border-bottom: 2px solid #eee;
         }
 
+        h3 {
+            margin: 20px 0 10px;
+            color: #444;
+            text-align: center;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
+            margin: 15px 0;
         }
 
         th,
@@ -78,6 +85,19 @@
             text-decoration: underline;
         }
 
+        .chinese-char {
+            font-size: 14px;
+            color: #666;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+
         @media (max-width: 600px) {
             table {
                 font-size: 14px;
@@ -89,16 +109,14 @@
             }
 
             .ipa-symbol {
-                font-size: 16px;
+                font-size: 18px;
                 padding: 3px 6px;
                 min-width: 30px;
             }
-        }
 
-        .loading {
-            text-align: center;
-            padding: 20px;
-            color: #666;
+            .chinese-char {
+                font-size: 12px;
+            }
         }
     </style>
 </head>
@@ -107,27 +125,51 @@
     <div class="container">
         <h1>IPA Phonetic Chart</h1>
 
-        <!-- Vowel Section -->
+        <!-- Vowel Section - Updated Format -->
         <h2>Vowels (元音) - 20</h2>
         <div id="vowel-loading" class="loading">Loading vowel data...</div>
-        <table id="vowel-table" style="display: none;">
-            <thead>
-                <tr>
-                    <th>Vowel Type</th>
-                    <th>Subcategory</th>
-                    <th>Symbol 1</th>
-                    <th>Symbol 2</th>
-                    <th>Symbol 3</th>
-                    <th>Symbol 4</th>
-                    <th>Symbol 5</th>
-                </tr>
-            </thead>
-            <tbody id="vowel-body">
-                <!-- Will be populated by JavaScript -->
-            </tbody>
-        </table>
 
-        <!-- Consonant Section -->
+        <div id="vowel-tables" style="display: none;">
+            <h3>单元音</h3>
+            <table id="long-vowels">
+                <thead>
+                    <tr>
+                        <th colspan="5" class="category-header">长元音</th>
+                    </tr>
+                </thead>
+                <tbody id="long-vowels-body"></tbody>
+            </table>
+
+            <table id="short-vowels">
+                <thead>
+                    <tr>
+                        <th colspan="7" class="category-header">短元音</th>
+                    </tr>
+                </thead>
+                <tbody id="short-vowels-body"></tbody>
+            </table>
+
+            <h3>双元音</h3>
+            <table id="closing-diphthongs">
+                <thead>
+                    <tr>
+                        <th colspan="5" class="category-header">合口双元音</th>
+                    </tr>
+                </thead>
+                <tbody id="closing-diphthongs-body"></tbody>
+            </table>
+
+            <table id="centering-diphthongs">
+                <thead>
+                    <tr>
+                        <th colspan="3" class="category-header">集中双元音</th>
+                    </tr>
+                </thead>
+                <tbody id="centering-diphthongs-body"></tbody>
+            </table>
+        </div>
+
+        <!-- Consonant Section - Kept Original Format -->
         <h2>Consonants (辅音) - 28</h2>
         <div id="consonant-loading" class="loading">Loading consonant data...</div>
         <table id="consonant-table" style="display: none;">
@@ -161,11 +203,11 @@
                 document.getElementById('consonant-loading').style.display = 'none';
 
                 // Show tables
-                document.getElementById('vowel-table').style.display = 'table';
+                document.getElementById('vowel-tables').style.display = 'block';
                 document.getElementById('consonant-table').style.display = 'table';
 
                 // Populate tables
-                populateVowelTable(mainData.vowels);
+                populateVowelTables(mainData.vowels);
                 populateConsonantTable(mainData.consonants);
             } else {
                 document.getElementById('vowel-loading').textContent = 'Failed to load vowel data.';
@@ -176,102 +218,91 @@
 
         // Function to handle IPA symbol clicks
         function handleSymbolClick(filename) {
-            // console.log(`IPA symbol clicked: /${filename}/`);
+            console.log(`IPA symbol clicked: /${filename}/`);
             window.open('./NewConcept_Template.html?&input=' + filename, '_blank');
         }
 
-        function populateVowelTable(data) {
-            const vowelBody = document.getElementById('vowel-body');
-
-            // Monophthongs - Front
-            vowelBody.appendChild(createVowelRow(
-                'Monophthongs<br>(单元音)',
-                'Front Vowels<br>(前元音)',
-                data.monophthongs.front,
-                'monophthong',
-                'front'
-            ));
-
-            // Monophthongs - Central
-            vowelBody.appendChild(createVowelRow(
-                '',
-                'Central Vowels<br>(中元音)',
-                data.monophthongs.central,
-                'monophthong',
-                'central'
-            ));
-
-            // Monophthongs - Back
-            vowelBody.appendChild(createVowelRow(
-                '',
-                'Back Vowels<br>(后元音)',
-                data.monophthongs.back,
-                'monophthong',
-                'back'
-            ));
-
-            // Diphthongs - Closing
-            vowelBody.appendChild(createVowelRow(
-                'Diphthongs<br>(双元音)',
-                'Closing Diphthongs<br>(开合双元音)',
-                data.diphthongs.closing,
-                'diphthong',
-                'closing'
-            ));
-
-            // Diphthongs - Centering
-            vowelBody.appendChild(createVowelRow(
-                '',
-                'Centering Diphthongs<br>(集中双元音)',
-                data.diphthongs.centering,
-                'diphthong',
-                'centering'
-            ));
-        }
-
-        function createVowelRow(type, subcategory, symbols, categoryType, categorySubtype) {
-            const row = document.createElement('tr');
-
-            if (type) {
-                const typeCell = document.createElement('td');
-                typeCell.className = 'category-header';
-                typeCell.rowSpan = type.includes('Monophthongs') ? 3 : 2;
-                typeCell.innerHTML = type;
-                row.appendChild(typeCell);
-            }
-
-            const subcategoryCell = document.createElement('td');
-            subcategoryCell.className = 'subcategory-header';
-            subcategoryCell.innerHTML = subcategory;
-            row.appendChild(subcategoryCell);
-
-            // Create cells for up to 4 symbols
-            for (let i = 0; i < 5; i++) {
+        function populateVowelTables(data) {
+            // Long vowels
+            const longVowelsBody = document.getElementById('long-vowels-body');
+            const longVowelsRow = document.createElement('tr');
+            data.long.forEach(vowel => {
                 const cell = document.createElement('td');
-                if (symbols[i]) {
-                    const span = document.createElement('span');
+                const span = document.createElement('span');
+                span.className = 'ipa-symbol';
+                span.textContent = `/${vowel.symbol}/`;
+                cell.appendChild(span);
+                cell.innerHTML += `<span class="chinese-char">${vowel.chinese}</span>`;
+                // Add click event listener
+                cell.addEventListener('click', () => {
+                    handleSymbolClick(
+                        vowel.filename
+                    );
+                });
+                longVowelsRow.appendChild(cell);
+            });
+            longVowelsBody.appendChild(longVowelsRow);
 
-                    if (symbols[i].symbol != "") {
-                        span.className = 'ipa-symbol';
-                        span.textContent = `/${symbols[i].symbol}/`;
+            // Short vowels
+            const shortVowelsBody = document.getElementById('short-vowels-body');
+            const shortVowelsRow = document.createElement('tr');
+            data.short.forEach(vowel => {
+                const cell = document.createElement('td');
+                const span = document.createElement('span');
+                span.className = 'ipa-symbol';
+                span.textContent = `/${vowel.symbol}/`;
+                cell.appendChild(span);
+                cell.innerHTML += `<span class="chinese-char">${vowel.chinese}</span>`;
+                // Add click event listener
+                cell.addEventListener('click', () => {
+                    handleSymbolClick(
+                        vowel.filename
+                    );
+                });
+                shortVowelsRow.appendChild(cell);
+            });
+            shortVowelsBody.appendChild(shortVowelsRow);
 
-                        // Add click event listener
-                        span.addEventListener('click', () => {
-                            handleSymbolClick(
-                                symbols[i].filename
-                            );
-                        });
-                    }
+            // Closing diphthongs
+            const closingDiphthongsBody = document.getElementById('closing-diphthongs-body');
+            const closingDiphthongsRow = document.createElement('tr');
+            data.closingDiphthongs.forEach(diphthong => {
+                const cell = document.createElement('td');
+                const span = document.createElement('span');
+                span.className = 'ipa-symbol';
+                span.textContent = `/${diphthong.symbol}/`;
+                cell.appendChild(span);
+                cell.innerHTML += `<span class="chinese-char">${diphthong.chinese}</span>`;
+                // Add click event listener
+                cell.addEventListener('click', () => {
+                    handleSymbolClick(
+                        vowel.filename
+                    );
+                });
+                closingDiphthongsRow.appendChild(cell);
+            });
+            closingDiphthongsBody.appendChild(closingDiphthongsRow);
 
-
-                    cell.appendChild(span);
-                }
-                row.appendChild(cell);
-            }
-
-            return row;
+            // Centering diphthongs
+            const centeringDiphthongsBody = document.getElementById('centering-diphthongs-body');
+            const centeringDiphthongsRow = document.createElement('tr');
+            data.centeringDiphthongs.forEach(diphthong => {
+                const cell = document.createElement('td');
+                const span = document.createElement('span');
+                span.className = 'ipa-symbol';
+                span.textContent = `/${diphthong.symbol}/`;
+                cell.appendChild(span);
+                cell.innerHTML += `<span class="chinese-char">${diphthong.chinese}</span>`;
+                // Add click event listener
+                cell.addEventListener('click', () => {
+                    handleSymbolClick(
+                        vowel.filename
+                    );
+                });
+                centeringDiphthongsRow.appendChild(cell);
+            });
+            centeringDiphthongsBody.appendChild(centeringDiphthongsRow);
         }
-
         function populateConsonantTable(data) {
             const consonantBody = document.getElementById('consonant-body');
 

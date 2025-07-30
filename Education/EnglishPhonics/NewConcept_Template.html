@@ -31,6 +31,10 @@
             line-height: 1.6;
         }
 
+        .highlight-letter {
+            color: red;
+        }
+
         /* Header Styles */
         .lesson-header {
             text-align: center;
@@ -618,10 +622,52 @@
                 /* 1 column for mobile */
             }
         }
+
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            #printContainer,
+            #printContainer * {
+                visibility: visible;
+            }
+
+            #printContainer {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+            }
+
+            .modal-nav,
+            .modal-word-container button,
+            .modal-tags,
+            .close-btn {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 
 <body>
+    <!-- <button id="printPdfBtn" style="
+        position: fixed;
+        top: 80px;
+        right: 20px;
+        z-index: 2000;
+        padding: 10px 20px;
+        background-color: #E25624;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+    ">
+        Print PDF
+    </button> -->
+
+    <div id="printContainer" style="display: none;"></div>
+
     <div class="lesson-header">
         <h1 class="lesson-title" id="maintitle"></h1>
         <p class="lesson-subtitle" id="subtitle"></p>
@@ -887,7 +933,16 @@
             }
 
             // Update main word content
-            elements.modalWord.textContent = word.word;
+            const wordTemp = word.word;
+            const letterToHighlight = (word.highlight && word.highlight.letter) || '';
+
+            // 用正则匹配目标字母（不区分大小写）
+            const regex = new RegExp(letterToHighlight, 'gi');
+            const highlightedWord = wordTemp.replace(regex, match =>
+                `<span class="highlight-letter">${match}</span>`
+            );
+
+            elements.modalWord.innerHTML = highlightedWord;
             if (word.image) {
                 elements.modalWordImage.src = "./images/" + word.image;
             } else {
@@ -945,7 +1000,7 @@
 
             img_modal.onload = function () {
                 img_modal.style.display = 'block';
-                fallbackDiv_modal.style.display = 'none';
+                fallbackDiv_modal.style.display = 'flex';
             };
         }
 
@@ -999,6 +1054,105 @@
 
         // Initialize on load
         window.addEventListener('load', init);
+
+        function generateModalContentHTML(word, index) {
+            const indexStr = (index + 1).toString().padStart(2, '0');
+
+            // 生成拼读部分的 HTML
+            const syllablesHTML = word.syllables.map(syllable => `
+        <div class="modal-syllable-card ${syllable.color}">
+            <span class="modal-syllable">${syllable.syllable}</span>
+            <span class="modal-phonetic">${syllable.phonetic}</span>
+        </div>
+    `).join('');
+
+            // 例句加粗单词
+            let sentenceEn = '';
+            let sentenceZh = '';
+            if (word.sentences?.length > 0) {
+                sentenceEn = word.sentences[0].en.replace(new RegExp(`\\b${word.word}\\b`, 'gi'), '<em>$&</em>');
+                sentenceZh = word.sentences[0].zh;
+            }
+
+            // 词组搭配
+            const collocationsHTML = (word.CommonCollocation?.length > 0) ? word.CommonCollocation
+                .map(item => `<div class="modal-collocation-item">${item}</div>`).join('') : '';
+
+            return `
+    <div class="word-modal active" style="display: block; position: relative; margin-bottom: 40px; page-break-after: always;">
+
+        <div class="modal-tags" style="position: relative; padding: 0 5%; margin-bottom: 10px;">
+            <div class="modal-card-index">${indexStr}</div>
+            <div class="modal-pronunciation-display" style="color: var(--primary-color); font-weight: bold;">
+                ${word.chinesePronunciation || ''}
+            </div>
+        </div>
+
+        <div class="modal-word-container" style="display: flex; justify-content: center; align-items: center; margin-bottom: 30px;">
+            <div class="modal-word" style="font-size: 90px; font-weight: bold; color: var(--text-color); margin: 0 20px; flex-grow: 1;">${word.word}</div>
+        </div>
+
+        <div class="modal-word-image-container" style="display: flex; justify-content: center; margin-bottom: 30px; gap: 30px;">
+            ${word.image ? `<img src="./images/${word.image}" class="modal-word-image" style="width:200px; height:200px; object-fit: contain; border-radius: 8px;">` : ''}
+        </div>
+
+        <div class="modal-syllables" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-bottom: 30px;">
+            ${syllablesHTML}
+        </div>
+
+        <div class="modal-full-phonetic" style="font-size: 28px; color: #666; margin: 30px 0; padding: 15px 0; border-top: 2px dashed #eee; border-bottom: 2px dashed #eee; text-align: center;">
+            ${word.fullPhonetic}
+        </div>
+
+        <div class="modal-translation" style="font-size: 28px; color: var(--text-light); margin-bottom: 40px; text-align: center;">
+            ${word.translation}
+        </div>
+
+        ${collocationsHTML ? `<div class="modal-collocations" style="margin: 20px auto; padding: 15px; background-color: #f0f7ff; border-radius: 8px; border-left: 4px solid #197DC7; max-width: 80%; font-size: 18px;">${collocationsHTML}</div>` : ''}
+
+        ${(sentenceEn && sentenceZh) ? `
+        <div class="modal-sentences" style="margin: 15px auto; padding: 15px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #6c757d; max-width: 80%; font-size: 26px;">
+            <div class="sentence-en" style="margin-bottom: 10px; font-style: italic; color: var(--text-color);">
+                <strong>Example: </strong> ${sentenceEn}
+            </div>
+            <div class="sentence-zh" style="color: var(--text-light); padding-left: 25px; border-left: 2px solid #ddd;">
+                ${sentenceZh}
+            </div>
+        </div>` : ''}
+    </div>
+    `;
+        }
+
+        const printBtn = document.getElementById("printPdfBtn");
+        const modal = document.getElementById("wordModal");
+
+        // printBtn.addEventListener("click", () => {
+        //     if (!wordData.length) return alert("数据未加载完毕");
+
+        //     const start = parseInt(prompt("请输入起始页码 (1 ~ " + wordData.length + "):", "1"));
+        //     const end = parseInt(prompt("请输入结束页码 (最大 " + wordData.length + "):", wordData.length.toString()));
+
+        //     if (isNaN(start) || isNaN(end) || start < 1 || end > wordData.length || start > end) {
+        //         alert("页码输入无效");
+        //         return;
+        //     }
+
+        //     const container = document.getElementById("printContainer");
+        //     container.innerHTML = ''; // 清空
+        //     container.style.display = 'block';
+
+        //     for (let i = start - 1; i < end; i++) {
+        //         container.innerHTML += generateModalContentHTML(wordData[i], i);
+        //     }
+
+        //     window.print();
+
+        //     setTimeout(() => {
+        //         container.innerHTML = '';
+        //         container.style.display = 'none';
+        //     }, 1000);
+        // });
+
     </script>
 </body>
 
