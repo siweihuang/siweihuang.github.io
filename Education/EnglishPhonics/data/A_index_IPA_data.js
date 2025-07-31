@@ -47,7 +47,7 @@ var mainData = {
       },
       {
         symbol: "ɒ",
-        chinese: "<u>喔</u>",
+        chinese: "漩<u>涡</u>",
         english: "d<u>o</u>g<br>/d<u>ɒ</u>g/",
         filename: "sound_o"
       },
@@ -59,13 +59,13 @@ var mainData = {
       },
       {
         symbol: "ɪ",
-        chinese: "<u>衣</u>",
+        chinese: "<u>衣</u>服",
         english: "b<u>i</u>g<br>/b<u>ɪ</u>ɡ/",
         filename: "sound_I"
       },
       {
         symbol: "ʊ",
-        chinese: "<u>屋</u>",
+        chinese: "<u>屋</u>顶",
         english: "p<u>u</u>t<br>/p<u>ʊ</u>t/",
         filename: "sound_u"
       },

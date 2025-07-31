@@ -42,24 +42,17 @@ var mainData = [
     foldername: ""
   },
   {
+    title: "英语固定短语",
+    subtitle: "",
+    category: "folder",
+    filename: "index_fixed_expression.html",
+    foldername: ""
+  },
+  {
     title: "Ind 365",
     subtitle: "Part 1",
     category: "file_slide",
     filename: "Ind_365_Part_1",
-    foldername: ""
-  },
-  {
-    title: "Grammar",
-    subtitle: "Short Paragraph",
-    category: "file_slide",
-    filename: "Grammar_Short_Paragraph",
-    foldername: ""
-  },
-  {
-    title: "小学英语",
-    subtitle: "五年级",
-    category: "file_slide",
-    filename: "Primary_5_Sentences",
     foldername: ""
   },
   {
