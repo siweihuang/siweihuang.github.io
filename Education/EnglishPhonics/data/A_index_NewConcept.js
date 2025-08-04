@@ -49,17 +49,17 @@ var mainData = [
     foldername: ""
   },
   {
-    title: "Ind 365",
-    subtitle: "Part 1",
-    category: "file_slide",
-    filename: "Ind_365_Part_1",
-    foldername: ""
-  },
-  {
     title: "Wordly Wise 3OOO Online",
     subtitle: "Word List",
     category: "folder",
     filename: "index_WW3000.html",
+    foldername: ""
+  },
+  {
+    title: "Reading Notes",
+    subtitle: "读书笔记",
+    category: "folder",
+    filename: "index_Reading_Notes.html",
     foldername: ""
   },
   {

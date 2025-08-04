@@ -62,6 +62,7 @@
             align-items: center;
             transition: transform 0.2s;
             white-space: nowrap;
+            color: #000000;
             /* Prevent phoneme text from breaking */
         }
 
@@ -71,19 +72,23 @@
 
         /* 🎨 Color Groups for table phonemes */
         .bg-vowel {
-            background-color: #ffe4e1;
+            background-color: #ffffff;
+            /* #ffe4e1; */
         }
 
         .bg-consonant {
-            background-color: #e0f7ff;
+            background-color: #ffffff;
+            /* #e0f7ff; */
         }
 
         .bg-diphthong {
-            background-color: #e6ffe0;
+            background-color: #ffffff;
+            /* #e6ffe0; */
         }
 
         .bg-other {
-            background-color: #f5e0ff;
+            background-color: #ffffff;
+            /* #f5e0ff; */
         }
 
         /* 🎨 Color Classes for display area phonics */
@@ -142,29 +147,78 @@
     <div id="phonics-table"></div>
 
     <script>
+        // const phonemes = [
+        //     { symbol: "ɑː", filename: "sound_a2", type: "vowel" },
+        //     { symbol: "ɔː", filename: "sound_o2", type: "vowel" },
+        //     { symbol: "ɜː", filename: "sound_er", type: "vowel" },
+        //     { symbol: "iː", filename: "sound_i2", type: "vowel" },
+        //     { symbol: "uː", filename: "sound_u2", type: "vowel" },
+        //     { symbol: "juː", filename: "sound_u2", type: "diphthong" },
+        //     { symbol: "ʌ", filename: "sound_a", type: "vowel" },
+        //     { symbol: "ɒ", filename: "sound_o", type: "vowel" },
+        //     { symbol: "ə", filename: "sound_e4", type: "vowel" },
+        //     { symbol: "ɪ", filename: "sound_I", type: "vowel" },
+        //     { symbol: "ʊ", filename: "sound_u", type: "vowel" },
+        //     { symbol: "e", filename: "sound_e", type: "vowel" },
+        //     { symbol: "æ", filename: "sound_ae", type: "vowel" },
+        //     { symbol: "aɪ", filename: "sound_aɪ", type: "diphthong" },
+        //     { symbol: "eɪ", filename: "sound_eɪ", type: "diphthong" },
+        //     { symbol: "ɔɪ", filename: "sound_oɪ", type: "diphthong" },
+        //     { symbol: "aʊ", filename: "sound_au", type: "diphthong" },
+        //     { symbol: "əʊ", filename: "sound_eu", type: "diphthong" },
+        //     { symbol: "ɪə", filename: "sound_Ir", type: "diphthong" },
+        //     { symbol: "eə", filename: "sound_air", type: "diphthong" },
+        //     { symbol: "ʊə", filename: "sound_ur", type: "diphthong" },
+        //     { symbol: "b", filename: "sound_b", type: "consonant" },
+        //     { symbol: "d", filename: "sound_d", type: "consonant" },
+        //     { symbol: "f", filename: "sound_f", type: "consonant" },
+        //     { symbol: "g", filename: "sound_g", type: "consonant" },
+        //     { symbol: "h", filename: "sound_h", type: "consonant" },
+        //     { symbol: "j", filename: "sound_j", type: "consonant" },
+        //     { symbol: "k", filename: "sound_k", type: "consonant" },
+        //     { symbol: "l", filename: "sound_l", type: "consonant" },
+        //     { symbol: "m", filename: "sound_m", type: "consonant" },
+        //     { symbol: "n", filename: "sound_n", type: "consonant" },
+        //     { symbol: "ŋ", filename: "sound_ng", type: "consonant" },
+        //     { symbol: "p", filename: "sound_p", type: "consonant" },
+        //     { symbol: "r", filename: "sound_r", type: "consonant" },
+        //     { symbol: "s", filename: "sound_s", type: "consonant" },
+        //     { symbol: "t", filename: "sound_t", type: "consonant" },
+        //     { symbol: "v", filename: "sound_v", type: "consonant" },
+        //     { symbol: "w", filename: "sound_w", type: "consonant" },
+        //     { symbol: "z", filename: "sound_z", type: "consonant" },
+        //     { symbol: "ʃ", filename: "sound_xi", type: "consonant" },
+        //     { symbol: "θ", filename: "sound_si", type: "consonant" },
+        //     { symbol: "ð", filename: "sound_the", type: "consonant" },
+        //     { symbol: "ʒ", filename: "sound_n3", type: "consonant" },
+        //     { symbol: "tʃ", filename: "sound_qi", type: "consonant" },
+        //     { symbol: "tr", filename: "sound_tr", type: "consonant" },
+        //     { symbol: "ts", filename: "sound_ts", type: "consonant" },
+        //     { symbol: "dʒ", filename: "sound_d3", type: "consonant" },
+        //     { symbol: "dr", filename: "sound_dr", type: "consonant" },
+        //     { symbol: "dz", filename: "sound_dz", type: "consonant" }
+        // ];
+
         const phonemes = [
+            { symbol: "θ", filename: "sound_si", type: "consonant" },
+            { symbol: "w", filename: "sound_w", type: "consonant" },
+            { symbol: "e", filename: "sound_e", type: "vowel" },
+            { symbol: "r", filename: "sound_r", type: "consonant" },
+            { symbol: "t", filename: "sound_t", type: "consonant" },
+            { symbol: "ʒ", filename: "sound_n3", type: "consonant" },
+            { symbol: "ʊ", filename: "sound_u", type: "vowel" },
+            { symbol: "ɪ", filename: "sound_I", type: "vowel" },
+            { symbol: "ɒ", filename: "sound_o", type: "vowel" },
+            { symbol: "p", filename: "sound_p", type: "consonant" },
+
+
             { symbol: "ɑː", filename: "sound_a2", type: "vowel" },
             { symbol: "ɔː", filename: "sound_o2", type: "vowel" },
             { symbol: "ɜː", filename: "sound_er", type: "vowel" },
             { symbol: "iː", filename: "sound_i2", type: "vowel" },
-            { symbol: "uː", filename: "sound_u2", type: "vowel" },
-            { symbol: "juː", filename: "sound_u2", type: "diphthong" },
+
             { symbol: "ʌ", filename: "sound_a", type: "vowel" },
-            { symbol: "ɒ", filename: "sound_o", type: "vowel" },
-            { symbol: "ə", filename: "sound_e4", type: "vowel" },
-            { symbol: "ɪ", filename: "sound_I", type: "vowel" },
-            { symbol: "ʊ", filename: "sound_u", type: "vowel" },
-            { symbol: "e", filename: "sound_e", type: "vowel" },
-            { symbol: "æ", filename: "sound_ae", type: "vowel" },
-            { symbol: "aɪ", filename: "sound_aɪ", type: "diphthong" },
-            { symbol: "eɪ", filename: "sound_eɪ", type: "diphthong" },
-            { symbol: "ɔɪ", filename: "sound_oɪ", type: "diphthong" },
-            { symbol: "aʊ", filename: "sound_au", type: "diphthong" },
-            { symbol: "əʊ", filename: "sound_eu", type: "diphthong" },
-            { symbol: "ɪə", filename: "sound_Ir", type: "diphthong" },
-            { symbol: "eə", filename: "sound_air", type: "diphthong" },
-            { symbol: "ʊə", filename: "sound_ur", type: "diphthong" },
-            { symbol: "b", filename: "sound_b", type: "consonant" },
+            { symbol: "s", filename: "sound_s", type: "consonant" },
             { symbol: "d", filename: "sound_d", type: "consonant" },
             { symbol: "f", filename: "sound_f", type: "consonant" },
             { symbol: "g", filename: "sound_g", type: "consonant" },
@@ -172,20 +226,48 @@
             { symbol: "j", filename: "sound_j", type: "consonant" },
             { symbol: "k", filename: "sound_k", type: "consonant" },
             { symbol: "l", filename: "sound_l", type: "consonant" },
-            { symbol: "m", filename: "sound_m", type: "consonant" },
-            { symbol: "n", filename: "sound_n", type: "consonant" },
-            { symbol: "ŋ", filename: "sound_ng", type: "consonant" },
-            { symbol: "p", filename: "sound_p", type: "consonant" },
-            { symbol: "r", filename: "sound_r", type: "consonant" },
-            { symbol: "s", filename: "sound_s", type: "consonant" },
-            { symbol: "t", filename: "sound_t", type: "consonant" },
-            { symbol: "v", filename: "sound_v", type: "consonant" },
-            { symbol: "w", filename: "sound_w", type: "consonant" },
+
+            { symbol: "uː", filename: "sound_u2", type: "vowel" },
+            { symbol: "juː", filename: "sound_u2", type: "diphthong" },
+
+            { symbol: "aɪ", filename: "sound_aɪ", type: "diphthong" },
+            { symbol: "eɪ", filename: "sound_eɪ", type: "diphthong" },
+            { symbol: "aʊ", filename: "sound_au", type: "diphthong" },
+
             { symbol: "z", filename: "sound_z", type: "consonant" },
-            { symbol: "ʃ", filename: "sound_xi", type: "consonant" },
-            { symbol: "θ", filename: "sound_si", type: "consonant" },
             { symbol: "ð", filename: "sound_the", type: "consonant" },
-            { symbol: "ʒ", filename: "sound_n3", type: "consonant" },
+            { symbol: "ʃ", filename: "sound_xi", type: "consonant" },
+            { symbol: "v", filename: "sound_v", type: "consonant" },
+            { symbol: "b", filename: "sound_b", type: "consonant" },
+            { symbol: "n", filename: "sound_n", type: "consonant" },
+            { symbol: "m", filename: "sound_m", type: "consonant" },
+            { symbol: "ŋ", filename: "sound_ng", type: "consonant" },
+
+
+            { symbol: "æ", filename: "sound_ae", type: "vowel" },
+            { symbol: "ə", filename: "sound_e4", type: "vowel" },
+            { symbol: "əʊ", filename: "sound_eu", type: "diphthong" },
+            { symbol: "ɔɪ", filename: "sound_oɪ", type: "diphthong" },
+
+            { symbol: "ɪə", filename: "sound_Ir", type: "diphthong" },
+            { symbol: "eə", filename: "sound_air", type: "diphthong" },
+            { symbol: "ʊə", filename: "sound_ur", type: "diphthong" },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             { symbol: "tʃ", filename: "sound_qi", type: "consonant" },
             { symbol: "tr", filename: "sound_tr", type: "consonant" },
             { symbol: "ts", filename: "sound_ts", type: "consonant" },

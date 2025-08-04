@@ -19,5 +19,12 @@ var mainData = [
     category: "file_slide",
     filename: "Short_Expression_100",
     foldername: ""
+  },
+  {
+    title: "小学固定短语",
+    subtitle: "100题",
+    category: "file_slide",
+    filename: "Short_Expression_Primary_100",
+    foldername: ""
   }
 ];
