@@ -142,7 +142,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #fff9f0;
+            background-color: #ffffff;
             /* 修改为与内容区相同的颜色 */
             z-index: 1000;
             justify-content: center;
@@ -154,7 +154,7 @@
         .modal-content {
             position: relative;
             /* 为箭头定位提供参考 */
-            background-color: #fff9f0;
+            background-color: #ffffff;
             padding: 40px;
             /* 增加内边距 */
             border-radius: 10px;
@@ -253,31 +253,54 @@
             transform: scale(1.1);
         }
 
-        /* 添加音标背景颜色样式 */
-        .english-ipa-highlight {
-            padding: 2px 4px;
-            border-radius: 4px;
-            font-weight: bold;
-        }
-
-        .english-ipa-highlight-1 {
+        /* 添加音节颜色样式 */
+        .syllable-color1 {
             color: #E25624;
             background-color: #FFF979;
         }
 
-        .english-ipa-highlight-2 {
+        .syllable-color2 {
             color: #453667;
             background-color: #F0EBFD;
         }
 
-        .english-ipa-highlight-3 {
+        .syllable-color3 {
             color: #4D9D1D;
-            background-color: #4D9D1D;
+            background-color: #EEF9EE;
         }
 
-        .english-ipa-highlight-4 {
+        .syllable-color4 {
             color: #197DC7;
             background-color: #CFF6FF;
+        }
+
+        .word-display {
+            font-family: Arial, "楷体";
+            font-size: 32px;
+            margin: 15px 0;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #ffffff;
+        }
+
+        .word-header {
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+
+        .word-phonetic {
+            font-family: Arial, sans-serif;
+            font-size: 48px;
+
+        }
+
+        .syllable-part {
+            font-family: Arial, sans-serif, "楷体";
+            padding: 2px 4px;
+            border-radius: 3px;
+            margin-right: 5px;
+            display: inline-block;
+            min-width: 60px;
         }
 
         @media (max-width: 600px) {
@@ -539,7 +562,8 @@
                 `/ ${symbolData.symbol} /`,
                 symbolData.chinese,
                 symbolData.english || '',
-                symbolData.filename
+                symbolData.filename,
+                symbolData.wordData || []
             );
         }
 
@@ -599,8 +623,29 @@
             return tempDiv.innerHTML;
         }
 
+        function formatWordData(wordData) {
+            return wordData.map(word => {
+                // 处理单词音节
+                let phoneticDisplay = '';
+                word.syllables.forEach(syllable => {
+                    phoneticDisplay += `<span class="syllable-part syllable-${syllable.color}">${syllable.phonetic.replace(/\//g, "")}</span>`;
+                });
+
+                return `
+                <div class="word-display">
+                    <div class="word-header">
+                        <strong>${word.word}</strong> ${word.fullPhonetic} - ${word.translation}
+                    </div>
+                    <div class="word-phonetic">
+                        ${phoneticDisplay}
+                    </div>
+                </div>
+            `;
+            }).join('');
+        }
+
         // 显示模态弹窗函数
-        function showModal(ipaSymbol, chineseChar, englishExample, filename) {
+        function showModal(ipaSymbol, chineseChar, englishExample, filename, wordData) {
             const modalIpaSymbol = document.getElementById('modal-ipa-symbol');
             modalIpaSymbol.textContent = ipaSymbol;
             modalIpaSymbol.dataset.filename = filename; // 存储filename到data属性
@@ -614,7 +659,16 @@
             document.getElementById('modal-chinese-char').innerHTML = chineseChar;
             // const formattedEnglish = formatEnglishExample(englishExample);
             // console.log(formatEnglishExample(formattedEnglish));
-            document.getElementById('modal-english-example').innerHTML = englishExample;
+            // document.getElementById('modal-english-example').innerHTML = englishExample;
+
+            const wordDataDisplay = formatWordData(wordData || []);
+            let displayText = englishExample;
+            if (wordDataDisplay != "") { // truthy check: not "", null, undefined, etc.
+                displayText = wordDataDisplay;
+            }
+            document.getElementById('modal-english-example').innerHTML =
+                `${displayText}`;
+
             document.getElementById('ipa-modal').style.display = 'flex';
 
             // 设置当前索引
@@ -632,7 +686,8 @@
                 `/ ${symbolData.symbol} /`,
                 symbolData.chinese,
                 symbolData.english || '',
-                symbolData.filename
+                symbolData.filename,
+                symbolData.wordData || []
             );
         }
 
