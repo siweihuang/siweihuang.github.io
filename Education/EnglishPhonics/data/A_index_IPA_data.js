@@ -216,7 +216,7 @@ var mainData = {
         {
           symbol: "h",
           chinese: "<u>喝</u>水",
-          english: "<u>h</u>ello /<u>h</u>əˈloʊ/<br><u>h</u>ope /<u>h</u>oʊp/",
+          english: "<u>h</u>ello /<u>h</u>əˈləʊ/<br><u>h</u>ope /<u>h</u>əʊp/",
           filename: "sound_h"
         }
       ],
@@ -249,7 +249,7 @@ var mainData = {
         {
           symbol: "r",
           chinese: "<u>惹</u>祸",
-          english: "<u>r</u>ed /r<u>e</u>d/<br><u>r</u>abbit /ˈ<u>r</u>æbɪt/",
+          english: "<u>r</u>ed /<u>r</u>ed/<br><u>r</u>abbit /ˈ<u>r</u>æbɪt/",
           filename: "sound_r"
         }
       ]
