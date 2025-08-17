@@ -26,8 +26,8 @@ var mainData = {
       translation: "adj. 药用的",
       syllables: [
         { syllable: "me", phonetic: "/mə/", color: "color1" },
-        { syllable: "dic", phonetic: "/ˈdɪs/", color: "color2" },
-        { syllable: "i", phonetic: "/ə/", color: "color3" },
+        { syllable: "di", phonetic: "/ˈdɪ/", color: "color2" },
+        { syllable: "ci", phonetic: "/sə/", color: "color3" },
         { syllable: "nal", phonetic: "/nəl/", color: "color4" }
       ],
       sentences: [
@@ -64,8 +64,8 @@ var mainData = {
       fullPhonetic: "/ˈben.ɪ.fɪt/",
       translation: "n. 好处；v. 受益",
       syllables: [
-        { syllable: "ben", phonetic: "/ˈben/", color: "color1" },
-        { syllable: "e", phonetic: "/ɪ/", color: "color2" },
+        { syllable: "be", phonetic: "/ˈbe/", color: "color1" },
+        { syllable: "ne", phonetic: "/nɪ/", color: "color2" },
         { syllable: "fit", phonetic: "/fɪt/", color: "color3" }
       ],
       sentences: [
@@ -82,8 +82,8 @@ var mainData = {
       fullPhonetic: "/ɪkˈstrækt/",
       translation: "v. 提取；n. 提取物",
       syllables: [
-        { syllable: "ex", phonetic: "/ɪk/", color: "color1" },
-        { syllable: "tract", phonetic: "/strækt/", color: "color2" }
+        { syllable: "ex", phonetic: "/ɪks/", color: "color1" },
+        { syllable: "tract", phonetic: "/trækt/", color: "color2" }
       ],
       sentences: [
         { en: "They extract oil from seeds.", zh: "他们从种子中提取油。" }
@@ -99,8 +99,8 @@ var mainData = {
       fullPhonetic: "/ˈstʌm.ək/",
       translation: "n. 胃",
       syllables: [
-        { syllable: "stom", phonetic: "/stʌm/", color: "color1" },
-        { syllable: "ach", phonetic: "/ək/", color: "color2" }
+        { syllable: "sto", phonetic: "/stʌ/", color: "color1" },
+        { syllable: "mach", phonetic: "/mək/", color: "color2" }
       ],
       sentences: [{ en: "He had a stomach ache.", zh: "他胃痛。" }],
       CommonCollocation: [
@@ -133,8 +133,8 @@ var mainData = {
       translation: "n. 资源",
       syllables: [
         { syllable: "re", phonetic: "/ˈriː/", color: "color1" },
-        { syllable: "sour", phonetic: "/sɔː/", color: "color2" },
-        { syllable: "ces", phonetic: "/sɪz/", color: "color3" }
+        { syllable: "sourc", phonetic: "/sɔːs/", color: "color2" },
+        { syllable: "es", phonetic: "/ɪz/", color: "color3" }
       ],
       sentences: [
         {
@@ -177,8 +177,7 @@ var mainData = {
       syllables: [
         { syllable: "bac", phonetic: "/bæk/", color: "color1" },
         { syllable: "te", phonetic: "/ˈtɪə/", color: "color2" },
-        { syllable: "ri", phonetic: "/ri/", color: "color3" },
-        { syllable: "a", phonetic: "/ə/", color: "color4" }
+        { syllable: "ria", phonetic: "/riə/", color: "color3" }
       ],
       sentences: [
         { en: "Bacteria can cause infections.", zh: "细菌会引起感染。" }

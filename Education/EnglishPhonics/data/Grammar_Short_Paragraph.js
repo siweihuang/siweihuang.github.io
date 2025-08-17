@@ -113,6 +113,70 @@ var mainData = {
     {
       en: "When can I see you again?",
       cn: "什么时候能再见到你？"
+    },
+    {
+      en: "Where are you from?",
+      cn: "你是哪里人？"
+    },
+    {
+      en: "Where have you been?",
+      cn: "你去哪儿了？"
+    },
+    {
+      en: "Where do you work?",
+      cn: "你在哪里工作？"
+    },
+    {
+      en: "Where did you buy it?",
+      cn: "你在哪儿买的？"
+    },
+    {
+      en: "Where is the restroom?",
+      cn: "洗手间在哪儿？"
+    },
+    {
+      en: "Who did that?",
+      cn: "谁干的？"
+    },
+    {
+      en: "Who is he?",
+      cn: "他是谁？"
+    },
+    {
+      en: "Who do you think you are?",
+      cn: "你以为你是谁？"
+    },
+    {
+      en: "Who does this belong to?",
+      cn: "这是谁的？"
+    },
+    {
+      en: "Who told you that?",
+      cn: "谁告诉你的？"
+    },
+    {
+      en: "Who asked you?",
+      cn: "谁问你了？"
+    },
+    {
+      en: "Why is that?",
+      cn: "为什么？"
+    },
+    {
+      en: "Why not?",
+      cn: "为什么不呢？"
+    },
+    {
+      en: "Why did you say that?",
+      cn: "你为什么这么说？"
+    },
+    {
+      en: "Why are you late?",
+      cn: "你为什么迟到？"
+    },
+    {
+      en: "Why do you ask?",
+      cn: "你为什么问这个？"
     }
   ]
 };

@@ -951,7 +951,8 @@ var mainData = {
               translation: "v. 想",
               syllables: [
                 { syllable: "th", phonetic: "/θ/", color: "color1" },
-                { syllable: "ink", phonetic: "/ɪŋk/", color: "color2" }
+                { syllable: "in", phonetic: "/ɪŋ/", color: "color2" },
+                { syllable: "k", phonetic: "/k/", color: "color3" }
               ]
             },
             {
@@ -1039,7 +1040,8 @@ var mainData = {
               fullPhonetic: "/zuː/",
               translation: "n. 动物园",
               syllables: [
-                { syllable: "zoo", phonetic: "/zuː/", color: "color1" }
+                { syllable: "zoo", phonetic: "/z/", color: "color1" },
+                { syllable: "zoo", phonetic: "/uː/", color: "color2" }
               ]
             },
             {
@@ -1048,8 +1050,10 @@ var mainData = {
               fullPhonetic: "/ˈziːbrə/",
               translation: "n. 斑马",
               syllables: [
-                { syllable: "ze", phonetic: "/ziː/", color: "color1" },
-                { syllable: "bra", phonetic: "/brə/", color: "color2" }
+                { syllable: "ze", phonetic: "/z/", color: "color1" },
+                { syllable: "ze", phonetic: "/iː/", color: "color2" },
+                { syllable: "bra", phonetic: "/b/", color: "color3" },
+                { syllable: "bra", phonetic: "/rə/", color: "color4" }
               ]
             }
           ],
@@ -1067,7 +1071,8 @@ var mainData = {
               translation: "n. 测量",
               syllables: [
                 { syllable: "mea", phonetic: "/me/", color: "color1" },
-                { syllable: "sure", phonetic: "/ʒər/", color: "color2" }
+                { syllable: "sure", phonetic: "/ʒ/", color: "color2" },
+                { syllable: "sure", phonetic: "/ər/", color: "color3" }
               ]
             }
           ],
@@ -1085,7 +1090,8 @@ var mainData = {
               translation: "n. 天气",
               syllables: [
                 { syllable: "wea", phonetic: "/we/", color: "color1" },
-                { syllable: "ther", phonetic: "/ðər/", color: "color2" }
+                { syllable: "ther", phonetic: "/ð/", color: "color2" },
+                { syllable: "ther", phonetic: "/ər/", color: "color3" }
               ]
             }
           ],
@@ -1113,7 +1119,8 @@ var mainData = {
               translation: "n. 兔子",
               syllables: [
                 { syllable: "ra", phonetic: "/ræ/", color: "color1" },
-                { syllable: "bbit", phonetic: "/bɪt/", color: "color2" }
+                { syllable: "bbit", phonetic: "/bɪ/", color: "color2" },
+                { syllable: "bbit", phonetic: "/t/", color: "color3" }
               ]
             }
           ],
@@ -1258,7 +1265,8 @@ var mainData = {
               fullPhonetic: "/draɪ/",
               translation: "adj. 干燥的",
               syllables: [
-                { syllable: "dry", phonetic: "/draɪ/", color: "color1" }
+                { syllable: "dry", phonetic: "/dr/", color: "color1" },
+                { syllable: "dry", phonetic: "/aɪ/", color: "color2" }
               ]
             },
             {
@@ -1267,7 +1275,9 @@ var mainData = {
               fullPhonetic: "/dres/",
               translation: "n. 连衣裙",
               syllables: [
-                { syllable: "dress", phonetic: "/dres/", color: "color1" }
+                { syllable: "dress", phonetic: "/dr/", color: "color1" },
+                { syllable: "dress", phonetic: "/e/", color: "color2" },
+                { syllable: "dress", phonetic: "/s/", color: "color3" }
               ]
             }
           ],
@@ -1285,7 +1295,8 @@ var mainData = {
               fullPhonetic: "/kɪdz/",
               translation: "n. 孩子们",
               syllables: [
-                { syllable: "kids", phonetic: "/kɪdz/", color: "color1" }
+                { syllable: "kids", phonetic: "/kɪ/", color: "color1" },
+                { syllable: "kids", phonetic: "/dz/", color: "color2" }
               ]
             },
             {
@@ -1294,7 +1305,9 @@ var mainData = {
               fullPhonetic: "/frendz/",
               translation: "n. 朋友们",
               syllables: [
-                { syllable: "friends", phonetic: "/frendz/", color: "color1" }
+                { syllable: "friends", phonetic: "/f/", color: "color1" },
+                { syllable: "friends", phonetic: "/ren/", color: "color2" },
+                { syllable: "friends", phonetic: "/dz/", color: "color3" }
               ]
             }
           ],
@@ -1315,7 +1328,9 @@ var mainData = {
             fullPhonetic: "/mɪlk/",
             translation: "n. 牛奶",
             syllables: [
-              { syllable: "milk", phonetic: "/mɪlk/", color: "color1" }
+              { syllable: "milk", phonetic: "/mɪ/", color: "color1" },
+              { syllable: "milk", phonetic: "/l/", color: "color2" },
+              { syllable: "milk", phonetic: "/k/", color: "color3" }
             ]
           },
           {
@@ -1324,7 +1339,8 @@ var mainData = {
             fullPhonetic: "/muːv/",
             translation: "v. 移动",
             syllables: [
-              { syllable: "move", phonetic: "/muːv/", color: "color1" }
+              { syllable: "move", phonetic: "/muː/", color: "color1" },
+              { syllable: "move", phonetic: "/v/", color: "color2" }
             ]
           },
           {
@@ -1333,8 +1349,9 @@ var mainData = {
             fullPhonetic: "/ˈmʌðər/",
             translation: "n. 母亲",
             syllables: [
-              { syllable: "moth", phonetic: "/mʌθ/", color: "color1" },
-              { syllable: "er", phonetic: "/ər/", color: "color2" }
+              { syllable: "moth", phonetic: "/mʌ/", color: "color1" },
+              { syllable: "moth", phonetic: "/ð/", color: "color2" },
+              { syllable: "er", phonetic: "/ər/", color: "color3" }
             ]
           }
         ],
@@ -1352,7 +1369,9 @@ var mainData = {
             fullPhonetic: "/naɪt/",
             translation: "n. 夜晚",
             syllables: [
-              { syllable: "night", phonetic: "/naɪt/", color: "color1" }
+              { syllable: "night", phonetic: "/n/", color: "color1" },
+              { syllable: "night", phonetic: "/aɪ/", color: "color2" },
+              { syllable: "night", phonetic: "/t/", color: "color3" }
             ]
           },
           {
@@ -1361,7 +1380,9 @@ var mainData = {
             fullPhonetic: "/naɪs/",
             translation: "adj. 好的",
             syllables: [
-              { syllable: "nice", phonetic: "/naɪs/", color: "color1" }
+              { syllable: "nice", phonetic: "/n/", color: "color1" },
+              { syllable: "nice", phonetic: "/aɪ/", color: "color2" },
+              { syllable: "nice", phonetic: "/s/", color: "color3" }
             ]
           },
           {
@@ -1370,7 +1391,9 @@ var mainData = {
             fullPhonetic: "/niːd/",
             translation: "v. 需要",
             syllables: [
-              { syllable: "need", phonetic: "/niːd/", color: "color1" }
+              { syllable: "need", phonetic: "/n/", color: "color1" },
+              { syllable: "need", phonetic: "/iː/", color: "color2" },
+              { syllable: "need", phonetic: "/d/", color: "color3" }
             ]
           }
         ],
@@ -1388,7 +1411,8 @@ var mainData = {
             fullPhonetic: "/rɪŋ/",
             translation: "n. 戒指",
             syllables: [
-              { syllable: "ring", phonetic: "/rɪŋ/", color: "color1" }
+              { syllable: "ring", phonetic: "/r/", color: "color1" },
+              { syllable: "ring", phonetic: "/ɪŋ/", color: "color2" }
             ]
           },
           {
@@ -1397,7 +1421,9 @@ var mainData = {
             fullPhonetic: "/brɪŋ/",
             translation: "v. 带来",
             syllables: [
-              { syllable: "bring", phonetic: "/brɪŋ/", color: "color1" }
+              { syllable: "bring", phonetic: "/b/", color: "color1" },
+              { syllable: "bring", phonetic: "/r/", color: "color2" },
+              { syllable: "bring", phonetic: "/ɪŋ/", color: "color3" }
             ]
           },
           {
@@ -1426,7 +1452,9 @@ var mainData = {
             fullPhonetic: "/lʌv/",
             translation: "n. 爱",
             syllables: [
-              { syllable: "love", phonetic: "/lʌv/", color: "color1" }
+              { syllable: "love", phonetic: "/l/", color: "color1" },
+              { syllable: "love", phonetic: "/ʌ/", color: "color2" },
+              { syllable: "love", phonetic: "/v/", color: "color3" }
             ]
           },
           {
@@ -1435,7 +1463,9 @@ var mainData = {
             fullPhonetic: "/laɪf/",
             translation: "n. 生活",
             syllables: [
-              { syllable: "life", phonetic: "/laɪf/", color: "color1" }
+              { syllable: "life", phonetic: "/l/", color: "color1" },
+              { syllable: "life", phonetic: "/aɪ/", color: "color2" },
+              { syllable: "life", phonetic: "/f/", color: "color3" }
             ]
           }
         ],
@@ -1454,17 +1484,18 @@ var mainData = {
             fullPhonetic: "/jɪr/",
             translation: "n. 年",
             syllables: [
-              { syllable: "year", phonetic: "/jɪr/", color: "color1" }
+              { syllable: "year", phonetic: "/jɪ/", color: "color1" },
+              { syllable: "year", phonetic: "/r/", color: "color2" }
             ]
           },
           {
             word: "yellow",
             image: "yellow.jpg",
-            fullPhonetic: "/ˈjeloʊ/",
+            fullPhonetic: "/ˈjeləʊ/",
             translation: "adj. 黄色的",
             syllables: [
-              { syllable: "yel", phonetic: "/jel/", color: "color1" },
-              { syllable: "low", phonetic: "/oʊ/", color: "color2" }
+              { syllable: "ye", phonetic: "/je/", color: "color1" },
+              { syllable: "llow", phonetic: "/ləʊ/", color: "color2" }
             ]
           }
         ],
@@ -1481,7 +1512,9 @@ var mainData = {
             fullPhonetic: "/waɪt/",
             translation: "adj. 白色的",
             syllables: [
-              { syllable: "white", phonetic: "/waɪt/", color: "color1" }
+              { syllable: "white", phonetic: "/w/", color: "color1" },
+              { syllable: "white", phonetic: "/aɪ/", color: "color2" },
+              { syllable: "white", phonetic: "/t/", color: "color3" }
             ]
           },
           {
