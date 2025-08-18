@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Input Data -->
-    <script src="../DataSource/englishspelling25.js"></script>
-    <title>Education - English Spelling</title>
+    <script src="data/A_index_EnglishSpelling25.js"></script>
+    <title>Education - English Spelling 2025</title>
     <style type="text/css">
         body {
             font-family: 'Book Antiqua';
@@ -101,12 +101,36 @@
     for (var i = 0; i < inputJSON.length; i++) {
         let index = i + 1
         let type = "paragraph" + i
-        text += `
-        <tr>
-            <td>${index}</td>
-            <td><a href="./ES_Template25.html?pageNo=${i}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;</a></td>
-            <td>&nbsp;${inputJSON[i].testdate}&nbsp;</td>
-        </tr>`
+        let title = inputJSON[i].title || ''
+        let subTitle = inputJSON[i].subtitle || ''
+        let testDate = inputJSON[i].testdate || ''
+
+        if (inputJSON[i].category == "file") {
+            text += `
+                <tr>
+                    <td>${index}</td>
+                    <td><a href="./Spelling_Template.html?input=${inputJSON[i].filename}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;&nbsp;${inputJSON[i].subtitle}&nbsp;</a></td>
+                    <td>&nbsp;${testDate}&nbsp;</td>    
+            `
+        }
+
+        if (inputJSON[i].category == "file_slide") {
+            text += `
+                <tr>
+                    <td>${index}</td>
+                    <td><a href="./template_textslide.html?input=${inputJSON[i].filename}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;&nbsp;${inputJSON[i].subtitle}&nbsp;</a></td>
+                    <td>&nbsp;${testDate}&nbsp;</td>    
+            `
+        }
+
+        if (inputJSON[i].category == "folder") {
+            text += `
+                <tr>
+                    <td>${index}</td>
+                    <td><a href="./${inputJSON[i].filename}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;&nbsp;${inputJSON[i].subtitle}&nbsp;</a></td>
+                    <td>&nbsp;${testDate}&nbsp;</td>    
+            `
+        }
     }
 
     text += `

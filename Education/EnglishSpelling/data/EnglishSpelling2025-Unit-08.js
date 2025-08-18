@@ -48,7 +48,8 @@ var mainData = {
       translation: "v. 缓解",
       syllables: [
         { syllable: "re", phonetic: "/rɪ/", color: "color1" },
-        { syllable: "lieve", phonetic: "/liːv/", color: "color2" }
+        { syllable: "lie", phonetic: "/liː/", color: "color2" },
+        { syllable: "ve", phonetic: "/v/", color: "color3" }
       ],
       sentences: [
         { en: "This medicine can relieve pain.", zh: "这种药可以缓解疼痛。" }
@@ -83,7 +84,8 @@ var mainData = {
       translation: "v. 提取；n. 提取物",
       syllables: [
         { syllable: "ex", phonetic: "/ɪks/", color: "color1" },
-        { syllable: "tract", phonetic: "/trækt/", color: "color2" }
+        { syllable: "tra", phonetic: "/træ/", color: "color2" },
+        { syllable: "ct", phonetic: "/kt/", color: "color3" }
       ],
       sentences: [
         { en: "They extract oil from seeds.", zh: "他们从种子中提取油。" }
@@ -232,10 +234,10 @@ var mainData = {
       translation: "n. 污染；玷污",
       syllables: [
         { syllable: "con", phonetic: "/kən/", color: "color1" },
-        { syllable: "tam", phonetic: "/ˌtæm/", color: "color2" },
-        { syllable: "i", phonetic: "/ɪ/", color: "color3" },
+        { syllable: "ta", phonetic: "/ˌtæ/", color: "color2" },
+        { syllable: "mi", phonetic: "/mɪ/", color: "color3" },
         { syllable: "na", phonetic: "/ˈneɪ/", color: "color4" },
-        { syllable: "tion", phonetic: "/ʃən/", color: "color5" }
+        { syllable: "tion", phonetic: "/ʃən/", color: "color1" }
       ],
       sentences: [
         {
@@ -309,9 +311,9 @@ var mainData = {
       fullPhonetic: "/əˈɡres.ɪv/",
       translation: "adj. 具有攻击性的；积极进取的",
       syllables: [
-        { syllable: "ag", phonetic: "/ə/", color: "color1" },
-        { syllable: "gres", phonetic: "/ˈɡres/", color: "color2" },
-        { syllable: "sive", phonetic: "/ɪv/", color: "color3" }
+        { syllable: "a", phonetic: "/ə/", color: "color1" },
+        { syllable: "ggre", phonetic: "/ˈɡre/", color: "color2" },
+        { syllable: "ssive", phonetic: "/sɪv/", color: "color3" }
       ],
       sentences: [
         { en: "The dog became aggressive.", zh: "这只狗变得具有攻击性。" }
@@ -327,8 +329,9 @@ var mainData = {
       fullPhonetic: "/ˈθret.ənd/",
       translation: "adj./v. 受到威胁的；威胁",
       syllables: [
-        { syllable: "threat", phonetic: "/ˈθret/", color: "color1" },
-        { syllable: "ened", phonetic: "/ənd/", color: "color2" }
+        { syllable: "threa", phonetic: "/ˈθre/", color: "color1" },
+        { syllable: "ten", phonetic: "/tən/", color: "color2" },
+        { syllable: "ed", phonetic: "/d/", color: "color3" }
       ],
       sentences: [
         {
@@ -347,7 +350,9 @@ var mainData = {
       fullPhonetic: "/swɔːrmd/",
       translation: "v. 蜂拥而至；挤满",
       syllables: [
-        { syllable: "swarmed", phonetic: "/swɔːrmd/", color: "color1" }
+        { syllable: "s", phonetic: "/s/", color: "color1" },
+        { syllable: "warm", phonetic: "/wɔːrm/", color: "color2" },
+        { syllable: "ed", phonetic: "/d/", color: "color3" }
       ],
       sentences: [
         {
@@ -366,11 +371,10 @@ var mainData = {
       fullPhonetic: "/ɪˈmiː.di.ət.li/",
       translation: "adv. 立即；马上",
       syllables: [
-        { syllable: "im", phonetic: "/ɪ/", color: "color1" },
-        { syllable: "me", phonetic: "/ˈmiː/", color: "color2" },
-        { syllable: "di", phonetic: "/di/", color: "color3" },
-        { syllable: "ate", phonetic: "/ət/", color: "color4" },
-        { syllable: "ly", phonetic: "/li/", color: "color1" }
+        { syllable: "i", phonetic: "/ɪ/", color: "color1" },
+        { syllable: "mme", phonetic: "/ˈmiː/", color: "color2" },
+        { syllable: "diate", phonetic: "/diət/", color: "color3" },
+        { syllable: "ly", phonetic: "/li/", color: "color4" }
       ],
       sentences: [
         { en: "Please call me immediately.", zh: "请立即给我打电话。" }
