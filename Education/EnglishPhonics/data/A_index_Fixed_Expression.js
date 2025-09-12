@@ -14,6 +14,13 @@ var mainData = [
     foldername: ""
   },
   {
+    title: "日常英语",
+    subtitle: "50句",
+    category: "file_slide",
+    filename: "Short_Expression_50",
+    foldername: ""
+  },
+  {
     title: "高考英语固定短语",
     subtitle: "100题",
     category: "file_slide",

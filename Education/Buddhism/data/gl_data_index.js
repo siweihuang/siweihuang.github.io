@@ -63,6 +63,13 @@ var mainData = [
     filename: "gl_data_P29L11_P31L8"
   },
   {
+    title: "P37L9_P39L3 第四亲近胜利者",
+    subtitle: "",
+    testdate: "13/09/2025",
+    category: "file_slide",
+    filename: "gl_data_P37L9_P39L3"
+  },
+  {
     title: "听闻 - 听闻轨理",
     subtitle: "",
     testdate: "14/07/2024",

@@ -453,7 +453,7 @@ var mainData = {
     {
       word: "elbow",
       image: "elbow.jpg",
-      fullPhonetic: "/ˈel.boʊ/",
+      fullPhonetic: "/ˈel.bəʊ/",
       translation: "n. 肘部",
       syllables: [
         {
@@ -463,7 +463,7 @@ var mainData = {
         },
         {
           syllable: "bow",
-          phonetic: "/boʊ/",
+          phonetic: "/bəʊ/",
           color: "color2"
         }
       ],
@@ -516,7 +516,7 @@ var mainData = {
     {
       word: "envelope",
       image: "envelope.jpg",
-      fullPhonetic: "/ˈen.və.loʊp/",
+      fullPhonetic: "/ˈen.və.ləʊp/",
       translation: "n. 信封",
       syllables: [
         {
@@ -531,7 +531,7 @@ var mainData = {
         },
         {
           syllable: "lope",
-          phonetic: "/loʊp/",
+          phonetic: "/ləʊp/",
           color: "color3"
         }
       ],
@@ -698,12 +698,12 @@ var mainData = {
     {
       word: "goat",
       image: "goat.jpg",
-      fullPhonetic: "/ɡoʊt/",
+      fullPhonetic: "/ɡəʊt/",
       translation: "n. 山羊",
       syllables: [
         {
           syllable: "goat",
-          phonetic: "/ɡoʊt/",
+          phonetic: "/ɡəʊt/",
           color: "color1"
         }
       ],
@@ -2194,10 +2194,10 @@ var mainData = {
     {
       word: "yogurt",
       image: "yogurt.jpg",
-      fullPhonetic: "/ˈjoʊɡərt/",
+      fullPhonetic: "/ˈjəʊɡərt/",
       translation: "n. 酸奶",
       syllables: [
-        { syllable: "yo", phonetic: "/ˈjoʊ/", color: "color1" },
+        { syllable: "yo", phonetic: "/ˈjəʊ/", color: "color1" },
         { syllable: "gurt", phonetic: "/ɡərt/", color: "color2" }
       ],
       sentences: [
@@ -2215,11 +2215,11 @@ var mainData = {
     {
       word: "yo-yo",
       image: "yo-yo.jpg",
-      fullPhonetic: "/ˈjoʊˌjoʊ/",
+      fullPhonetic: "/ˈjəʊˌjəʊ/",
       translation: "n. 溜溜球",
       syllables: [
-        { syllable: "yo", phonetic: "/ˈjoʊ/", color: "color1" },
-        { syllable: "yo", phonetic: "/joʊ/", color: "color2" }
+        { syllable: "yo", phonetic: "/ˈjəʊ/", color: "color1" },
+        { syllable: "yo", phonetic: "/jəʊ/", color: "color2" }
       ],
       sentences: [
         { en: "The yo-yo spins up and down.", zh: "溜溜球上下旋转。" }
@@ -2251,11 +2251,11 @@ var mainData = {
     {
       word: "zero",
       image: "zero.jpg",
-      fullPhonetic: "/ˈzɪəroʊ/",
+      fullPhonetic: "/ˈzɪərəʊ/",
       translation: "num. 零",
       syllables: [
         { syllable: "ze", phonetic: "/ˈzɪə/", color: "color1" },
-        { syllable: "ro", phonetic: "/roʊ/", color: "color2" }
+        { syllable: "ro", phonetic: "/rəʊ/", color: "color2" }
       ],
       sentences: [
         {
