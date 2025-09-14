@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Input Data -->
-    <script src="../DataSource/readingnotes.js"></script>
-    <title>Education - Reading Notes</title>
+    <script src="./data/A_index_Reading_Notes.js"></script>
+    <title>Reading Notes</title>
     <style type="text/css">
         body {
             font-family: 'Book Antiqua';
@@ -83,7 +83,7 @@
     <!---728x90--->
     <div class="wrap">
         <div class="logo">
-            <h1>Reading Notes 阅读摘要</h1>
+            <h1>Reading Notes 读书笔记</h1>
             <div id="mainContent"></div>
         </div>
     </div>
@@ -92,27 +92,81 @@
 <script>
     let inputJSON = mainData;
 
-    let text = `<table class="center">
+    let text = `    <table>
     <tr>
-        <th>SN</th>
-        <th>Part</th>
-        <th>Reference</th>
+        <th>Lesson</th>
+        <th>Title</th>
+        <th></th>
+        <th>Lesson</th>
+        <th>Title</th>
     </tr>`;
-    for (var i = 0; i < inputJSON.length; i++) {
-        let index = i + 1
+    let rows = Math.ceil(inputJSON.length / 2)
+    console.log(`rows is ${rows}`)
+    for (var i = 0; i < rows; i++) {
+        let i1 = i * 2
+        let index1 = i * 2 + 1
+        let i2 = i * 2 + 1
+        let index2 = i * 2 + 2
         let type = "paragraph" + i
+
+        if (inputJSON[i1].category == "file") {
+            text += `
+                <tr>
+                    <td>${index1}</td>
+                    <td><a href="./NewConcept_Template.html?input=${inputJSON[i1].filename}" target="_blank">&nbsp;${inputJSON[i1].title}&nbsp;&nbsp;${inputJSON[i1].subtitle}&nbsp;</a></td>
+                    <td></td>    
+            `
+        }
+
+        if (inputJSON[i1].category == "file_slide") {
+            text += `
+                <tr>
+                    <td>${index1}</td>
+                    <td><a href="./template_textslide.html?input=${inputJSON[i1].filename}" target="_blank">&nbsp;${inputJSON[i1].title}&nbsp;&nbsp;${inputJSON[i1].subtitle}&nbsp;</a></td>
+                    <td></td>    
+            `
+        }
+
+
+        if (inputJSON[i2]) {
+
+            if (inputJSON[i2].category == "file") {
+                text += `
+                <td>${index2}</td>    
+                <td><a href="./NewConcept_Template.html?&input=${inputJSON[i2].filename}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;&nbsp;${inputJSON[i2].subtitle}&nbsp;</a></td>
+                `
+            }
+
+            if (inputJSON[i2].category == "file_slide") {
+                text += `
+                <td>${index2}</td>    
+                <td><a href="./template_textslide.html?&input=${inputJSON[i2].filename}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;&nbsp;${inputJSON[i2].subtitle}&nbsp;</a></td>
+                `
+            }
+
+            if (inputJSON[i2].category == "folder") {
+                text += `
+                <td>${index2}</td>
+                <td><a href="./${inputJSON[i2].filename}" target="_blank">&nbsp;${inputJSON[i2].title}&nbsp;&nbsp;${inputJSON[i2].subtitle}&nbsp;</a></td>
+                `
+            }
+        } else {
+            text += `
+                <td></td>
+                <td></td>
+            `
+        }
         text += `
-        <tr>
-            <td>${index}</td>
-            <td><a href="./RN_Template.html?pageNo=${i}" target="_blank">&nbsp;${inputJSON[i].title}&nbsp;</a></td>
-            <td>&nbsp;${inputJSON[i].testdate}&nbsp;</td>
-        </tr>`
+            </tr>`
     }
 
     text += `
-</table>
+        </table>
     `
     document.getElementById("mainContent").innerHTML = text;
 </script>
+
+
+<div style="text-align: center;margin-top: 40px"> 咖啡先生<br>Last updated on 14/09/2025</div>
 
 </html>
