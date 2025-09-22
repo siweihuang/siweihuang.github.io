@@ -102,8 +102,8 @@ var mainData = {
       syllables: [
         { syllable: "mul", phonetic: "/ˌmʌl/", color: "color1" },
         { syllable: "ti", phonetic: "/tɪ/", color: "color2" },
-        { syllable: "far", phonetic: "/ˈfeə/", color: "color3" },
-        { syllable: "i", phonetic: "/ri/", color: "color4" },
+        { syllable: "fa", phonetic: "/ˈfeə/", color: "color3" },
+        { syllable: "ri", phonetic: "/ri/", color: "color4" },
         { syllable: "ous", phonetic: "/əs/", color: "color1" }
       ],
       sentences: [
